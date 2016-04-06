@@ -3,46 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Project Euler 1-50 Summary | For A Breath I tarry</title>
+  <title>Tag: data | For A Breath I tarry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="算法学的一把渣，想了半天，还想到树啊左孩子右孩子什么的，完全忘记了排列组合这个神器。
-
-
-从上往下是暴力解法，从下往上就是有限的并且逐步减小的过程。
-
-
-数学不好是硬伤。下面是我在别人的博客上看到的解释：
-There are 3 kinds of rational numbers:
-Expansion is finite (for instance 1/4 = 0.25): those are">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Project Euler 1-50 Summary">
-<meta property="og:url" content="http://lijiali1226.github.io/2015/04/01/project-euler-1-50/index.html">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="For A Breath I tarry">
+<meta property="og:url" content="http://lijiali1226.github.io/tags/data/index.html">
 <meta property="og:site_name" content="For A Breath I tarry">
-<meta property="og:description" content="算法学的一把渣，想了半天，还想到树啊左孩子右孩子什么的，完全忘记了排列组合这个神器。
-
-
-从上往下是暴力解法，从下往上就是有限的并且逐步减小的过程。
-
-
-数学不好是硬伤。下面是我在别人的博客上看到的解释：
-There are 3 kinds of rational numbers:
-Expansion is finite (for instance 1/4 = 0.25): those are">
-<meta property="og:image" content="http://lijiali1226.github.io/images/p15.PNG">
-<meta property="og:image" content="http://lijiali1226.github.io/images/p18.PNG">
-<meta property="og:image" content="http://lijiali1226.github.io/images/p26.PNG">
-<meta property="og:updated_time" content="2016-04-06T12:05:28.000Z">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Project Euler 1-50 Summary">
-<meta name="twitter:description" content="算法学的一把渣，想了半天，还想到树啊左孩子右孩子什么的，完全忘记了排列组合这个神器。
-
-
-从上往下是暴力解法，从下往上就是有限的并且逐步减小的过程。
-
-
-数学不好是硬伤。下面是我在别人的博客上看到的解释：
-There are 3 kinds of rational numbers:
-Expansion is finite (for instance 1/4 = 0.25): those are">
-<meta name="twitter:image" content="http://lijiali1226.github.io/images/p15.PNG">
+<meta name="twitter:title" content="For A Breath I tarry">
+<meta name="twitter:description">
   
     <link rel="alternate" href="/atom.xml" title="For A Breath I tarry" type="application/atom+xml">
   
@@ -105,95 +76,40 @@ Expansion is finite (for instance 1/4 = 0.25): those are">
 
     <div class="row">
         <div class="col-sm-8 blog-main">
-          <article id="post-project-euler-1-50" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <header class="article-header">
+          
+  
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2015" class="archive-year">2015</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <header class="archive-article-header">
     
   
-    <h1 class="article-title" itemprop="name">
-      Project Euler 1-50 Summary
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2015/11/01/runqian-report-tips/">RunqianReport Tips</a>
     </h1>
   
 
 
-  </header>
-
-  <div class="article-meta">
     <div class="article-datetime">
-  <a href="/2015/04/01/project-euler-1-50/" class="article-date"><time datetime="2015-04-01T04:00:00.000Z" itemprop="datePublished">2015-04-01</time></a>
+  <a href="/2015/11/01/runqian-report-tips/" class="archive-article-date"><time datetime="2015-11-01T04:00:00.000Z" itemprop="datePublished">November 1st</time></a>
 </div>
 
-    
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/programming/">programming</a>
-  </div>
-
-
-  </div>
-  <div class="article-inner">
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="/images/p15.PNG" alt="p15"></p>
-<p>算法学的一把渣，想了半天，还想到树啊左孩子右孩子什么的，完全忘记了排列组合这个神器。</p>
-<hr>
-<p><img src="/images/p18.PNG" alt="p18"></p>
-<p>从上往下是暴力解法，从下往上就是有限的并且逐步减小的过程。</p>
-<hr>
-<p><img src="/images/p26.PNG" alt="p26"></p>
-<p>数学不好是硬伤。下面是我在别人的博客上看到的解释：</p>
-<pre><code>There are 3 kinds of rational numbers:
-Expansion is finite (for instance 1/4 = 0.25): those are numbers of the form (2^a)*(5^b).
-Expansion is repetitive, from the start (like 1/7 = 0.(142857)). This is for numbers co-prime to 10.
-Expansion is repetitive, after some initial non-repetitive section. This is for numbers that have both factors co-prime to 10 and are divisible by 2 or 5. (for example 1/14 = 0.0(714285)).
-To find the longest cycle it&apos;s sufficient to look just at the primes - because other numbers will just have the same cycles after some initial non-repetitive section.
-</code></pre><p>然后模拟求循环节的过程就可以了。</p>
-<p><a href="https://github.com/lijiali1226/Code/tree/master/euler" target="_blank" rel="external">代码在这里</a></p>
-
-      
-    </div>
-
-    
-      
-
-    
-
-    <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2015/04/01/project-euler-1-50/" data-id="cimowg00f001aduz7iq5nsci4" class="article-share-link">
-        <i class="fa fa-share"></i> Share
-      </a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/programming/">programming</a></li></ul>
-
-
-    </footer>
-  </div>
-  
-    
-<ul id="article-nav" class="nav nav-pills nav-justified">
-  
-  <li role="presentation">
-    <a href="/2014/12/01/open-course-recommendation/" id="article-nav-older" class="article-nav-link-wrap">
-      <i class="fa fa-chevron-left pull-left"></i>
-      <span class="article-nav-link-title">Open Course Recommendation</span>
-    </a>
-  </li>
-  
-  
-  <li role="presentation">
-    <a href="/2015/11/01/runqian-report-tips/" id="article-nav-newer" class="article-nav-link-wrap">
-      <span class="article-nav-link-title">RunqianReport Tips</span>
-      <i class="fa fa-chevron-right pull-right"></i>
-    </a>
-  </li>
-  
-</ul>
-
-
-  
+  </header>
 </article>
+
+  
+  
+    </div></section>
+  
 
 
 
