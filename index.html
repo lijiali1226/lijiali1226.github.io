@@ -72,6 +72,8 @@
     <div class="blog-header">
   <h1 class="blog-title">For A Breath I tarry</h1>
   
+    <p class="lead blog-description">For A Breath I tarry</p>
+  
 </div>
 
     <div class="row">
@@ -108,8 +110,8 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong> 数据类型 </strong><br>两者大部分数据类型都能对应，少部分需进行转换<br>(/images/datatype.PNG)</p>
-<p><strong> 日期函数 </strong><br>(/images/date.PNG)</p>
+        <p><strong> 数据类型 </strong><br>两者大部分数据类型都能对应，少部分需进行转换<br><img src="/images/datatype.PNG" alt="datatype"></p>
+<p><strong> 日期函数 </strong><br><img src="/images/date.PNG" alt="date"></p>
 <p>举例：<br><code>select date_format(date_sub(&#39;2016-05-01&#39;,interval 1 day),&#39;%Y%m%d&#39;)</code><br>结果：<br>20160430</p>
 <p>column a (varchar)<br>20160121<br>20160122<br>20160123</p>
 <p><code>select date_format(date_sub(a,interval 21 day),&#39;%Y%m%d&#39;) from dbname.tablename</code><br>结果：<br>20151231<br>20160101<br>20160102</p>
@@ -125,7 +127,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/05/01/sql-server-mysql-diff/" data-id="cimrnkkqx001n7ez7hqfk02kg" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/05/01/sql-server-mysql-diff/" data-id="cimrorra5001t97z72r09gtmo" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -184,7 +186,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/01/sql-server-to-mysql/" data-id="cimrnkkqz001s7ez7gwznae4q" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/04/01/sql-server-to-mysql/" data-id="cimrorrad002197z74qnf2v5o" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -235,10 +237,7 @@
 <p>用户设置：<br>在MySQL启动状态创建管理员 <code>/usr/bin/mysqladmin -u root password &#39;123456&#39;</code><br>登陆 <code>mysql -u root -p</code>  输入密码</p>
 <p>开机启动配置：<br>查看MySQL开机选项 <code>chkconfig --list|grep mysqld</code><br>设为开机启动 <code>chkconfig mysqld on</code><br>检查是否设置成功 <code>chkconfig --list|grep mysqld</code></p>
 <p>其他：<br>查看配置文件 <code>cat /etc/my.cnf</code><br>查看数据库 <code>ll -h /var/lib/mysql</code><br>查看日志 <code>ll -h /var/log</code><br>查看端口情况 <code>netstat -anp |more</code></p>
-<p><strong> 安装Kettle</strong><br>1.上传data-integration.zip到LINUX系统中<br>2.解压 <code>unzip data-integration.zip -d  /home/test/kettle</code><br>3.cd到data-integration目录下 ll查看权限<br>4.加权限 <code>chmod +x *.sh</code></p>
-<ol>
-<li>查看安装效果 <code>./kitchen.sh</code> 显示帮助信息  <code>./spoon.sh</code> 运行程序，弹出图形界面，安装成功</li>
-</ol>
+<p><strong> 安装Kettle</strong><br>1.上传data-integration.zip到LINUX系统中<br>2.解压 <code>unzip data-integration.zip -d  /home/test/kettle</code><br>3.cd到data-integration目录下 ll查看权限<br>4.加权限 <code>chmod +x *.sh</code><br>5.查看安装效果 <code>./kitchen.sh</code> 显示帮助信息  <code>./spoon.sh</code> 运行程序，弹出图形界面，安装成功</p>
 <p>MySQL连接不上：<br>1.将MySQL对应mysql-connector-java-5.1.35-bin.jar复制到Kettle对应的libext/JDBC目录下<br>2.检查数据库连接配置（数据库类型，地址，数据库名称，端口号，用户名，密码）是否正确</p>
 
       
@@ -250,7 +249,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/03/01/kettle-mysql-install/" data-id="cimrnkkqi001a7ez7g1gwszvx" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/03/01/kettle-mysql-install/" data-id="cimrorr9r001c97z7wdlgnze6" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -312,7 +311,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2015/11/01/runqian-report-tips/" data-id="cimrnkkr900247ez7bp21nwhc" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2015/11/01/runqian-report-tips/" data-id="cimrorra3001q97z77sc81z4v" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -383,7 +382,7 @@ To find the longest cycle it&apos;s sufficient to look just at the primes - beca
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2015/04/01/project-euler-1-50/" data-id="cimrnkkr600227ez7whb8jdbj" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2015/04/01/project-euler-1-50/" data-id="cimrorra1001m97z7tyo7hltw" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -430,8 +429,8 @@ To find the longest cycle it&apos;s sufficient to look just at the primes - beca
     <div class="article-entry" itemprop="articleBody">
       
         <p>以下是我之前看的一些udacity课程，间隔时间比较久。比较主观，仅供参考。</p>
-<p>Intro to the Design of Everyday things<br>课程比较短。老师非常非常有名。<br>难易程度：3<br>推荐程度：3</p>
-<p>Intro to Programming (Java)<br>java入门。用的是bluej。基本上都讲清楚了，用了很多的辅助教学工具，效果比较炫。看个人理解了。<br>难易程度：3<br>推荐程度：3</p>
+<p>1.Intro to the Design of Everyday things<br>课程比较短。老师非常非常有名。<br>难易程度：3<br>推荐程度：3</p>
+<p>2.Intro to Programming (Java)<br>java入门。用的是bluej。基本上都讲清楚了，用了很多的辅助教学工具，效果比较炫。看个人理解了。<br>难易程度：3<br>推荐程度：3</p>
 <p>待看：<br>Intro to Computer Science<br>Software Debugging<br>Software Testing<br>Interaction<br>Web Development</p>
 
       
@@ -443,7 +442,7 @@ To find the longest cycle it&apos;s sufficient to look just at the primes - beca
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2015/01/01/udacity-recommendation/" data-id="cimrnkkr1001v7ez753oye6ot" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2015/01/01/udacity-recommendation/" data-id="cimrorra9001y97z736lhaj6a" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -591,7 +590,7 @@ To find the longest cycle it&apos;s sufficient to look just at the primes - beca
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2014/12/01/open-course-recommendation/" data-id="cimrnkkqp001g7ez7mmk394rn" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2014/12/01/open-course-recommendation/" data-id="cimrorr9y001j97z7tio9xfyi" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -745,7 +744,7 @@ To find the longest cycle it&apos;s sufficient to look just at the primes - beca
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2014/11/01/coursera-recommendation/" data-id="cimrnkkq6000x7ez7ds99wvdu" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2014/11/01/coursera-recommendation/" data-id="cimrorr9c000y97z7plrcmz04" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -808,7 +807,7 @@ To find the longest cycle it&apos;s sufficient to look just at the primes - beca
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2014/05/01/ad-list/" data-id="cimrnkkq2000v7ez7elvh2d1t" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2014/05/01/ad-list/" data-id="cimrorr99000u97z7y4yulcgp" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -904,7 +903,7 @@ To find the longest cycle it&apos;s sufficient to look just at the primes - beca
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2010/09/01/fashion-coordination/" data-id="cimrnkkqa00127ez7f21v2ufc" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2010/09/01/fashion-coordination/" data-id="cimrorr9e001197z7dv9xvpjt" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       

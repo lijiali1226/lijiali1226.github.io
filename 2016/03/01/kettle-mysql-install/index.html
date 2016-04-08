@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="For A Breath I tarry">
 <meta property="og:description" content="安装JDK 1.查看是否已经安装 rpm -qa |grep java2.查看有资源的java版本 yum search java3.用root用户安装对应版本 yum -y install java-1.7.0-openjdk*4.查看安装效果  java -version
  安装MySQL1.查看是否已经安装 rpm -qa|grep mysql2.用root用户安装 yum install">
-<meta property="og:updated_time" content="2016-04-08T11:47:55.000Z">
+<meta property="og:updated_time" content="2016-04-08T11:54:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LINUX平台下的Kettle+MySQL安装配置">
 <meta name="twitter:description" content="安装JDK 1.查看是否已经安装 rpm -qa |grep java2.查看有资源的java版本 yum search java3.用root用户安装对应版本 yum -y install java-1.7.0-openjdk*4.查看安装效果  java -version
@@ -76,6 +76,8 @@
     <div class="blog-header">
   <h1 class="blog-title">For A Breath I tarry</h1>
   
+    <p class="lead blog-description">For A Breath I tarry</p>
+  
 </div>
 
     <div class="row">
@@ -115,10 +117,7 @@
 <p>用户设置：<br>在MySQL启动状态创建管理员 <code>/usr/bin/mysqladmin -u root password &#39;123456&#39;</code><br>登陆 <code>mysql -u root -p</code>  输入密码</p>
 <p>开机启动配置：<br>查看MySQL开机选项 <code>chkconfig --list|grep mysqld</code><br>设为开机启动 <code>chkconfig mysqld on</code><br>检查是否设置成功 <code>chkconfig --list|grep mysqld</code></p>
 <p>其他：<br>查看配置文件 <code>cat /etc/my.cnf</code><br>查看数据库 <code>ll -h /var/lib/mysql</code><br>查看日志 <code>ll -h /var/log</code><br>查看端口情况 <code>netstat -anp |more</code></p>
-<p><strong> 安装Kettle</strong><br>1.上传data-integration.zip到LINUX系统中<br>2.解压 <code>unzip data-integration.zip -d  /home/test/kettle</code><br>3.cd到data-integration目录下 ll查看权限<br>4.加权限 <code>chmod +x *.sh</code></p>
-<ol>
-<li>查看安装效果 <code>./kitchen.sh</code> 显示帮助信息  <code>./spoon.sh</code> 运行程序，弹出图形界面，安装成功</li>
-</ol>
+<p><strong> 安装Kettle</strong><br>1.上传data-integration.zip到LINUX系统中<br>2.解压 <code>unzip data-integration.zip -d  /home/test/kettle</code><br>3.cd到data-integration目录下 ll查看权限<br>4.加权限 <code>chmod +x *.sh</code><br>5.查看安装效果 <code>./kitchen.sh</code> 显示帮助信息  <code>./spoon.sh</code> 运行程序，弹出图形界面，安装成功</p>
 <p>MySQL连接不上：<br>1.将MySQL对应mysql-connector-java-5.1.35-bin.jar复制到Kettle对应的libext/JDBC目录下<br>2.检查数据库连接配置（数据库类型，地址，数据库名称，端口号，用户名，密码）是否正确</p>
 
       
@@ -130,7 +129,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/03/01/kettle-mysql-install/" data-id="cimrnkkqi001a7ez7g1gwszvx" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/03/01/kettle-mysql-install/" data-id="cimrorr9r001c97z7wdlgnze6" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
