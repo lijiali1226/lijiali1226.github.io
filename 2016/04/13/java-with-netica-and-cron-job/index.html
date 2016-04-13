@@ -3,17 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: linux | For A Breath I tarry</title>
+  <title>Java Program with NeticaJ and Cron Job | For A Breath I tarry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="For A Breath I tarry">
-<meta property="og:url" content="http://lijiali1226.github.io/tags/linux/index.html">
+  <meta name="description" content="同事两年前写的项目，需要部署到服务器上运行。配置：1.拷贝64位的Netica文件Netica.dll,NeticaJ.dll,NeticaJ.jar,Netica.lib到java.library.path下获取java.library.path的方法，在Myeclipse下运行System.out.println(System.getProperty(&amp;quot;java.library.pa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java Program with NeticaJ and Cron Job">
+<meta property="og:url" content="http://lijiali1226.github.io/2016/04/13/java-with-netica-and-cron-job/index.html">
 <meta property="og:site_name" content="For A Breath I tarry">
-<meta property="og:description">
+<meta property="og:description" content="同事两年前写的项目，需要部署到服务器上运行。配置：1.拷贝64位的Netica文件Netica.dll,NeticaJ.dll,NeticaJ.jar,Netica.lib到java.library.path下获取java.library.path的方法，在Myeclipse下运行System.out.println(System.getProperty(&amp;quot;java.library.pa">
+<meta property="og:image" content="http://lijiali1226.github.io/images/neticadbms.PNG">
+<meta property="og:image" content="http://lijiali1226.github.io/images/neticahint.PNG">
+<meta property="og:image" content="http://lijiali1226.github.io/images/neticadb.PNG">
+<meta property="og:updated_time" content="2016-04-13T11:29:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="For A Breath I tarry">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Java Program with NeticaJ and Cron Job">
+<meta name="twitter:description" content="同事两年前写的项目，需要部署到服务器上运行。配置：1.拷贝64位的Netica文件Netica.dll,NeticaJ.dll,NeticaJ.jar,Netica.lib到java.library.path下获取java.library.path的方法，在Myeclipse下运行System.out.println(System.getProperty(&amp;quot;java.library.pa">
+<meta name="twitter:image" content="http://lijiali1226.github.io/images/neticadbms.PNG">
   
     <link rel="alternate" href="/atom.xml" title="For A Breath I tarry" type="application/atom+xml">
   
@@ -78,40 +83,90 @@
 
     <div class="row">
         <div class="col-sm-8 blog-main">
-          
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
+          <article id="post-java-with-netica-and-cron-job" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <header class="article-header">
     
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/01/kettle-mysql-install/">LINUX平台下的Kettle+MySQL安装配置</a>
+    <h1 class="article-title" itemprop="name">
+      Java Program with NeticaJ and Cron Job
     </h1>
   
 
 
+  </header>
+
+  <div class="article-meta">
     <div class="article-datetime">
-  <a href="/2016/03/01/kettle-mysql-install/" class="archive-article-date"><time datetime="2016-03-01T04:00:00.000Z" itemprop="datePublished">March 1st</time></a>
+  <a href="/2016/04/13/java-with-netica-and-cron-job/" class="article-date"><time datetime="2016-04-13T10:51:31.000Z" itemprop="datePublished">2016-04-13</time></a>
 </div>
 
-  </header>
-</article>
+    
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/tool/">tool</a>
+  </div>
+
+
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>同事两年前写的项目，需要部署到服务器上运行。<br>配置：<br>1.拷贝64位的Netica文件Netica.dll,NeticaJ.dll,NeticaJ.jar,Netica.lib到java.library.path下<br>获取java.library.path的方法，在Myeclipse下运行<code>System.out.println(System.getProperty(&quot;java.library.path&quot;));</code></p>
+<p>2.修改数据库连接字符串,ODBC连接,文件存储位置</p>
+<p>问题：<br>1.图形化控件各种bug，和算法逻辑没关系，干脆都干掉了<br>2.服务器系统和数据库经历各种重装，odbc连接各种奇葩问题，原来的连接是这样：<br><img src="/images/neticadbms.PNG" alt="neticadbms"></p>
+<p>改来改去就是连不上，后来查了手册，看到了角落里面的一行小字<br><img src="/images/neticahint.PNG" alt="neticahint"></p>
+<p>于是再配了一遍，改成了这样，大功告成：<br><img src="/images/neticadb.PNG" alt="neticadb"></p>
+<p>然后又提出了一个需求，要做成定时任务。<br>首先想到的就是Quartz ，以前的程序有过用Quartz +Spring+Tomcat做调度的。但是这是个单独的java程序，没必要搞那么重量级。单独用Quartz 又要考虑到数据库持久化，Quartz 程序的销毁问题。总觉得有更简单的办法。<br>当当当当，直接写个bat脚本，计划任务调bat，bat调java。</p>
+<p>写bat中间最难的问题是程序调用了Netica的dll文件和lib文件，报各种错，比如：<br>1.java.lang.UnsatisfiedLinkError：no xxx in java.library.path<br>2.java.lang.ClassLoader.loadClass(Unknown Source)<br>3.java.lang.UnsatisfiedLinkError: %1 不是有效的 Win32 应用程序</p>
+<p>1和2的解决方法是配置好classpath和java.library.path。配置classpath的时候千万要注意把原来的备份，我就手残的把原来的覆盖掉了。<br>3是因为32位和64位引起的问题。把Netica的x64_bin下的所有文件复制到c:\Program Files\java\jdkxxx\bin目录下。<br>设置编译和运行环境的时候注意用64位目录下的文件和程序，用和操作系统、jdk版本同一个位长的，不然各种报错。</p>
+<p>编译<br><code>javac -deprecation -classpath ..\x64_bin\NeticaJ.jar;..\x64_bin\sqljdbc4.jar *.java</code><br>运行<br><code>echo %date%_%time% &gt;&gt; E:\test\log\log%date%.txt</code><br><code>set PATH=..\bin;%PATH%</code><br><code>java -classpath .;..\x64_bin\NeticaJ.jar;..\x64_bin\sqljdbc4.jar -Djava.library.path=..\x64_bin Entry &gt;&gt; E:\test\log\log%date%.txt</code><br><code>exit</code></p>
+<p>然后到计划任务里面进行设置就大功告成了。</p>
+
+      
+    </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://lijiali1226.github.io/2016/04/13/java-with-netica-and-cron-job/" data-id="cimyryymc001enaz7slri6fkx" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+    
+<ul id="article-nav" class="nav nav-pills nav-justified">
+  
+  <li role="presentation">
+    <a href="/2016/04/01/sql-server-to-mysql/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">跨平台 Microsoft SQL Server 迁移到MySQL</span>
+    </a>
+  </li>
+  
+  
+  <li role="presentation">
+    <a href="/2016/05/01/sql-server-mysql-diff/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">Microsoft SQL Server 和MySQL的区别（数据类型及语法）</span>
+      <i class="fa fa-chevron-right pull-right"></i>
+    </a>
+  </li>
+  
+</ul>
+
 
   
-  
-    </div></section>
-  
+</article>
 
 
 
