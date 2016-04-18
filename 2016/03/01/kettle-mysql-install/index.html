@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>LINUX平台下的Kettle+MySQL安装配置 | For A Breath I tarry</title>
+  <title>Linux下的Kettle+MySQL安装配置 | For A Breath I tarry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="安装JDK 1.查看是否已经安装 rpm -qa |grep java2.查看有资源的java版本 yum search java3.用root用户安装对应版本 yum -y install java-1.7.0-openjdk*4.查看安装效果  java -version
  安装MySQL1.查看是否已经安装 rpm -qa|grep mysql2.用root用户安装 yum install">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LINUX平台下的Kettle+MySQL安装配置">
+<meta property="og:title" content="Linux下的Kettle+MySQL安装配置">
 <meta property="og:url" content="http://lijiali1226.github.io/2016/03/01/kettle-mysql-install/index.html">
 <meta property="og:site_name" content="For A Breath I tarry">
 <meta property="og:description" content="安装JDK 1.查看是否已经安装 rpm -qa |grep java2.查看有资源的java版本 yum search java3.用root用户安装对应版本 yum -y install java-1.7.0-openjdk*4.查看安装效果  java -version
  安装MySQL1.查看是否已经安装 rpm -qa|grep mysql2.用root用户安装 yum install">
-<meta property="og:updated_time" content="2016-04-08T11:54:40.000Z">
+<meta property="og:updated_time" content="2016-04-18T11:38:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LINUX平台下的Kettle+MySQL安装配置">
+<meta name="twitter:title" content="Linux下的Kettle+MySQL安装配置">
 <meta name="twitter:description" content="安装JDK 1.查看是否已经安装 rpm -qa |grep java2.查看有资源的java版本 yum search java3.用root用户安装对应版本 yum -y install java-1.7.0-openjdk*4.查看安装效果  java -version
  安装MySQL1.查看是否已经安装 rpm -qa|grep mysql2.用root用户安装 yum install">
   
@@ -88,7 +88,7 @@
     
   
     <h1 class="article-title" itemprop="name">
-      LINUX平台下的Kettle+MySQL安装配置
+      Linux下的Kettle+MySQL安装配置
     </h1>
   
 
@@ -103,7 +103,7 @@
     
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/tool/">tool</a>
+    <a class="article-category-link" href="/categories/tips/">tips</a>
   </div>
 
 
@@ -117,7 +117,7 @@
 <p>用户设置：<br>在MySQL启动状态创建管理员 <code>/usr/bin/mysqladmin -u root password &#39;123456&#39;</code><br>登陆 <code>mysql -u root -p</code>  输入密码</p>
 <p>开机启动配置：<br>查看MySQL开机选项 <code>chkconfig --list|grep mysqld</code><br>设为开机启动 <code>chkconfig mysqld on</code><br>检查是否设置成功 <code>chkconfig --list|grep mysqld</code></p>
 <p>其他：<br>查看配置文件 <code>cat /etc/my.cnf</code><br>查看数据库 <code>ll -h /var/lib/mysql</code><br>查看日志 <code>ll -h /var/log</code><br>查看端口情况 <code>netstat -anp |more</code></p>
-<p><strong> 安装Kettle</strong><br>1.上传data-integration.zip到LINUX系统中<br>2.解压 <code>unzip data-integration.zip -d  /home/test/kettle</code><br>3.cd到data-integration目录下 ll查看权限<br>4.加权限 <code>chmod +x *.sh</code><br>5.查看安装效果 <code>./kitchen.sh</code> 显示帮助信息  <code>./spoon.sh</code> 运行程序，弹出图形界面，安装成功</p>
+<p><strong> 安装Kettle</strong><br>1.上传data-integration.zip到Linux系统中<br>2.解压 <code>unzip data-integration.zip -d  /home/test/kettle</code><br>3.cd到data-integration目录下 ll查看权限<br>4.加权限 <code>chmod +x *.sh</code><br>5.查看安装效果 <code>./kitchen.sh</code> 显示帮助信息  <code>./spoon.sh</code> 运行程序，弹出图形界面，安装成功</p>
 <p>MySQL连接不上：<br>1.将MySQL对应mysql-connector-java-5.1.35-bin.jar复制到Kettle对应的libext/JDBC目录下<br>2.检查数据库连接配置（数据库类型，地址，数据库名称，端口号，用户名，密码）是否正确</p>
 
       
@@ -129,7 +129,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/03/01/kettle-mysql-install/" data-id="cimyryymf001hnaz78c6k18fc" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/03/01/kettle-mysql-install/" data-id="cin5ybk0x001c3yz7diyrla8k" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -152,8 +152,8 @@
   
   
   <li role="presentation">
-    <a href="/2016/04/01/sql-server-to-mysql/" id="article-nav-newer" class="article-nav-link-wrap">
-      <span class="article-nav-link-title">跨平台 Microsoft SQL Server 迁移到MySQL</span>
+    <a href="/2016/03/25/hexo-install/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">Mac下的Hexo安装和配置</span>
       <i class="fa fa-chevron-right pull-right"></i>
     </a>
   </li>
@@ -180,7 +180,7 @@
   
   <div class="sidebar-module">
     <h4>Categories</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/database/">database</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/note/">note</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/other/">other</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/programming/">programming</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/tool/">tool</a><span class="sidebar-module-list-count">3</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/database/">database</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/note/">note</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/other/">other</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/programming/">programming</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/tips/">tips</a><span class="sidebar-module-list-count">4</span></li></ul>
   </div>
 
 
@@ -188,7 +188,7 @@
   
   <div class="sidebar-module">
     <h4>Tags</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/data/">data</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/database/">database</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/java/">java</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/linux/">linux</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/other/">other</a><span class="sidebar-module-list-count">9</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/programming/">programming</a><span class="sidebar-module-list-count">1</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/algorithm/">algorithm</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/etl/">etl</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/hexo/">hexo</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/java/">java</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/linux/">linux</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mssql/">mssql</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mysql/">mysql</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/note/">note</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/other/">other</a><span class="sidebar-module-list-count">4</span></li></ul>
   </div>
 
 
@@ -196,7 +196,7 @@
   
   <div class="sidebar-module">
     <h4>Archives</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/05/">May 2016</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/04/">April 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/03/">March 2016</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/11/">November 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/04/">April 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/01/">January 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/12/">December 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/11/">November 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/05/">May 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/09/">September 2010</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/08/">August 2010</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/04/">April 2010</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/03/">March 2010</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/02/">February 2010</a><span class="sidebar-module-list-count">1</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/04/">April 2016</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/03/">March 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/11/">November 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/04/">April 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/01/">January 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/12/">December 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/11/">November 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/05/">May 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/09/">September 2010</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/08/">August 2010</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/04/">April 2010</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/03/">March 2010</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/02/">February 2010</a><span class="sidebar-module-list-count">1</span></li></ul>
   </div>
 
 
@@ -207,7 +207,7 @@
     <ul class="sidebar-module-list">
       
         <li>
-          <a href="/2016/05/01/sql-server-mysql-diff/">Microsoft SQL Server 和MySQL的区别（数据类型及语法）</a>
+          <a href="/2016/04/18/mysql-tips/">MySQL Tips</a>
         </li>
       
         <li>
@@ -215,15 +215,15 @@
         </li>
       
         <li>
+          <a href="/2016/04/06/sql-server-mysql-diff/">Microsoft SQL Server 和MySQL的区别（数据类型及语法）</a>
+        </li>
+      
+        <li>
           <a href="/2016/04/01/sql-server-to-mysql/">跨平台 Microsoft SQL Server 迁移到MySQL</a>
         </li>
       
         <li>
-          <a href="/2016/03/01/kettle-mysql-install/">LINUX平台下的Kettle+MySQL安装配置</a>
-        </li>
-      
-        <li>
-          <a href="/2015/11/01/runqian-report-tips/">RunqianReport Tips</a>
+          <a href="/2016/03/25/hexo-install/">Mac下的Hexo安装和配置</a>
         </li>
       
     </ul>

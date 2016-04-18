@@ -3,46 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Project Euler 1-50 Summary | For A Breath I tarry</title>
+  <title>MySQL Tips | For A Breath I tarry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="算法学的一把渣，想了半天，还想到树啊左孩子右孩子什么的，完全忘记了排列组合这个神器。
-
-
-从上往下是暴力解法，从下往上就是有限的并且逐步减小的过程。
-
-
-数学不好是硬伤。下面是我在别人的博客上看到的解释：
-
-There are 3 kinds of rational numbers:Expansion is finite (for instance 1/4 = 0.25): those are">
+  <meta name="description" content="1.Linux下的MySQL，数据库名、表名、变量名默认是严格区分大小写的。
+让MySQL不区分表名大小写：　　1.用ROOT登录，修改/etc/my.cnf　　2.在[mysqld]下加入一行：lower_case_table_names=1  （0区分，1不区分）　　3.重新启动数据库 /etc/init.d/mysqld restart
+2.MySQL编码格式：全部设置成utf8是终极解决方">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Project Euler 1-50 Summary">
-<meta property="og:url" content="http://lijiali1226.github.io/2015/04/01/project-euler-1-50/index.html">
+<meta property="og:title" content="MySQL Tips">
+<meta property="og:url" content="http://lijiali1226.github.io/2016/04/18/mysql-tips/index.html">
 <meta property="og:site_name" content="For A Breath I tarry">
-<meta property="og:description" content="算法学的一把渣，想了半天，还想到树啊左孩子右孩子什么的，完全忘记了排列组合这个神器。
-
-
-从上往下是暴力解法，从下往上就是有限的并且逐步减小的过程。
-
-
-数学不好是硬伤。下面是我在别人的博客上看到的解释：
-
-There are 3 kinds of rational numbers:Expansion is finite (for instance 1/4 = 0.25): those are">
-<meta property="og:image" content="http://lijiali1226.github.io/images/p15.PNG">
-<meta property="og:image" content="http://lijiali1226.github.io/images/p18.PNG">
-<meta property="og:image" content="http://lijiali1226.github.io/images/p26.PNG">
-<meta property="og:updated_time" content="2016-04-18T11:54:06.000Z">
+<meta property="og:description" content="1.Linux下的MySQL，数据库名、表名、变量名默认是严格区分大小写的。
+让MySQL不区分表名大小写：　　1.用ROOT登录，修改/etc/my.cnf　　2.在[mysqld]下加入一行：lower_case_table_names=1  （0区分，1不区分）　　3.重新启动数据库 /etc/init.d/mysqld restart
+2.MySQL编码格式：全部设置成utf8是终极解决方">
+<meta property="og:updated_time" content="2016-04-18T11:57:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Project Euler 1-50 Summary">
-<meta name="twitter:description" content="算法学的一把渣，想了半天，还想到树啊左孩子右孩子什么的，完全忘记了排列组合这个神器。
-
-
-从上往下是暴力解法，从下往上就是有限的并且逐步减小的过程。
-
-
-数学不好是硬伤。下面是我在别人的博客上看到的解释：
-
-There are 3 kinds of rational numbers:Expansion is finite (for instance 1/4 = 0.25): those are">
-<meta name="twitter:image" content="http://lijiali1226.github.io/images/p15.PNG">
+<meta name="twitter:title" content="MySQL Tips">
+<meta name="twitter:description" content="1.Linux下的MySQL，数据库名、表名、变量名默认是严格区分大小写的。
+让MySQL不区分表名大小写：　　1.用ROOT登录，修改/etc/my.cnf　　2.在[mysqld]下加入一行：lower_case_table_names=1  （0区分，1不区分）　　3.重新启动数据库 /etc/init.d/mysqld restart
+2.MySQL编码格式：全部设置成utf8是终极解决方">
   
     <link rel="alternate" href="/atom.xml" title="For A Breath I tarry" type="application/atom+xml">
   
@@ -107,13 +85,13 @@ There are 3 kinds of rational numbers:Expansion is finite (for instance 1/4 = 0.
 
     <div class="row">
         <div class="col-sm-8 blog-main">
-          <article id="post-project-euler-1-50" class="article article-type-post" itemscope itemprop="blogPost">
+          <article id="post-mysql-tips" class="article article-type-post" itemscope itemprop="blogPost">
 
   <header class="article-header">
     
   
     <h1 class="article-title" itemprop="name">
-      Project Euler 1-50 Summary
+      MySQL Tips
     </h1>
   
 
@@ -122,13 +100,13 @@ There are 3 kinds of rational numbers:Expansion is finite (for instance 1/4 = 0.
 
   <div class="article-meta">
     <div class="article-datetime">
-  <a href="/2015/04/01/project-euler-1-50/" class="article-date"><time datetime="2015-04-01T04:00:00.000Z" itemprop="datePublished">2015-04-01</time></a>
+  <a href="/2016/04/18/mysql-tips/" class="article-date"><time datetime="2016-04-18T10:40:15.000Z" itemprop="datePublished">2016-04-18</time></a>
 </div>
 
     
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/programming/">programming</a>
+    <a class="article-category-link" href="/categories/database/">database</a>
   </div>
 
 
@@ -137,19 +115,11 @@ There are 3 kinds of rational numbers:Expansion is finite (for instance 1/4 = 0.
 
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/images/p15.PNG" alt="p15"></p>
-<p>算法学的一把渣，想了半天，还想到树啊左孩子右孩子什么的，完全忘记了排列组合这个神器。</p>
-<hr>
-<p><img src="/images/p18.PNG" alt="p18"></p>
-<p>从上往下是暴力解法，从下往上就是有限的并且逐步减小的过程。</p>
-<hr>
-<p><img src="/images/p26.PNG" alt="p26"></p>
-<p>数学不好是硬伤。下面是我在别人的博客上看到的解释：</p>
-<blockquote>
-<p>There are 3 kinds of rational numbers:<br>Expansion is finite (for instance 1/4 = 0.25): those are numbers of the form (2^a)*(5^b).<br>Expansion is repetitive, from the start (like 1/7 = 0.(142857)). This is for numbers co-prime to 10.<br>Expansion is repetitive, after some initial non-repetitive section. This is for numbers that have both factors co-prime to 10 and are divisible by 2 or 5. (for example 1/14 = 0.0(714285)).<br>To find the longest cycle it’s sufficient to look just at the primes - because other numbers will just have the same cycles after some initial non-repetitive section.</p>
-</blockquote>
-<p>然后模拟求循环节的过程就可以了。</p>
-<p><a href="https://github.com/lijiali1226/Code/tree/master/euler" target="_blank" rel="external">代码在这里</a></p>
+        <p>1.Linux下的MySQL，数据库名、表名、变量名默认是严格区分大小写的。</p>
+<p>让MySQL不区分表名大小写：<br>　　1.用ROOT登录，修改/etc/my.cnf<br>　　2.在[mysqld]下加入一行：<code>lower_case_table_names=1</code>  （0区分，1不区分）<br>　　3.重新启动数据库 <code>/etc/init.d/mysqld restart</code></p>
+<p>2.MySQL编码格式：<br>全部设置成utf8是终极解决方案。</p>
+<p>3.MySQL临时表不能在一次查询中被打开两次。会报错Can’t reopen table。解决方法：建个普通表，用完之后再删了。</p>
+<p>4.在Linux环境下执行SQL语句要注意tab键问题。因为终端下tab键有提示命令作用，替换成空格之类后再执行。</p>
 
       
     </div>
@@ -160,12 +130,12 @@ There are 3 kinds of rational numbers:Expansion is finite (for instance 1/4 = 0.
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2015/04/01/project-euler-1-50/" data-id="cin5ybk17001p3yz7abjlwi7y" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/04/18/mysql-tips/" data-id="cin5ybk15001n3yz7zjz4w4lx" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
 
 
     </footer>
@@ -175,19 +145,12 @@ There are 3 kinds of rational numbers:Expansion is finite (for instance 1/4 = 0.
 <ul id="article-nav" class="nav nav-pills nav-justified">
   
   <li role="presentation">
-    <a href="/2015/01/01/udacity-recommendation/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/04/13/java-with-netica-and-cron-job/" id="article-nav-older" class="article-nav-link-wrap">
       <i class="fa fa-chevron-left pull-left"></i>
-      <span class="article-nav-link-title">Udacity Recommendation</span>
+      <span class="article-nav-link-title">Java Program with NeticaJ and Cron Job</span>
     </a>
   </li>
   
-  
-  <li role="presentation">
-    <a href="/2015/11/01/runqian-report-tips/" id="article-nav-newer" class="article-nav-link-wrap">
-      <span class="article-nav-link-title">RunqianReport Tips</span>
-      <i class="fa fa-chevron-right pull-right"></i>
-    </a>
-  </li>
   
 </ul>
 
