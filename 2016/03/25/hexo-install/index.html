@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://lijiali1226.github.io/2016/03/25/hexo-install/index.html">
 <meta property="og:site_name" content="For A Breath I tarry">
 <meta property="og:description" content="安装homebrew 1.ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;有时候网络不太好，要多试几次。2.添加环境变量 echo &amp;#39;export PATH=&amp;quot;/usr/local/bin:$PATH&amp;quot;&amp;#39; &amp;gt">
-<meta property="og:updated_time" content="2016-04-18T11:39:12.000Z">
+<meta property="og:updated_time" content="2016-04-25T10:11:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac下的Hexo安装和配置">
 <meta name="twitter:description" content="安装homebrew 1.ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;有时候网络不太好，要多试几次。2.添加环境变量 echo &amp;#39;export PATH=&amp;quot;/usr/local/bin:$PATH&amp;quot;&amp;#39; &amp;gt">
@@ -116,7 +116,7 @@
 <p><strong> 配置Git </strong><br>1.申请github账号<br>2.建立github仓库，比如username.github.io这种<br>3.ssh key配置，非必须<br>a.检查ssh key是否存在 <code>cd ~/.ssh</code><br>b.没有的话生成 <code>ssh-keygen -t rsa -C &quot;xxx@xxx.com&quot;</code><br>c.在github页面添加ssh key，Account Settings-&gt;SSH Public Keys-&gt;Add another key，保存<br>d.测试连接 <code>ssh -T git@github.com</code><br>4.个人信息设置 <code>git config --global user.name &quot;username&quot;</code><br><code>git config --global user.email &quot;xxx@xxx.com&quot;</code></p>
 <p><strong> 安装Hexo </strong><br><code>npm install -g hexo-cli</code></p>
 <p><strong> 配置Hexo </strong><br>blog是文件夹的名字，可以改别的。<br><code>hexo init blog</code><br><code>cd blog</code><br><code>npm install</code><br>整个网站的配置在_config.yml里面。<br><a href="https://hexo.io/docs/configuration.html" target="_blank" rel="external">配置说明</a></p>
-<p><strong> 基本用法 </strong><br><code>hexo new &quot;new-post&quot;</code><br><code>hexo generate</code><br><code>hexo server</code><br>可以访问<code>http://localhost:4000/</code>查看页面了。Ctrl+C停止。<br>以后generate之前最好运行<code>hexo clean</code>清理缓存文件。<br>配置了git之后用<code>hexo deploy</code>推送到github上。<br><a href="https://hexo.io/docs/commands.html" target="_blank" rel="external">其他命令</a></p>
+<p><strong> 基本用法 </strong><br><code>hexo new &quot;new-post&quot;</code><br><code>hexo generate</code><br><code>hexo server</code><br>可以访问<code>http://localhost:4000/</code>查看页面了。Ctrl+C停止。<br>运行<code>hexo clean</code>清理缓存文件。<br>配置了git之后用<code>hexo deploy</code>推送到github上。<br><a href="https://hexo.io/docs/commands.html" target="_blank" rel="external">其他命令</a></p>
 <p><strong> 配置Hexo推送到Git </strong><br>安装工具 <code>npm install hexo-deployer-git --save</code><br>在_config.yml中修改</p>
 <blockquote>
 <p>deploy:<br>  type: git<br>  repo: <a href="https://github.com/username/username.github.io.git" target="_blank" rel="external">https://github.com/username/username.github.io.git</a><br>  branch: master</p>
@@ -131,9 +131,13 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/03/25/hexo-install/" data-id="cin5ybk0u001a3yz7xadtx4e6" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/03/25/hexo-install/" data-id="cinfyjxiu0022dyz7q2wczq6f" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
+      
+        <a href="http://lijiali1226.github.io/2016/03/25/hexo-install/#disqus_thread" class="article-comment-link">
+          <i class="fa fa-comment"></i> Comments
+        </a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -148,7 +152,7 @@
   <li role="presentation">
     <a href="/2016/03/01/kettle-mysql-install/" id="article-nav-older" class="article-nav-link-wrap">
       <i class="fa fa-chevron-left pull-left"></i>
-      <span class="article-nav-link-title">Linux下的Kettle+MySQL安装配置</span>
+      <span class="article-nav-link-title">Linux下的Kettle+MySQL安装和配置</span>
     </a>
   </li>
   
@@ -169,6 +173,16 @@
 
 
 
+<!--
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+-->
+
         </div>
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           
@@ -182,7 +196,7 @@
   
   <div class="sidebar-module">
     <h4>Categories</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/database/">database</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/note/">note</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/other/">other</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/programming/">programming</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/tips/">tips</a><span class="sidebar-module-list-count">4</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/database/">database</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/other/">other</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/programming/">programming</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/tips/">tips</a><span class="sidebar-module-list-count">4</span></li></ul>
   </div>
 
 
@@ -190,7 +204,7 @@
   
   <div class="sidebar-module">
     <h4>Tags</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/algorithm/">algorithm</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/etl/">etl</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/hexo/">hexo</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/java/">java</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/linux/">linux</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mssql/">mssql</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mysql/">mysql</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/note/">note</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/other/">other</a><span class="sidebar-module-list-count">4</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/algorithm/">algorithm</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/etl/">etl</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/hexo/">hexo</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/java/">java</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/kettle/">kettle</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/linux/">linux</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mysql/">mysql</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/other/">other</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/sql-server/">sql server</a><span class="sidebar-module-list-count">2</span></li></ul>
   </div>
 
 
@@ -198,7 +212,7 @@
   
   <div class="sidebar-module">
     <h4>Archives</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/04/">April 2016</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/03/">March 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/11/">November 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/04/">April 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/01/">January 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/12/">December 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/11/">November 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/05/">May 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/09/">September 2010</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/08/">August 2010</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/04/">April 2010</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/03/">March 2010</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/02/">February 2010</a><span class="sidebar-module-list-count">1</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/04/">April 2016</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/03/">March 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/11/">November 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/04/">April 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/01/">January 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/12/">December 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/11/">November 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/05/">May 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/01/">January 2014</a><span class="sidebar-module-list-count">1</span></li></ul>
   </div>
 
 
@@ -207,6 +221,10 @@
   <div class="sidebar-module">
     <h4>Recents</h4>
     <ul class="sidebar-module-list">
+      
+        <li>
+          <a href="/2016/04/25/mysql-upgrade/">MySQL 子查询及升级</a>
+        </li>
       
         <li>
           <a href="/2016/04/18/mysql-tips/">MySQL Tips</a>
@@ -222,10 +240,6 @@
       
         <li>
           <a href="/2016/04/01/sql-server-to-mysql/">跨平台 Microsoft SQL Server 迁移到MySQL</a>
-        </li>
-      
-        <li>
-          <a href="/2016/03/25/hexo-install/">Mac下的Hexo安装和配置</a>
         </li>
       
     </ul>
@@ -246,6 +260,20 @@
 </footer>
 
   
+<script>
+  var disqus_shortname = 'habit2016';
+  
+  var disqus_url = 'http://lijiali1226.github.io/2016/03/25/hexo-install/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
 
 <script src="//libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
 
