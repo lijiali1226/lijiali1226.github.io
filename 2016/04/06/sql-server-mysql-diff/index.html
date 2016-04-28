@@ -3,32 +3,35 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Microsoft SQL Server 和MySQL的区别（数据类型及语法） | For A Breath I tarry</title>
+  <title>Microsoft SQL Server 和MySQL的区别（数据类型及语法） | For A Breath I Tarry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="数据类型 两者大部分数据类型都能对应，少部分需进行转换(图片来自MySQL)
  日期函数 (图片来自MySQL)
-举例：select date_format(date_sub(&amp;#39;2016-05-01&amp;#39;,interval 1 day),&amp;#39;%Y%m%d&amp;#39;)结果：20160430
-select date_format(date_sub(a,interval 21 day">
+日期转字符串：DATE_FORMAT(date,format)格式控制
+字符串转日期：STR_TO_DATE(str,format) 
+之前的同事设计的数据库把一个非常重要的日期字段在所有的表中都用的varchar类型存储，带来了无数的日期字符串转换问题，真是一个非常糟糕的设计。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Microsoft SQL Server 和MySQL的区别（数据类型及语法）">
 <meta property="og:url" content="http://lijiali1226.github.io/2016/04/06/sql-server-mysql-diff/index.html">
-<meta property="og:site_name" content="For A Breath I tarry">
+<meta property="og:site_name" content="For A Breath I Tarry">
 <meta property="og:description" content="数据类型 两者大部分数据类型都能对应，少部分需进行转换(图片来自MySQL)
  日期函数 (图片来自MySQL)
-举例：select date_format(date_sub(&amp;#39;2016-05-01&amp;#39;,interval 1 day),&amp;#39;%Y%m%d&amp;#39;)结果：20160430
-select date_format(date_sub(a,interval 21 day">
+日期转字符串：DATE_FORMAT(date,format)格式控制
+字符串转日期：STR_TO_DATE(str,format) 
+之前的同事设计的数据库把一个非常重要的日期字段在所有的表中都用的varchar类型存储，带来了无数的日期字符串转换问题，真是一个非常糟糕的设计。">
 <meta property="og:image" content="http://lijiali1226.github.io/images/datatype.PNG">
 <meta property="og:image" content="http://lijiali1226.github.io/images/date.PNG">
-<meta property="og:updated_time" content="2016-04-25T10:15:52.000Z">
+<meta property="og:updated_time" content="2016-04-28T10:15:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Microsoft SQL Server 和MySQL的区别（数据类型及语法）">
 <meta name="twitter:description" content="数据类型 两者大部分数据类型都能对应，少部分需进行转换(图片来自MySQL)
  日期函数 (图片来自MySQL)
-举例：select date_format(date_sub(&amp;#39;2016-05-01&amp;#39;,interval 1 day),&amp;#39;%Y%m%d&amp;#39;)结果：20160430
-select date_format(date_sub(a,interval 21 day">
+日期转字符串：DATE_FORMAT(date,format)格式控制
+字符串转日期：STR_TO_DATE(str,format) 
+之前的同事设计的数据库把一个非常重要的日期字段在所有的表中都用的varchar类型存储，带来了无数的日期字符串转换问题，真是一个非常糟糕的设计。">
 <meta name="twitter:image" content="http://lijiali1226.github.io/images/datatype.PNG">
   
-    <link rel="alternate" href="/atom.xml" title="For A Breath I tarry" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="For A Breath I Tarry" type="application/atom+xml">
   
   
   
@@ -83,9 +86,9 @@ select date_format(date_sub(a,interval 21 day">
 
   <div class="container">
     <div class="blog-header">
-  <h1 class="blog-title">For A Breath I tarry</h1>
+  <h1 class="blog-title">For A Breath I Tarry</h1>
   
-    <p class="lead blog-description">For A Breath I tarry</p>
+    <p class="lead blog-description">For A Breath I Tarry</p>
   
 </div>
 
@@ -123,9 +126,6 @@ select date_format(date_sub(a,interval 21 day">
       
         <p><strong> 数据类型 </strong><br>两者大部分数据类型都能对应，少部分需进行转换<br>(图片来自MySQL)<br><img src="/images/datatype.PNG" alt="datatype"></p>
 <p><strong> 日期函数 </strong><br>(图片来自MySQL)<br><img src="/images/date.PNG" alt="date"></p>
-<p>举例：<br><code>select date_format(date_sub(&#39;2016-05-01&#39;,interval 1 day),&#39;%Y%m%d&#39;)</code><br>结果：<br>20160430</p>
-<p><code>select date_format(date_sub(a,interval 21 day),&#39;%Y%m%d&#39;) from dbname.tablename</code><br>column a (varchar)<br>20160121<br>20160122<br>20160123</p>
-<p>结果：<br>20151231<br>20160101<br>20160102</p>
 <p>日期转字符串：<br>DATE_FORMAT(date,format)<br><a href="http://www.w3school.com.cn/sql/func_date_format.asp" target="_blank" rel="external">格式控制</a></p>
 <p>字符串转日期：<br>STR_TO_DATE(str,format) </p>
 <p>之前的同事设计的数据库把一个非常重要的日期字段在所有的表中都用的varchar类型存储，带来了无数的日期字符串转换问题，真是一个非常糟糕的设计。</p>
@@ -143,7 +143,7 @@ select date_format(date_sub(a,interval 21 day">
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/06/sql-server-mysql-diff/" data-id="cinhjjkl50021bxz79q6sr9u2" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/04/06/sql-server-mysql-diff/" data-id="cink53upl001tnkz7fupemaas" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -161,7 +161,7 @@ select date_format(date_sub(a,interval 21 day">
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/06/sql-server-mysql-diff/" data-id="cinhjjkl50021bxz79q6sr9u2" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/04/06/sql-server-mysql-diff/" data-id="cink53upl001tnkz7fupemaas" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -238,7 +238,7 @@ select date_format(date_sub(a,interval 21 day">
   
   <div class="sidebar-module">
     <h4>Categories</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/database/">database</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/other/">other</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/programming/">programming</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/tips/">tips</a><span class="sidebar-module-list-count">4</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/database/">database</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/notes/">notes</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/other/">other</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/programming/">programming</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/tips/">tips</a><span class="sidebar-module-list-count">4</span></li></ul>
   </div>
 
 
@@ -246,7 +246,7 @@ select date_format(date_sub(a,interval 21 day">
   
   <div class="sidebar-module">
     <h4>Tags</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/algorithm/">algorithm</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/etl/">etl</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/hexo/">hexo</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/java/">java</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/kettle/">kettle</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/linux/">linux</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mysql/">mysql</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/other/">other</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/sql-server/">sql server</a><span class="sidebar-module-list-count">2</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/algorithm/">algorithm</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/cs/">cs</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/etl/">etl</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/hexo/">hexo</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/java/">java</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/kettle/">kettle</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/linux/">linux</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mysql/">mysql</a><span class="sidebar-module-list-count">6</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/nosql/">nosql</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/oracle/">oracle</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/other/">other</a><span class="sidebar-module-list-count">6</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/python/">python</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/sql-server/">sql server</a><span class="sidebar-module-list-count">2</span></li></ul>
   </div>
 
 
@@ -254,7 +254,7 @@ select date_format(date_sub(a,interval 21 day">
   
   <div class="sidebar-module">
     <h4>Archives</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/04/">April 2016</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/03/">March 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/11/">November 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/04/">April 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/01/">January 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/12/">December 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/11/">November 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/05/">May 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/01/">January 2014</a><span class="sidebar-module-list-count">1</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/04/">April 2016</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/03/">March 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/01/">January 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/11/">November 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/04/">April 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/01/">January 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/12/">December 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/11/">November 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/05/">May 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/01/">January 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2012/09/">September 2012</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2011/09/">September 2011</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/01/">January 2010</a><span class="sidebar-module-list-count">1</span></li></ul>
   </div>
 
 
