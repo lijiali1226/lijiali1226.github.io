@@ -80,6 +80,90 @@
         <div class="col-sm-8 blog-main">
           
   
+    <article id="post-sql-server-to-mysql" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <header class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/01/sql-server-to-mysql/">跨平台 Microsoft SQL Server 迁移到MySQL</a>
+    </h1>
+  
+
+
+  </header>
+
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/2016/04/01/sql-server-to-mysql/" class="article-date"><time datetime="2016-03-31T16:00:00.000Z" itemprop="datePublished">2016-04-01</time></a>
+</div>
+
+    
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/database/">database</a>
+  </div>
+
+
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.WINDOWS平台，用MySQL的Workbench工具进行SQL Server数据库迁移<br>可参阅：<a href="http://www.mysql.com/why-mysql/white-papers/guide-to-workbench-migration-wizard/" target="_blank" rel="external">Guide to the MySQL Workbench Migration Wizard: From Microsoft SQL Server to MySQL</a><br>问题：编码格式，有一个表用的中文做列名，带来很多奇葩问题，简单粗暴地改英文名了。因为原本程序都要改一遍，也没有别的影响。权衡利弊之下，似乎是代价最小的办法。</p>
+<p>2.WINDOWS平台，进行MySQL数据库及全部数据导出<br>数据库结构：<code>mysqldump -u username -p -d dbname &gt; dbname.sql</code><br>整个数据库，包括数据：<code>mysqldump -u username -p dbname &gt; dbname.sql</code>    </p>
+<p>3.LINUX平台，进行MySQL数据库导入<br>新建数据库 <code>create database dbname</code><br>选中该数据库 <code>use dbname</code><br>导入数据库 <code>source /home/test/dbname.sql</code><br>问题：两个MySQL数据库版本不一致，数据类型略有区别。datetime(6) ，只有MySQL特定版本支持，改成了datetime</p>
+
+      
+    </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://lijiali1226.github.io/2016/04/01/sql-server-to-mysql/" data-id="cinx0tg1f001wwuz7u3akmwl5" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+        <a href="http://lijiali1226.github.io/2016/04/01/sql-server-to-mysql/
+        #ds-thread" class="article-comment-link">
+          <i class="fa fa-comment"></i> Comments
+        </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql-server/">sql server</a></li></ul>
+
+
+    </footer>
+
+<!--
+    <footer class="article-footer">
+      <a data-url="http://lijiali1226.github.io/2016/04/01/sql-server-to-mysql/" data-id="cinx0tg1f001wwuz7u3akmwl5" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql-server/">sql server</a></li></ul>
+
+
+    </footer>
+-->
+
+
+  </div>
+  
+</article>
+
+
+
+
+<!--
+
+-->
+  
     <article id="post-hexo-install" class="article article-type-post" itemscope itemprop="blogPost">
 
   <header class="article-header">
@@ -132,7 +216,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/03/25/hexo-install/" data-id="cinsvk562000x7fz786juohxy" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/03/25/hexo-install/" data-id="cinx0tg0k000wwuz7a7y3vlzx" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -150,7 +234,7 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/03/25/hexo-install/" data-id="cinsvk562000x7fz786juohxy" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/03/25/hexo-install/" data-id="cinx0tg0k000wwuz7a7y3vlzx" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -220,7 +304,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/03/01/kettle-mysql-install/" data-id="cinsvk56700147fz7n4e7b5jw" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/03/01/kettle-mysql-install/" data-id="cinx0tg0m000ywuz7k6mq1d9i" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -238,7 +322,7 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/03/01/kettle-mysql-install/" data-id="cinsvk56700147fz7n4e7b5jw" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/03/01/kettle-mysql-install/" data-id="cinx0tg0m000ywuz7k6mq1d9i" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -307,7 +391,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2015/11/01/runqian-report-tips/" data-id="cinsvk56q001n7fz7vdyc04k9" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2015/11/01/runqian-report-tips/" data-id="cinx0tg19001pwuz7cxyif6qv" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -325,7 +409,7 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2015/11/01/runqian-report-tips/" data-id="cinsvk56q001n7fz7vdyc04k9" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2015/11/01/runqian-report-tips/" data-id="cinx0tg19001pwuz7cxyif6qv" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -348,13 +432,13 @@
 
 -->
   
-    <article id="post-project-euler-1-50" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-kettle-tips" class="article article-type-post" itemscope itemprop="blogPost">
 
   <header class="article-header">
     
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/01/project-euler-1-50/">Project Euler 1-50 Summary</a>
+      <a class="article-title" href="/2015/10/01/kettle-tips/">Kettle Tips</a>
     </h1>
   
 
@@ -363,13 +447,13 @@
 
   <div class="article-meta">
     <div class="article-datetime">
-  <a href="/2015/04/01/project-euler-1-50/" class="article-date"><time datetime="2015-04-01T04:00:00.000Z" itemprop="datePublished">2015-04-01</time></a>
+  <a href="/2015/10/01/kettle-tips/" class="article-date"><time datetime="2015-09-30T16:00:00.000Z" itemprop="datePublished">2015-10-01</time></a>
 </div>
 
     
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/programming/">programming</a>
+    <a class="article-category-link" href="/categories/data/">data</a>
   </div>
 
 
@@ -378,20 +462,12 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1.<br><img src="/images/p15.PNG" alt="p15"></p>
-<p>算法学的一把渣，想了半天，还想到树啊左孩子右孩子什么的，完全忘记了排列组合这个神器。</p>
-<hr>
-<p>2.<br><img src="/images/p18.PNG" alt="p18"></p>
-<p>从上往下是暴力解法，从下往上就是有限的并且逐步减小的过程。</p>
-<hr>
-<p>3.<br><img src="/images/p26.PNG" alt="p26"></p>
-<p>数学不好是硬伤。下面是我在别人的博客上看到的解释：</p>
-<blockquote>
-<p>There are 3 kinds of rational numbers:<br>Expansion is finite (for instance 1/4 = 0.25): those are numbers of the form (2^a)*(5^b).<br>Expansion is repetitive, from the start (like 1/7 = 0.(142857)). This is for numbers co-prime to 10.<br>Expansion is repetitive, after some initial non-repetitive section. This is for numbers that have both factors co-prime to 10 and are divisible by 2 or 5. (for example 1/14 = 0.0(714285)).<br>To find the longest cycle it’s sufficient to look just at the primes - because other numbers will just have the same cycles after some initial non-repetitive section.</p>
-</blockquote>
-<p>然后模拟求循环节的过程就可以了。</p>
-<hr>
-<p><a href="https://github.com/lijiali1226/Code/tree/master/euler" target="_blank" rel="external">代码在这里</a></p>
+        <p>ETL负责将分布的、异构数据源中的数据如关系数据、平面数据文件等抽取到临时中间层后进行清洗、转换、集成，最后加载到数据仓库或数据集市中，成为联机分析处理、数据挖掘的基础。</p>
+<p>Kettle是一款国外开源的ETL工具，纯JAVA编写，绿色无需安装，数据抽取高效稳定。Kettle中有两种脚本文件，transformation和job，transformation完成针对数据的基础转换，job则完成整个工作流的控制。</p>
+<p>Kettle分为四大块：<br>Chef: job设计工具 (GUI)<br>Kitchen: job执行器 (命令行)<br>Spoon: transformation设计工具 (GUI)<br>Span: transformation执行器 (命令行)</p>
+<p>1.job和transformation的区别：transformation专注于数据的ETL；job范围比较广，可以是transformation，也可以是mail、sql、shell、ftp甚至是job。简单地说，是包含与被包含的关系。</p>
+<p>2.SQL Server的临时表创建有select into语法可以直接用于table input（表输入）步骤，MySQL的临时表用create table语法不能直接用于此步骤。估计是因为背后执行的java代码，executeQuery之类的。</p>
+<p>3.正常情况下不管是表查询还是字段应该是都能够预览的，如果预览不了一定是哪里不对。</p>
 
       
     </div>
@@ -402,115 +478,30 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2015/04/01/project-euler-1-50/" data-id="cinsvk56n001k7fz7qwqlcfwy" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2015/10/01/kettle-tips/" data-id="cinx0tg0q0014wuz7mdho07l2" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
       
-        <a href="http://lijiali1226.github.io/2015/04/01/project-euler-1-50/
+        <a href="http://lijiali1226.github.io/2015/10/01/kettle-tips/
         #ds-thread" class="article-comment-link">
           <i class="fa fa-comment"></i> Comments
         </a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/etl/">etl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kettle/">kettle</a></li></ul>
 
 
     </footer>
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2015/04/01/project-euler-1-50/" data-id="cinsvk56n001k7fz7qwqlcfwy" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2015/10/01/kettle-tips/" data-id="cinx0tg0q0014wuz7mdho07l2" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
-
-
-    </footer>
--->
-
-
-  </div>
-  
-</article>
-
-
-
-
-<!--
-
--->
-  
-    <article id="post-udacity-recommendation" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <header class="article-header">
-    
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/01/udacity-recommendation/">Udacity Recommendation</a>
-    </h1>
-  
-
-
-  </header>
-
-  <div class="article-meta">
-    <div class="article-datetime">
-  <a href="/2015/01/01/udacity-recommendation/" class="article-date"><time datetime="2014-12-31T16:00:00.000Z" itemprop="datePublished">2015-01-01</time></a>
-</div>
-
-    
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/course/">course</a>
-  </div>
-
-
-  </div>
-  <div class="article-inner">
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>以下是我之前看的一些udacity课程，间隔时间比较久。比较主观，仅供参考。</p>
-<p>1.Intro to the Design of Everyday things<br>课程比较短。老师非常非常有名。<br>难易程度：3<br>推荐程度：3</p>
-<p>2.Intro to Programming (Java)<br>java入门。用的是bluej。基本上都讲清楚了，用了很多的辅助教学工具，效果比较炫。看个人理解了。<br>难易程度：3<br>推荐程度：3</p>
-<p>待看：<br>Intro to Computer Science<br>Software Debugging<br>Software Testing<br>Interaction<br>Web Development</p>
-
-      
-    </div>
-
-    
-      
-
-    
-
-    <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2015/01/01/udacity-recommendation/" data-id="cinsvk56y001x7fz7a7rtkd1a" class="article-share-link">
-        <i class="fa fa-share"></i> Share
-      </a>
-      
-      
-        <a href="http://lijiali1226.github.io/2015/01/01/udacity-recommendation/
-        #ds-thread" class="article-comment-link">
-          <i class="fa fa-comment"></i> Comments
-        </a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/other/">other</a></li></ul>
-
-
-    </footer>
-
-<!--
-    <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2015/01/01/udacity-recommendation/" data-id="cinsvk56y001x7fz7a7rtkd1a" class="article-share-link">
-        <i class="fa fa-share"></i> Share
-      </a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/other/">other</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/etl/">etl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kettle/">kettle</a></li></ul>
 
 
     </footer>
@@ -531,7 +522,7 @@
 
 
   <div id="page-nav">
-    <nav><ul class="pagination"><li><a class="page-prev" rel="prev" href="/"><i class="fa fa-chevron-left"></i> Prev</a></li><li><a class="page-number" href="/">1</a></li><li class="active"><span class="page-number">2</span></li><li><a class="page-number" href="/page/3/">3</a></li><li><a class="page-next" rel="next" href="/page/3/">Next <i class="fa fa-chevron-right"></i></a></li></ul></nav>
+    <nav><ul class="pagination"><li><a class="page-prev" rel="prev" href="/"><i class="fa fa-chevron-left"></i> Prev</a></li><li><a class="page-number" href="/">1</a></li><li class="active"><span class="page-number">2</span></li><li><a class="page-number" href="/page/3/">3</a></li><li><a class="page-number" href="/page/4/">4</a></li><li><a class="page-next" rel="next" href="/page/3/">Next <i class="fa fa-chevron-right"></i></a></li></ul></nav>
   </div>
 
 
@@ -549,7 +540,7 @@
   
   <div class="sidebar-module">
     <h4>Categories</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/course/">course</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/data/">data</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/database/">database</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/java/">java</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/linux/">linux</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/mac/">mac</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/other/">other</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/programming/">programming</a><span class="sidebar-module-list-count">1</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/course/">course</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/data/">data</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/database/">database</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/education/">education</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/java/">java</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/life/">life</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/linux/">linux</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/mac/">mac</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/notes/">notes</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/programming/">programming</a><span class="sidebar-module-list-count">1</span></li></ul>
   </div>
 
 
@@ -557,7 +548,7 @@
   
   <div class="sidebar-module">
     <h4>Tags</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/algorithm/">algorithm</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/hexo/">hexo</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/java/">java</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/kettle/">kettle</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/linux/">linux</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mysql/">mysql</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/netica/">netica</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/other/">other</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/report/">report</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/sql-server/">sql server</a><span class="sidebar-module-list-count">2</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/algorithm/">algorithm</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/course/">course</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/coursera/">coursera</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/education/">education</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/etl/">etl</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/game/">game</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/hexo/">hexo</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/ime/">ime</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/java/">java</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/kettle/">kettle</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/linux/">linux</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mysql/">mysql</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/netica/">netica</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/report/">report</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/sql-server/">sql server</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/udacity/">udacity</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/volunteer/">volunteer</a><span class="sidebar-module-list-count">1</span></li></ul>
   </div>
 
 
@@ -565,7 +556,7 @@
   
   <div class="sidebar-module">
     <h4>Archives</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/04/">April 2016</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/03/">March 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/11/">November 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/04/">April 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/01/">January 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/12/">December 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/11/">November 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/05/">May 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/01/">January 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2011/09/">September 2011</a><span class="sidebar-module-list-count">1</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/05/">May 2016</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/04/">April 2016</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/03/">March 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/11/">November 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/10/">October 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/05/">May 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/04/">April 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/01/">January 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/05/">May 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/01/">January 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2013/12/">December 2013</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2013/11/">November 2013</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/09/">September 2010</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/07/">July 2010</a><span class="sidebar-module-list-count">1</span></li></ul>
   </div>
 
 
@@ -574,6 +565,10 @@
   <div class="sidebar-module">
     <h4>Recents</h4>
     <ul class="sidebar-module-list">
+      
+        <li>
+          <a href="/2016/05/06/shuangpin/">关于双拼</a>
+        </li>
       
         <li>
           <a href="/2016/04/25/mysql-upgrade/">MySQL 子查询及升级</a>
@@ -589,10 +584,6 @@
       
         <li>
           <a href="/2016/04/06/sql-server-mysql-diff/">Microsoft SQL Server 和MySQL的区别（数据类型及语法）</a>
-        </li>
-      
-        <li>
-          <a href="/2016/04/01/sql-server-to-mysql/">跨平台 Microsoft SQL Server 迁移到MySQL</a>
         </li>
       
     </ul>
