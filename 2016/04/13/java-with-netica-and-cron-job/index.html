@@ -5,22 +5,25 @@
   
   <title>Java Program with NeticaJ and Cron Job | For A Breath I Tarry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="同事两年前写的项目，需要部署到服务器上运行。配置：1.拷贝64位的Netica文件Netica.dll,NeticaJ.dll,NeticaJ.jar,Netica.lib到java.library.path下获取java.library.path的方法，在MyEclipse下运行System.out.println(System.getProperty(&amp;quot;java.library.pa">
+  <meta name="description" content="NeticaJ配置同事两年前写的项目，需要部署到服务器上运行。
+步骤1.拷贝64位的Netica文件Netica.dll,NeticaJ.dll,NeticaJ.jar,Netica.lib到java.library.path下。获取java.library.path的方法:在MyEclipse下运行System.out.println(System.getProperty(&amp;quot;java.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java Program with NeticaJ and Cron Job">
 <meta property="og:url" content="http://lijiali1226.github.io/2016/04/13/java-with-netica-and-cron-job/index.html">
 <meta property="og:site_name" content="For A Breath I Tarry">
-<meta property="og:description" content="同事两年前写的项目，需要部署到服务器上运行。配置：1.拷贝64位的Netica文件Netica.dll,NeticaJ.dll,NeticaJ.jar,Netica.lib到java.library.path下获取java.library.path的方法，在MyEclipse下运行System.out.println(System.getProperty(&amp;quot;java.library.pa">
-<meta property="og:updated_time" content="2016-05-07T11:55:58.000Z">
+<meta property="og:description" content="NeticaJ配置同事两年前写的项目，需要部署到服务器上运行。
+步骤1.拷贝64位的Netica文件Netica.dll,NeticaJ.dll,NeticaJ.jar,Netica.lib到java.library.path下。获取java.library.path的方法:在MyEclipse下运行System.out.println(System.getProperty(&amp;quot;java.">
+<meta property="og:updated_time" content="2016-05-09T15:55:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java Program with NeticaJ and Cron Job">
-<meta name="twitter:description" content="同事两年前写的项目，需要部署到服务器上运行。配置：1.拷贝64位的Netica文件Netica.dll,NeticaJ.dll,NeticaJ.jar,Netica.lib到java.library.path下获取java.library.path的方法，在MyEclipse下运行System.out.println(System.getProperty(&amp;quot;java.library.pa">
+<meta name="twitter:description" content="NeticaJ配置同事两年前写的项目，需要部署到服务器上运行。
+步骤1.拷贝64位的Netica文件Netica.dll,NeticaJ.dll,NeticaJ.jar,Netica.lib到java.library.path下。获取java.library.path的方法:在MyEclipse下运行System.out.println(System.getProperty(&amp;quot;java.">
   
     <link rel="alternate" href="/atom.xml" title="For A Breath I Tarry" type="application/atom+xml">
   
   
   
-    <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -56,6 +59,9 @@
           <li><a class=""
                  href="/archives/">Archives</a></li>
         
+          <li><a class=""
+                 href="/categories/demo/">Demos</a></li>
+        
       </ul>
 
       <!--
@@ -70,10 +76,17 @@
 </nav>
 
   <div class="container">
-    <div class="blog-header">
+    <div class="blog-header hidden-xs">
+  <img id="blog-logo" width="80" height="80" alt="Christopher Martin" src="/images/icon.jpg">
   <h1 class="blog-title">For A Breath I Tarry</h1>
   
     <p class="lead blog-description">For A Breath I Tarry</p>
+  
+</div>
+<div class="blog-header visible-xs">
+  <h1 class="blog-title">undefined</h1>
+  
+    <p class="lead blog-description">undefined</p>
   
 </div>
 
@@ -104,25 +117,27 @@
   </div>
 
 
+    
   </div>
   <div class="article-inner">
 
     <div class="article-entry" itemprop="articleBody">
       
-        <p>同事两年前写的项目，需要部署到服务器上运行。<br>配置：<br>1.拷贝64位的Netica文件Netica.dll,NeticaJ.dll,NeticaJ.jar,Netica.lib到java.library.path下<br>获取java.library.path的方法，在MyEclipse下运行<code>System.out.println(System.getProperty(&quot;java.library.path&quot;));</code><br>2.修改数据库连接字符串,ODBC连接,文件存储位置</p>
-<p>问题：<br>1.图形化控件各种bug，和算法逻辑没关系，都干掉了<br>2.服务器系统和数据库经历各种重装，odbc连接各种奇葩问题，原来的连接是这样：<br><code>Driver={SQL Server};Server=DB_server;DataBase=myDB</code><br>改来改去就是连不上，后来查了手册，看到了角落里面的一行小字</p>
+        <h2 id="NeticaJ配置"><a href="#NeticaJ配置" class="headerlink" title="NeticaJ配置"></a>NeticaJ配置</h2><p>同事两年前写的项目，需要部署到服务器上运行。</p>
+<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><p>1.拷贝64位的Netica文件Netica.dll,NeticaJ.dll,NeticaJ.jar,Netica.lib到java.library.path下。<br>获取java.library.path的方法:<br>在MyEclipse下运行<code>System.out.println(System.getProperty(&quot;java.library.path&quot;));</code><br>2.修改数据库连接字符串,ODBC连接,文件存储位置</p>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>1.图形化控件各种bug，和算法逻辑没关系，都干掉了<br>2.服务器系统和数据库经历各种重装，odbc连接各种奇葩问题，原来的连接是这样：<br><code>Driver={SQL Server};Server=DB_server;DataBase=myDB</code><br>改来改去就是连不上，后来查了手册，看到了角落里面的一行小字</p>
 <blockquote>
 <p>Hint: If you are having difficulty getting your connection string to work, then use the Windows ODBC Data Source Administrator to connect to the database, give it a data source name (DSN), “myName”, and then use “DSN=myName” as the simplified connection string. The Administrator has powerful wizards to facilitate both finding the database and defining precisely how you wish to access it.</p>
 </blockquote>
 <p>于是再配了一遍，改成了这样：<br><code>DSN=myDataSource;UID=myUserAccount;PWD=myPassword</code><br>大功告成。</p>
-<hr>
-<p>然后又提出了一个需求，要做成定时任务。<br>首先想到的就是Quartz ，以前的程序有过用Quartz+Spring+Tomcat做调度的。但是这是个单独的java程序，没必要搞那么重量级。单独用Quartz 又要考虑到数据库持久化，Quartz 程序的销毁问题。总觉得有更简单的办法。<br>当当当当，直接写个bat脚本，计划任务调bat，bat调java。</p>
-<p>问题：<br>程序调用了Netica的dll文件和lib文件，报各种错<br>1.java.lang.UnsatisfiedLinkError：no xxx in java.library.path<br>2.java.lang.ClassLoader.loadClass(Unknown Source)<br>3.java.lang.UnsatisfiedLinkError: %1 不是有效的 Win32 应用程序</p>
+<h2 id="定时调度任务"><a href="#定时调度任务" class="headerlink" title="定时调度任务"></a>定时调度任务</h2><p>然后又提出了一个需求，要把它做成定时任务。</p>
+<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>首先想到的就是Quartz ，以前的程序有过用Quartz+Spring+Tomcat做调度的。但是这是个单独的java程序，没必要搞那么重量级。单独用Quartz 又要考虑到数据库持久化，Quartz 程序的销毁问题。总觉得有更简单的办法。<br>当当当当，直接写个bat脚本，计划任务调bat，bat调java。</p>
+<h3 id="问题-1"><a href="#问题-1" class="headerlink" title="问题"></a>问题</h3><p>程序调用了Netica的dll文件和lib文件，报各种错<br>1.java.lang.UnsatisfiedLinkError：no xxx in java.library.path<br>2.java.lang.ClassLoader.loadClass(Unknown Source)<br>3.java.lang.UnsatisfiedLinkError: %1 不是有效的 Win32 应用程序</p>
 <p>1和2的解决方法是配置好classpath和java.library.path。配置classpath的时候千万要注意在原来的基础上追加，我就手残的把原来的覆盖掉了。<br>3是因为32位和64位引起的问题。把Netica的x64_bin下的所有文件复制到c:\Program Files\Java\jdkxxx\bin目录下。<br>设置编译和运行环境的时候注意用64位的目录下的文件和程序，用和操作系统、jdk版本同一个位长的，不然各种报错。</p>
-<p>关于bat<br>bat文件如果闪退的话可以加<code>pause</code>，退出cmd窗口用<code>exit</code>。<br>bat的注释是<code>::</code>和<code>rem</code>，<code>&gt;</code>是传递并覆盖，<code>&gt;&gt;</code>是传递并追加。<br><code>.</code>表示当前目录，<code>..</code>表示上级目录。</p>
-<p>编译<br><code>javac -deprecation -classpath ..\x64_bin\NeticaJ.jar;..\x64_bin\sqljdbc4.jar *.java</code></p>
-<p>运行<br><code>echo %date%_%time% &gt;&gt; E:\projectname\log\log%date%.txt</code><br><code>set PATH=..\bin;%PATH%</code><br><code>java -classpath .;..\x64_bin\NeticaJ.jar;..\x64_bin\sqljdbc4.jar -Djava.library.path=..\x64_bin Entry &gt;&gt; E:\projectname\log\log%date%.txt</code><br><code>exit</code></p>
-<p>计划任务<br>然后到计划任务里面进行设置。这里要注意路径问题，计划任务不能识别相对路径，要么配置的时候配置“起始于”选项，要么改成绝对路径。</p>
+<h3 id="bat脚本"><a href="#bat脚本" class="headerlink" title="bat脚本"></a>bat脚本</h3><p><strong>关于bat</strong><br>bat文件如果闪退的话可以加<code>pause</code>，退出cmd窗口用<code>exit</code>。<br>bat的注释是<code>::</code>和<code>rem</code>，<code>&gt;</code>是传递并覆盖，<code>&gt;&gt;</code>是传递并追加。<br><code>.</code>表示当前目录，<code>..</code>表示上级目录。</p>
+<p><strong>编译</strong><br><code>javac -deprecation -classpath ..\x64_bin\NeticaJ.jar;..\x64_bin\sqljdbc4.jar *.java</code></p>
+<p><strong>运行</strong><br><code>echo %date%_%time% &gt;&gt; E:\projectname\log\log%date%.txt</code><br><code>set PATH=..\bin;%PATH%</code><br><code>java -classpath .;..\x64_bin\NeticaJ.jar;..\x64_bin\sqljdbc4.jar -Djava.library.path=..\x64_bin Entry &gt;&gt; E:\projectname\log\log%date%.txt</code><br><code>exit</code></p>
+<h3 id="计划任务"><a href="#计划任务" class="headerlink" title="计划任务"></a>计划任务</h3><p>到计划任务里面进行设置。这里要注意路径问题，计划任务不能识别相对路径，要么配置的时候配置“起始于”选项，要么改成绝对路径。</p>
 
       
     </div>
@@ -133,13 +148,12 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/13/java-with-netica-and-cron-job/" data-id="cio02zc4s000zm9z7a5336h62" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/04/13/java-with-netica-and-cron-job/" data-id="cio07z3n9000x40z7k43ahpin" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
       
-        <a href="http://lijiali1226.github.io/2016/04/13/java-with-netica-and-cron-job/
-        #ds-thread" class="article-comment-link">
+        <a href="http://lijiali1226.github.io/2016/04/13/java-with-netica-and-cron-job/#ds-thread" class="article-comment-link">
           <i class="fa fa-comment"></i> Comments
         </a>
       
@@ -149,19 +163,19 @@
 
     </footer>
 
+
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/13/java-with-netica-and-cron-job/" data-id="cio02zc4s000zm9z7a5336h62" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/04/13/java-with-netica-and-cron-job/" data-id="cio07z3n9000x40z7k43ahpin" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
-      
+
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/netica/">netica</a></li></ul>
 
 
     </footer>
 -->
-
 
   </div>
   
@@ -188,7 +202,6 @@
 
   
 </article>
-
 
 
 <section id="comments">
@@ -218,6 +231,13 @@
         </div>
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           
+  <div class="sidebar-module sidebar-toc">
+    <h4>Table of Contents</h4>
+    <ol class="sidebar-module-list"><li class="sidebar-module-list-item sidebar-module-list-level-2"><a class="sidebar-module-list-link" href="#NeticaJ配置"><span class="sidebar-module-list-number">1.</span> <span class="sidebar-module-list-text">NeticaJ配置</span></a><ol class="sidebar-module-list-child"><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#步骤"><span class="sidebar-module-list-number">1.1.</span> <span class="sidebar-module-list-text">步骤</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#问题"><span class="sidebar-module-list-number">1.2.</span> <span class="sidebar-module-list-text">问题</span></a></li></ol></li><li class="sidebar-module-list-item sidebar-module-list-level-2"><a class="sidebar-module-list-link" href="#定时调度任务"><span class="sidebar-module-list-number">2.</span> <span class="sidebar-module-list-text">定时调度任务</span></a><ol class="sidebar-module-list-child"><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#思考"><span class="sidebar-module-list-number">2.1.</span> <span class="sidebar-module-list-text">思考</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#问题-1"><span class="sidebar-module-list-number">2.2.</span> <span class="sidebar-module-list-text">问题</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#bat脚本"><span class="sidebar-module-list-number">2.3.</span> <span class="sidebar-module-list-text">bat脚本</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#计划任务"><span class="sidebar-module-list-number">2.4.</span> <span class="sidebar-module-list-text">计划任务</span></a></li></ol></li></ol>
+  </div>
+
+
+
   <div class="sidebar-module sidebar-module-inset">
   <h4>About</h4>
   <p>Hello,World!</p>
@@ -228,15 +248,15 @@
   
   <div class="sidebar-module">
     <h4>Categories</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/course/">course</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/data/">data</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/database/">database</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/education/">education</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/java/">java</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/life/">life</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/linux/">linux</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/mac/">mac</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/notes/">notes</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/programming/">programming</a><span class="sidebar-module-list-count">1</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/course/">course</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/data/">data</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/database/">database</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/demo/">demo</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/education/">education</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/java/">java</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/life/">life</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/linux/">linux</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/mac/">mac</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/notes/">notes</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/programming/">programming</a><span class="sidebar-module-list-count">1</span></li></ul>
   </div>
 
 
 
   
-  <div class="sidebar-module">
+  <div class="sidebar-module sidebar-tags">
     <h4>Tags</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/algorithm/">algorithm</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/course/">course</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/coursera/">coursera</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/education/">education</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/etl/">etl</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/game/">game</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/hexo/">hexo</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/ime/">ime</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/java/">java</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/kettle/">kettle</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/linux/">linux</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mac/">mac</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mysql/">mysql</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/netica/">netica</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/report/">report</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/sql-server/">sql server</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/udacity/">udacity</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/volunteer/">volunteer</a><span class="sidebar-module-list-count">1</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/algorithm/">algorithm</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/course/">course</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/coursera/">coursera</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/education/">education</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/etl/">etl</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/game/">game</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/git/">git</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/hexo/">hexo</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/ime/">ime</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/java/">java</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/kettle/">kettle</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/linux/">linux</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mac/">mac</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mysql/">mysql</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/netica/">netica</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/report/">report</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/sql-server/">sql server</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/ssh/">ssh</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/udacity/">udacity</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/volunteer/">volunteer</a><span class="sidebar-module-list-count">1</span></li></ul>
   </div>
 
 
@@ -244,13 +264,13 @@
   
   <div class="sidebar-module">
     <h4>Archives</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/05/">May 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/04/">April 2016</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/03/">March 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/11/">November 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/10/">October 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/05/">May 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/04/">April 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/01/">January 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/05/">May 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/01/">January 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2013/12/">December 2013</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2013/11/">November 2013</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/09/">September 2010</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/07/">July 2010</a><span class="sidebar-module-list-count">1</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/05/">May 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/04/">April 2016</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/03/">March 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/11/">November 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/10/">October 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/05/">May 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/04/">April 2015</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/01/">January 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/05/">May 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/01/">January 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2013/12/">December 2013</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2013/11/">November 2013</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/09/">September 2010</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/07/">July 2010</a><span class="sidebar-module-list-count">1</span></li></ul>
   </div>
 
 
 
   
-  <div class="sidebar-module">
+  <div class="sidebar-module sidebar-recents">
     <h4>Recents</h4>
     <ul class="sidebar-module-list">
       
@@ -279,6 +299,16 @@
 
 
 
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-general-responsive-sidebar -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4721191851305300"
+     data-ad-slot="5846920073"
+     data-ad-format="auto"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
         </div>
     </div>
   </div>
@@ -293,11 +323,16 @@
 
   
 
-<script src="//libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/github.min.css" integrity="sha384-WtUWHyk39lfUpZQVgokNfSKCJaKAeD6adgLduBLrKTMUuPzFhLtL23y1guFy6lZn" crossorigin="anonymous">
+  <script src="/highlight/highlight.pack.js"></script>
+
+
+
 
 
 

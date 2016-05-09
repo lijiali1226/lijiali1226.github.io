@@ -19,7 +19,7 @@
   
   
   
-    <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -55,6 +55,9 @@
           <li><a class=""
                  href="/archives/">Archives</a></li>
         
+          <li><a class=""
+                 href="/categories/demo/">Demos</a></li>
+        
       </ul>
 
       <!--
@@ -69,16 +72,26 @@
 </nav>
 
   <div class="container">
-    <div class="blog-header">
+    <div class="blog-header hidden-xs">
+  <img id="blog-logo" width="80" height="80" alt="Christopher Martin" src="/images/icon.jpg">
   <h1 class="blog-title">For A Breath I Tarry</h1>
   
     <p class="lead blog-description">For A Breath I Tarry</p>
+  
+</div>
+<div class="blog-header visible-xs">
+  <h1 class="blog-title">undefined</h1>
+  
+    <p class="lead blog-description">undefined</p>
   
 </div>
 
     <div class="row">
         <div class="col-sm-8 blog-main">
           
+
+
+
   
     <article id="post-sql-server-mysql-diff" class="article article-type-post" itemscope itemprop="blogPost">
 
@@ -105,19 +118,20 @@
   </div>
 
 
+    
   </div>
   <div class="article-inner">
 
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong> 数据类型 </strong><br>两者大部分数据类型都能对应，少部分需进行转换<br>(图片来自MySQL)<br><img src="/images/datatype.PNG" alt="datatype"></p>
-<p><strong> 日期函数 </strong><br>(图片来自MySQL)<br><img src="/images/date.PNG" alt="date"></p>
+        <h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>两者大部分数据类型都能对应，少部分需进行转换<br>(图片来自MySQL)<br><img src="/images/datatype.PNG" alt="datatype"></p>
+<h3 id="日期函数"><a href="#日期函数" class="headerlink" title="日期函数"></a>日期函数</h3><p>(图片来自MySQL)<br><img src="/images/date.PNG" alt="date"></p>
 <p>日期转字符串：<br>DATE_FORMAT(date,format)<br><a href="http://www.w3school.com.cn/sql/func_date_format.asp" target="_blank" rel="external">格式控制</a></p>
 <p>字符串转日期：<br>STR_TO_DATE(str,format) </p>
 <p>之前的同事设计的数据库把一个非常重要的日期字段在所有的表中都用的varchar类型存储，带来了无数的日期字符串转换问题，真是一个非常糟糕的设计。</p>
-<p><strong> 类型转换 </strong><br>SQL Server<br><code>CONVERT(int, &#39;123.4&#39;)</code><br><code>CAST(&#39;123.4&#39; as int)</code><br>convert可以格式化日期和数值。</p>
+<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><p>SQL Server<br><code>CONVERT(int, &#39;123.4&#39;)</code><br><code>CAST(&#39;123.4&#39; as int)</code><br>convert可以格式化日期和数值。</p>
 <p>MySQL<br><code>CONVERT(&#39;23&#39;,SIGNED)</code><br><code>CAST(&#39;125e342.83&#39; AS signed)</code><br>可以转换的类型是有限制的。</p>
-<p><strong> 临时表 </strong><br>SQL Server<br><code>select * INTO #TEMPOO FROM SELECT * FROM table_name</code></p>
+<h3 id="临时表"><a href="#临时表" class="headerlink" title="临时表"></a>临时表</h3><p>SQL Server<br><code>select * INTO #TEMPOO FROM SELECT * FROM table_name</code></p>
 <p>MySQL<br><code>CREATE TEMPORARY TABLE tmp_table SELECT * FROM table_name</code></p>
 
       
@@ -129,13 +143,12 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/06/sql-server-mysql-diff/" data-id="cio02zc5k001vm9z7uyiezsp5" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/04/06/sql-server-mysql-diff/" data-id="cio07z3o9001z40z74ew7g1q4" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
       
-        <a href="http://lijiali1226.github.io/2016/04/06/sql-server-mysql-diff/
-        #ds-thread" class="article-comment-link">
+        <a href="http://lijiali1226.github.io/2016/04/06/sql-server-mysql-diff/#ds-thread" class="article-comment-link">
           <i class="fa fa-comment"></i> Comments
         </a>
       
@@ -145,12 +158,13 @@
 
     </footer>
 
+
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/06/sql-server-mysql-diff/" data-id="cio02zc5k001vm9z7uyiezsp5" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/04/06/sql-server-mysql-diff/" data-id="cio07z3o9001z40z74ew7g1q4" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
-      
+
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql-server/">sql server</a></li></ul>
 
@@ -158,11 +172,9 @@
     </footer>
 -->
 
-
   </div>
   
 </article>
-
 
 
 
@@ -195,6 +207,7 @@
   </div>
 
 
+    
   </div>
   <div class="article-inner">
 
@@ -213,13 +226,12 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/01/sql-server-to-mysql/" data-id="cio02zc5o001ym9z72xxuvamc" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/04/01/sql-server-to-mysql/" data-id="cio07z3o6001w40z7xgqpkxsb" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
       
-        <a href="http://lijiali1226.github.io/2016/04/01/sql-server-to-mysql/
-        #ds-thread" class="article-comment-link">
+        <a href="http://lijiali1226.github.io/2016/04/01/sql-server-to-mysql/#ds-thread" class="article-comment-link">
           <i class="fa fa-comment"></i> Comments
         </a>
       
@@ -229,12 +241,13 @@
 
     </footer>
 
+
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/01/sql-server-to-mysql/" data-id="cio02zc5o001ym9z72xxuvamc" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/04/01/sql-server-to-mysql/" data-id="cio07z3o6001w40z7xgqpkxsb" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
-      
+
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql-server/">sql server</a></li></ul>
 
@@ -242,11 +255,9 @@
     </footer>
 -->
 
-
   </div>
   
 </article>
-
 
 
 
@@ -260,7 +271,7 @@
     
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/25/hexo-install/">Mac下的Hexo安装和配置</a>
+      <a class="article-title" href="/2016/03/25/hexo-install/">Mac下的Hexo+Git安装和配置</a>
     </h1>
   
 
@@ -279,20 +290,21 @@
   </div>
 
 
+    
   </div>
   <div class="article-inner">
 
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong> 安装homebrew </strong><br>1.<code>ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code>有时候网络不太好，要多试几次。<br>2.添加环境变量 <code>echo &#39;export PATH=&quot;/usr/local/bin:$PATH&quot;&#39; &gt;&gt; ~/.bash_profile</code><br>3.查看安装情况 <code>brew doctor</code></p>
-<p><strong> 安装Xcode  非必须</strong><br>官方文档说可能会碰到一些编译问题，最好装一个。到App Store下载安装，有点大有点慢。</p>
-<p><strong> 安装Nodejs </strong><br><code>brew install node</code></p>
-<p><strong> 安装Git</strong><br><code>brew install git</code></p>
-<p><strong> 配置Git </strong><br>1.申请github账号<br>2.建立github仓库，比如username.github.io这种<br>3.ssh key配置，非必须<br>a.检查ssh key是否存在 <code>cd ~/.ssh</code><br>b.没有的话生成 <code>ssh-keygen -t rsa -C &quot;xxx@xxx.com&quot;</code><br>c.在github页面添加ssh key，Account Settings-&gt;SSH Public Keys-&gt;Add another key，保存<br>d.测试连接 <code>ssh -T git@github.com</code><br>4.个人信息设置 <code>git config --global user.name &quot;username&quot;</code><br><code>git config --global user.email &quot;xxx@xxx.com&quot;</code></p>
-<p><strong> 安装Hexo </strong><br><code>npm install -g hexo-cli</code></p>
-<p><strong> 配置Hexo </strong><br>blog是文件夹的名字，可以改别的。<br><code>hexo init blog</code><br><code>cd blog</code><br><code>npm install</code><br>整个网站的配置在_config.yml里面。<br><a href="https://hexo.io/docs/configuration.html" target="_blank" rel="external">配置说明</a></p>
-<p><strong> 基本用法 </strong><br><code>hexo new &quot;new-post&quot;</code><br><code>hexo generate</code><br><code>hexo server</code><br>可以访问<code>http://localhost:4000/</code>查看页面了。Ctrl+C停止。<br>运行<code>hexo clean</code>清理缓存文件。<br>配置了git之后用<code>hexo deploy</code>推送到github上。<br><a href="https://hexo.io/docs/commands.html" target="_blank" rel="external">其他命令</a></p>
-<p><strong> 配置Hexo推送到Git </strong><br>安装工具 <code>npm install hexo-deployer-git --save</code><br>在_config.yml中修改</p>
+        <h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><h3 id="安装homebrew"><a href="#安装homebrew" class="headerlink" title="安装homebrew"></a>安装homebrew</h3><p>1.<code>ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code>有时候网络不太好，要多试几次。<br>2.添加环境变量 <code>echo &#39;export PATH=&quot;/usr/local/bin:$PATH&quot;&#39; &gt;&gt; ~/.bash_profile</code><br>3.查看安装情况 <code>brew doctor</code></p>
+<h3 id="安装Xcode-非必须"><a href="#安装Xcode-非必须" class="headerlink" title="安装Xcode(非必须)"></a>安装Xcode(非必须)</h3><p>官方文档说可能会碰到一些编译问题，最好装一个。到App Store下载安装，有点大有点慢。</p>
+<h3 id="安装Nodejs"><a href="#安装Nodejs" class="headerlink" title="安装Nodejs"></a>安装Nodejs</h3><p><code>brew install node</code></p>
+<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p><code>brew install git</code></p>
+<h3 id="配置Git"><a href="#配置Git" class="headerlink" title="配置Git"></a>配置Git</h3><p>1.申请github账号<br>2.建立github仓库，比如username.github.io这种<br>3.ssh key配置，非必须<br>a.检查ssh key是否存在 <code>cd ~/.ssh</code><br>b.没有的话生成 <code>ssh-keygen -t rsa -C &quot;xxx@xxx.com&quot;</code><br>c.在github页面添加ssh key，Account Settings-&gt;SSH Public Keys-&gt;Add another key，保存<br>d.测试连接 <code>ssh -T git@github.com</code><br>4.个人信息设置 <code>git config --global user.name &quot;username&quot;</code><br><code>git config --global user.email &quot;xxx@xxx.com&quot;</code></p>
+<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p><code>npm install -g hexo-cli</code></p>
+<h3 id="配置Hexo"><a href="#配置Hexo" class="headerlink" title="配置Hexo"></a>配置Hexo</h3><p>blog是文件夹的名字，可以改别的。<br><code>hexo init blog</code><br><code>cd blog</code><br><code>npm install</code><br>整个网站的配置在_config.yml里面。<br><a href="https://hexo.io/docs/configuration.html" target="_blank" rel="external">配置说明</a></p>
+<h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><p><code>hexo new &quot;new-post&quot;</code><br><code>hexo generate</code><br><code>hexo server</code><br>可以访问<code>http://localhost:4000/</code>查看页面了。Ctrl+C停止。<br>运行<code>hexo clean</code>清理缓存文件。<br>配置了git之后用<code>hexo deploy</code>推送到github上。<br><a href="https://hexo.io/docs/commands.html" target="_blank" rel="external">其他命令</a></p>
+<h3 id="Hexo推送到Git"><a href="#Hexo推送到Git" class="headerlink" title="Hexo推送到Git"></a>Hexo推送到Git</h3><p>安装工具 <code>npm install hexo-deployer-git --save</code><br>在_config.yml中修改</p>
 <blockquote>
 <p>deploy:<br>  type: git<br>  repo: <a href="https://github.com/username/username.github.io.git" target="_blank" rel="external">https://github.com/username/username.github.io.git</a><br>  branch: master</p>
 </blockquote>
@@ -306,40 +318,38 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/03/25/hexo-install/" data-id="cio02zc4r000wm9z7ejhaqki6" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/03/25/hexo-install/" data-id="cio07z3n8000u40z7bbzr5uyn" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
       
-        <a href="http://lijiali1226.github.io/2016/03/25/hexo-install/
-        #ds-thread" class="article-comment-link">
+        <a href="http://lijiali1226.github.io/2016/03/25/hexo-install/#ds-thread" class="article-comment-link">
           <i class="fa fa-comment"></i> Comments
         </a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
 
 
     </footer>
 
+
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/03/25/hexo-install/" data-id="cio02zc4r000wm9z7ejhaqki6" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/03/25/hexo-install/" data-id="cio07z3n8000u40z7bbzr5uyn" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
+
       
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
 
 
     </footer>
 -->
 
-
   </div>
   
 </article>
-
 
 
 
@@ -372,18 +382,19 @@
   </div>
 
 
+    
   </div>
   <div class="article-inner">
 
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong> 安装JDK </strong><br>1.查看是否已经安装 <code>rpm -qa |grep java</code><br>2.查看有资源的java版本 <code>yum search java</code><br>3.用root用户安装对应版本 <code>yum -y install java-1.7.0-openjdk*</code><br>4.查看安装效果  <code>java -version</code></p>
-<p><strong> 安装MySQL</strong><br>1.查看是否已经安装 <code>rpm -qa|grep mysql</code><br>2.用root用户安装 <code>yum install -y mysql-server mysql mysql-devel</code><br>3.查看安装信息 <code>rpm -qi mysql-server</code><br>4.启动MySQL进程 <code>service mysqld start</code> </p>
-<p>用户设置：<br>在MySQL启动状态创建管理员 <code>/usr/bin/mysqladmin -u root password &#39;123456&#39;</code><br>登陆 <code>mysql -u root -p</code>  输入密码</p>
-<p>开机启动配置：<br>查看MySQL开机选项 <code>chkconfig --list|grep mysqld</code><br>设为开机启动 <code>chkconfig mysqld on</code><br>检查是否设置成功 <code>chkconfig --list|grep mysqld</code></p>
-<p>其他：<br>查看配置文件 <code>cat /etc/my.cnf</code><br>查看数据库 <code>ll -h /var/lib/mysql</code><br>查看日志 <code>ll -h /var/log</code><br>查看端口情况 <code>netstat -anp |more</code></p>
-<p><strong> 安装Kettle</strong><br>1.上传data-integration.zip到Linux系统中<br>2.解压 <code>unzip data-integration.zip -d  /home/test/kettle</code><br>3.cd到data-integration目录下 ll查看权限<br>4.加权限 <code>chmod +x *.sh</code><br>5.查看安装效果 <code>./kitchen.sh</code> 显示帮助信息  <code>./spoon.sh</code> 运行程序，弹出图形界面，安装成功</p>
-<p>MySQL连接不上：<br>1.将MySQL对应mysql-connector-java-5.1.35-bin.jar复制到Kettle对应的libext/JDBC目录下<br>2.检查数据库连接配置（数据库类型，地址，数据库名称，端口号，用户名，密码）是否正确</p>
+        <h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><h3 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h3><p>1.查看是否已经安装 <code>rpm -qa |grep java</code><br>2.查看有资源的java版本 <code>yum search java</code><br>3.用root用户安装对应版本 <code>yum -y install java-1.7.0-openjdk*</code><br>4.查看安装效果  <code>java -version</code></p>
+<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><h3 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h3><p>1.查看是否已经安装 <code>rpm -qa|grep mysql</code><br>2.用root用户安装 <code>yum install -y mysql-server mysql mysql-devel</code><br>3.查看安装信息 <code>rpm -qi mysql-server</code><br>4.启动MySQL进程 <code>service mysqld start</code> </p>
+<h3 id="用户设置"><a href="#用户设置" class="headerlink" title="用户设置"></a>用户设置</h3><p>在MySQL启动状态创建管理员 <code>/usr/bin/mysqladmin -u root password &#39;123456&#39;</code><br>登陆 <code>mysql -u root -p</code>  输入密码</p>
+<h3 id="开机启动配置"><a href="#开机启动配置" class="headerlink" title="开机启动配置"></a>开机启动配置</h3><p>查看MySQL开机选项 <code>chkconfig --list|grep mysqld</code><br>设为开机启动 <code>chkconfig mysqld on</code><br>检查是否设置成功 <code>chkconfig --list|grep mysqld</code></p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>查看配置文件 <code>cat /etc/my.cnf</code><br>查看数据库 <code>ll -h /var/lib/mysql</code><br>查看日志 <code>ll -h /var/log</code><br>查看端口情况 <code>netstat -anp |more</code></p>
+<h2 id="Kettle"><a href="#Kettle" class="headerlink" title="Kettle"></a>Kettle</h2><h3 id="安装Kettle"><a href="#安装Kettle" class="headerlink" title="安装Kettle"></a>安装Kettle</h3><p>1.上传data-integration.zip到Linux系统中<br>2.解压 <code>unzip data-integration.zip -d  /home/test/kettle</code><br>3.cd到data-integration目录下 ll查看权限<br>4.加权限 <code>chmod +x *.sh</code><br>5.查看安装效果 <code>./kitchen.sh</code> 显示帮助信息  <code>./spoon.sh</code> 运行程序，弹出图形界面，安装成功</p>
+<h3 id="MySQL连不上问题"><a href="#MySQL连不上问题" class="headerlink" title="MySQL连不上问题"></a>MySQL连不上问题</h3><p>1.将MySQL对应mysql-connector-java-5.1.35-bin.jar复制到Kettle对应的libext/JDBC目录下<br>2.检查数据库连接配置（数据库类型，地址，数据库名称，端口号，用户名，密码）是否正确</p>
 
       
     </div>
@@ -394,13 +405,12 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/03/01/kettle-mysql-install/" data-id="cio02zc4u0012m9z79n8qtzax" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/03/01/kettle-mysql-install/" data-id="cio07z3nb001140z7113z9hct" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
       
-        <a href="http://lijiali1226.github.io/2016/03/01/kettle-mysql-install/
-        #ds-thread" class="article-comment-link">
+        <a href="http://lijiali1226.github.io/2016/03/01/kettle-mysql-install/#ds-thread" class="article-comment-link">
           <i class="fa fa-comment"></i> Comments
         </a>
       
@@ -410,12 +420,13 @@
 
     </footer>
 
+
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/03/01/kettle-mysql-install/" data-id="cio02zc4u0012m9z79n8qtzax" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/03/01/kettle-mysql-install/" data-id="cio07z3nb001140z7113z9hct" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
-      
+
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kettle/">kettle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
 
@@ -423,11 +434,9 @@
     </footer>
 -->
 
-
   </div>
   
 </article>
-
 
 
 
@@ -460,13 +469,14 @@
   </div>
 
 
+    
   </div>
   <div class="article-inner">
 
     <div class="article-entry" itemprop="articleBody">
       
-        <p>润乾报表是一个纯JAVA的企业级报表工具，支持对J2EE系统的嵌入式部署，无缝集成。服务器端支持各种常见的操作系统，支持各种常见的关系数据库和各类J2EE的应用服务器，客户端采用标准纯html方式展现。</p>
-<p>1.报表要先发布才能部署，不然会报找不到路径或文件不存在的错。</p>
+        <h3 id="润乾报表"><a href="#润乾报表" class="headerlink" title="润乾报表"></a>润乾报表</h3><p>润乾报表是一个纯JAVA的企业级报表工具，支持对J2EE系统的嵌入式部署，无缝集成。服务器端支持各种常见的操作系统，支持各种常见的关系数据库和各类J2EE的应用服务器，客户端采用标准纯html方式展现。</p>
+<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>1.报表要先发布才能部署，不然会报找不到路径或文件不存在的错。</p>
 <p>2.select和select1的区别：select1只选一个，select选所有符合条件的。</p>
 <p>3.格式控制：加行控制边框，通过if条件控制行数奇偶或值的大小显示颜色。<br>例如 <code>前景色=if(value()&lt;0,-65536,-16777216)</code><br><code>背景色=if(row()%2==1,-1,rgb(204,255,204))</code>     </p>
 <p>4.利用隐藏行隐藏列计算中间数据。</p>
@@ -481,13 +491,12 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2015/11/01/runqian-report-tips/" data-id="cio02zc5g001om9z7iz4zswks" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2015/11/01/runqian-report-tips/" data-id="cio07z3ny001p40z7wucxx4g2" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
       
-        <a href="http://lijiali1226.github.io/2015/11/01/runqian-report-tips/
-        #ds-thread" class="article-comment-link">
+        <a href="http://lijiali1226.github.io/2015/11/01/runqian-report-tips/#ds-thread" class="article-comment-link">
           <i class="fa fa-comment"></i> Comments
         </a>
       
@@ -497,12 +506,13 @@
 
     </footer>
 
+
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2015/11/01/runqian-report-tips/" data-id="cio02zc5g001om9z7iz4zswks" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2015/11/01/runqian-report-tips/" data-id="cio07z3ny001p40z7wucxx4g2" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
-      
+
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/report/">report</a></li></ul>
 
@@ -510,11 +520,9 @@
     </footer>
 -->
 
-
   </div>
   
 </article>
-
 
 
 
@@ -525,7 +533,7 @@
 
 
   <div id="page-nav">
-    <nav><ul class="pagination"><li><a class="page-prev" rel="prev" href="/"><i class="fa fa-chevron-left"></i> Prev</a></li><li><a class="page-number" href="/">1</a></li><li class="active"><span class="page-number">2</span></li><li><a class="page-number" href="/page/3/">3</a></li><li><a class="page-number" href="/page/4/">4</a></li><li><a class="page-next" rel="next" href="/page/3/">Next <i class="fa fa-chevron-right"></i></a></li></ul></nav>
+    <nav><ul class="pagination"><li><a class="page-prev" rel="prev" href="/"><i class="fa fa-chevron-left"></i> Prev</a></li><li><a class="page-number" href="/">1</a></li><li class="active"><span class="page-number">2</span></li><li><a class="page-number" href="/page/3/">3</a></li><li><a class="page-number" href="/page/4/">4</a></li><li><a class="page-number" href="/page/5/">5</a></li><li><a class="page-next" rel="next" href="/page/3/">Next <i class="fa fa-chevron-right"></i></a></li></ul></nav>
   </div>
 
 
@@ -533,6 +541,8 @@
         </div>
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           
+
+
   <div class="sidebar-module sidebar-module-inset">
   <h4>About</h4>
   <p>Hello,World!</p>
@@ -543,15 +553,15 @@
   
   <div class="sidebar-module">
     <h4>Categories</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/course/">course</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/data/">data</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/database/">database</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/education/">education</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/java/">java</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/life/">life</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/linux/">linux</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/mac/">mac</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/notes/">notes</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/programming/">programming</a><span class="sidebar-module-list-count">1</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/course/">course</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/data/">data</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/database/">database</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/demo/">demo</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/education/">education</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/java/">java</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/life/">life</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/linux/">linux</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/mac/">mac</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/notes/">notes</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/programming/">programming</a><span class="sidebar-module-list-count">1</span></li></ul>
   </div>
 
 
 
   
-  <div class="sidebar-module">
+  <div class="sidebar-module sidebar-tags">
     <h4>Tags</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/algorithm/">algorithm</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/course/">course</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/coursera/">coursera</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/education/">education</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/etl/">etl</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/game/">game</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/hexo/">hexo</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/ime/">ime</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/java/">java</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/kettle/">kettle</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/linux/">linux</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mac/">mac</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mysql/">mysql</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/netica/">netica</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/report/">report</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/sql-server/">sql server</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/udacity/">udacity</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/volunteer/">volunteer</a><span class="sidebar-module-list-count">1</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/algorithm/">algorithm</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/course/">course</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/coursera/">coursera</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/education/">education</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/etl/">etl</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/game/">game</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/git/">git</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/hexo/">hexo</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/ime/">ime</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/java/">java</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/kettle/">kettle</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/linux/">linux</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mac/">mac</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mysql/">mysql</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/netica/">netica</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/report/">report</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/sql-server/">sql server</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/ssh/">ssh</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/udacity/">udacity</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/volunteer/">volunteer</a><span class="sidebar-module-list-count">1</span></li></ul>
   </div>
 
 
@@ -559,13 +569,13 @@
   
   <div class="sidebar-module">
     <h4>Archives</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/05/">May 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/04/">April 2016</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/03/">March 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/11/">November 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/10/">October 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/05/">May 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/04/">April 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/01/">January 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/05/">May 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/01/">January 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2013/12/">December 2013</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2013/11/">November 2013</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/09/">September 2010</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/07/">July 2010</a><span class="sidebar-module-list-count">1</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/05/">May 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/04/">April 2016</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/03/">March 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/11/">November 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/10/">October 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/05/">May 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/04/">April 2015</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/01/">January 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/05/">May 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/01/">January 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2013/12/">December 2013</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2013/11/">November 2013</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/09/">September 2010</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/07/">July 2010</a><span class="sidebar-module-list-count">1</span></li></ul>
   </div>
 
 
 
   
-  <div class="sidebar-module">
+  <div class="sidebar-module sidebar-recents">
     <h4>Recents</h4>
     <ul class="sidebar-module-list">
       
@@ -594,6 +604,16 @@
 
 
 
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-general-responsive-sidebar -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4721191851305300"
+     data-ad-slot="5846920073"
+     data-ad-format="auto"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
         </div>
     </div>
   </div>
@@ -608,11 +628,16 @@
 
   
 
-<script src="//libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/github.min.css" integrity="sha384-WtUWHyk39lfUpZQVgokNfSKCJaKAeD6adgLduBLrKTMUuPzFhLtL23y1guFy6lZn" crossorigin="anonymous">
+  <script src="/highlight/highlight.pack.js"></script>
+
+
+
 
 
 

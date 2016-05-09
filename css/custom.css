@@ -22,14 +22,14 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
   margin-top: 1em;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   color: #333;
 }
 
-p {
-  margin: 0 0 15px;
+p, pre {
+  margin: 0 0 20px;
 }
 
 code {
@@ -104,7 +104,7 @@ code {
   }
 
   /** The following may need modification depending on
-      the size of your `navbar-brand` (if enabled) */
+      the size of your `navbar-brand` (if enabled)*/
   #main-menu-navbar {
     margin-left: -30px;
   }
@@ -112,7 +112,7 @@ code {
     padding-top: 10px;
     padding-bottom: 10px;
   }
-  /** ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+  /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
   .navbar-inverse .navbar-nav>li>a.active:after {
     position: absolute;
@@ -127,6 +127,7 @@ code {
     border-bottom: 5px solid;
     border-left: 5px solid transparent;
   }
+
 }
 
 /*
@@ -146,6 +147,15 @@ code {
   font-size: 20px;
   color: #999;
 }
+#blog-logo {
+  display: block;
+  float: left;
+  border: 1px solid #ccc;
+  padding: 1px;
+  margin: 6px 10px 0 0;
+  width: 84px; height: 84px;
+  background-color: #fff;
+}
 
 /*
  * Main column and sidebar layout
@@ -160,6 +170,10 @@ code {
 }
 
 /* Sidebar modules for boxing content */
+.blog-sidebar > .sidebar-module:last-of-type {
+  margin-bottom: 30px;
+}
+
 .sidebar-module {
   padding: 15px;
   margin: 0 -15px 15px;
@@ -186,7 +200,37 @@ code {
 .sidebar-module-list-child {
   padding-left: 25px;
 }
+.sidebar-toc ol {
+  list-style: none;
+}
+.sidebar-toc li,
+.sidebar-recents li {
+  margin-bottom: 5px;
+}
 
+.page-header,
+.page-header h1 {
+  margin: 0 0 10px;
+}
+.page-header {
+  border: 0;
+}
+.page-header.tag-type h1:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  content: "\f02b";
+  margin-right: 0.25em;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.page-header.category-type h1:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  content: "\f07b";
+  margin-right: 0.25em;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
 
 /*
  * Blog posts
@@ -221,6 +265,15 @@ code {
   color: inherit;
 }
 
+.article-entry > ul,
+.article-entry > ol,
+.article-entry > .bs-callout {
+  margin: 0 0 20px;
+}
+.article-entry > * > li {
+  margin-bottom: 0.50em;
+}
+
 .article-entry .article-more-link {
   margin: 15px 0;
 }
@@ -228,7 +281,7 @@ code {
   padding: 0;
 }
 .article-entry>*:last-child {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 /* article footer content */
@@ -261,16 +314,20 @@ code {
   margin-bottom: 30px;
 }
 
-.archive-year-wrap a,
-.archive-article .article-datetime a {
+.archive-year-wrap a {
   color: #333;
   text-decoration: none;
 }
-
 .archive-article .article-datetime a {
   color: #999;
   text-decoration: none;
 }
+.archive-article .article-tag-list a {
+  color: #999;
+  font-size: 0.9em;
+}
+.archive-article-header h1 { margin: 3px 0; }
+
 
 /*
  * Pagination
@@ -300,6 +357,7 @@ code {
  */
 
 .blog-footer {
+  margin-top: 15px;
   padding: 40px 0;
   color: #999;
   text-align: center;

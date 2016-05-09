@@ -81,5 +81,20 @@
   if ($.fancybox){
     $('.image-link').fancybox();
   }
+  if ($.magnificPopup){
+    $('.article-entry .image-link').magnificPopup({type: 'image'});
+    $('.article-gallery').each(function() {
+      $(this).magnificPopup({
+        delegate: '.image-link',
+        type: 'image',
+        gallery: { enabled: true }
+      });
+    });
+  }
 
+  if (window.hljs) {
+    $('pre code').each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
+  }
 })(jQuery);

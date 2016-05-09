@@ -3,24 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Mac下的Hexo安装和配置 | For A Breath I Tarry</title>
+  <title>Mac下的Hexo+Git安装和配置 | For A Breath I Tarry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装homebrew 1.ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;有时候网络不太好，要多试几次。2.添加环境变量 echo &amp;#39;export PATH=&amp;quot;/usr/local/bin:$PATH&amp;quot;&amp;#39; &amp;gt">
+  <meta name="description" content="前提条件安装homebrew1.ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;有时候网络不太好，要多试几次。2.添加环境变量 echo &amp;#39;export PATH=&amp;quot;/usr/local/bin:$PATH&amp;quot;&amp;#39; &amp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac下的Hexo安装和配置">
+<meta property="og:title" content="Mac下的Hexo+Git安装和配置">
 <meta property="og:url" content="http://lijiali1226.github.io/2016/03/25/hexo-install/index.html">
 <meta property="og:site_name" content="For A Breath I Tarry">
-<meta property="og:description" content="安装homebrew 1.ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;有时候网络不太好，要多试几次。2.添加环境变量 echo &amp;#39;export PATH=&amp;quot;/usr/local/bin:$PATH&amp;quot;&amp;#39; &amp;gt">
-<meta property="og:updated_time" content="2016-05-04T12:45:17.000Z">
+<meta property="og:description" content="前提条件安装homebrew1.ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;有时候网络不太好，要多试几次。2.添加环境变量 echo &amp;#39;export PATH=&amp;quot;/usr/local/bin:$PATH&amp;quot;&amp;#39; &amp;">
+<meta property="og:updated_time" content="2016-05-09T15:55:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac下的Hexo安装和配置">
-<meta name="twitter:description" content="安装homebrew 1.ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;有时候网络不太好，要多试几次。2.添加环境变量 echo &amp;#39;export PATH=&amp;quot;/usr/local/bin:$PATH&amp;quot;&amp;#39; &amp;gt">
+<meta name="twitter:title" content="Mac下的Hexo+Git安装和配置">
+<meta name="twitter:description" content="前提条件安装homebrew1.ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;有时候网络不太好，要多试几次。2.添加环境变量 echo &amp;#39;export PATH=&amp;quot;/usr/local/bin:$PATH&amp;quot;&amp;#39; &amp;">
   
     <link rel="alternate" href="/atom.xml" title="For A Breath I Tarry" type="application/atom+xml">
   
   
   
-    <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -56,6 +56,9 @@
           <li><a class=""
                  href="/archives/">Archives</a></li>
         
+          <li><a class=""
+                 href="/categories/demo/">Demos</a></li>
+        
       </ul>
 
       <!--
@@ -70,10 +73,17 @@
 </nav>
 
   <div class="container">
-    <div class="blog-header">
+    <div class="blog-header hidden-xs">
+  <img id="blog-logo" width="80" height="80" alt="Christopher Martin" src="/images/icon.jpg">
   <h1 class="blog-title">For A Breath I Tarry</h1>
   
     <p class="lead blog-description">For A Breath I Tarry</p>
+  
+</div>
+<div class="blog-header visible-xs">
+  <h1 class="blog-title">undefined</h1>
+  
+    <p class="lead blog-description">undefined</p>
   
 </div>
 
@@ -85,7 +95,7 @@
     
   
     <h1 class="article-title" itemprop="name">
-      Mac下的Hexo安装和配置
+      Mac下的Hexo+Git安装和配置
     </h1>
   
 
@@ -104,20 +114,21 @@
   </div>
 
 
+    
   </div>
   <div class="article-inner">
 
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong> 安装homebrew </strong><br>1.<code>ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code>有时候网络不太好，要多试几次。<br>2.添加环境变量 <code>echo &#39;export PATH=&quot;/usr/local/bin:$PATH&quot;&#39; &gt;&gt; ~/.bash_profile</code><br>3.查看安装情况 <code>brew doctor</code></p>
-<p><strong> 安装Xcode  非必须</strong><br>官方文档说可能会碰到一些编译问题，最好装一个。到App Store下载安装，有点大有点慢。</p>
-<p><strong> 安装Nodejs </strong><br><code>brew install node</code></p>
-<p><strong> 安装Git</strong><br><code>brew install git</code></p>
-<p><strong> 配置Git </strong><br>1.申请github账号<br>2.建立github仓库，比如username.github.io这种<br>3.ssh key配置，非必须<br>a.检查ssh key是否存在 <code>cd ~/.ssh</code><br>b.没有的话生成 <code>ssh-keygen -t rsa -C &quot;xxx@xxx.com&quot;</code><br>c.在github页面添加ssh key，Account Settings-&gt;SSH Public Keys-&gt;Add another key，保存<br>d.测试连接 <code>ssh -T git@github.com</code><br>4.个人信息设置 <code>git config --global user.name &quot;username&quot;</code><br><code>git config --global user.email &quot;xxx@xxx.com&quot;</code></p>
-<p><strong> 安装Hexo </strong><br><code>npm install -g hexo-cli</code></p>
-<p><strong> 配置Hexo </strong><br>blog是文件夹的名字，可以改别的。<br><code>hexo init blog</code><br><code>cd blog</code><br><code>npm install</code><br>整个网站的配置在_config.yml里面。<br><a href="https://hexo.io/docs/configuration.html" target="_blank" rel="external">配置说明</a></p>
-<p><strong> 基本用法 </strong><br><code>hexo new &quot;new-post&quot;</code><br><code>hexo generate</code><br><code>hexo server</code><br>可以访问<code>http://localhost:4000/</code>查看页面了。Ctrl+C停止。<br>运行<code>hexo clean</code>清理缓存文件。<br>配置了git之后用<code>hexo deploy</code>推送到github上。<br><a href="https://hexo.io/docs/commands.html" target="_blank" rel="external">其他命令</a></p>
-<p><strong> 配置Hexo推送到Git </strong><br>安装工具 <code>npm install hexo-deployer-git --save</code><br>在_config.yml中修改</p>
+        <h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><h3 id="安装homebrew"><a href="#安装homebrew" class="headerlink" title="安装homebrew"></a>安装homebrew</h3><p>1.<code>ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code>有时候网络不太好，要多试几次。<br>2.添加环境变量 <code>echo &#39;export PATH=&quot;/usr/local/bin:$PATH&quot;&#39; &gt;&gt; ~/.bash_profile</code><br>3.查看安装情况 <code>brew doctor</code></p>
+<h3 id="安装Xcode-非必须"><a href="#安装Xcode-非必须" class="headerlink" title="安装Xcode(非必须)"></a>安装Xcode(非必须)</h3><p>官方文档说可能会碰到一些编译问题，最好装一个。到App Store下载安装，有点大有点慢。</p>
+<h3 id="安装Nodejs"><a href="#安装Nodejs" class="headerlink" title="安装Nodejs"></a>安装Nodejs</h3><p><code>brew install node</code></p>
+<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p><code>brew install git</code></p>
+<h3 id="配置Git"><a href="#配置Git" class="headerlink" title="配置Git"></a>配置Git</h3><p>1.申请github账号<br>2.建立github仓库，比如username.github.io这种<br>3.ssh key配置，非必须<br>a.检查ssh key是否存在 <code>cd ~/.ssh</code><br>b.没有的话生成 <code>ssh-keygen -t rsa -C &quot;xxx@xxx.com&quot;</code><br>c.在github页面添加ssh key，Account Settings-&gt;SSH Public Keys-&gt;Add another key，保存<br>d.测试连接 <code>ssh -T git@github.com</code><br>4.个人信息设置 <code>git config --global user.name &quot;username&quot;</code><br><code>git config --global user.email &quot;xxx@xxx.com&quot;</code></p>
+<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p><code>npm install -g hexo-cli</code></p>
+<h3 id="配置Hexo"><a href="#配置Hexo" class="headerlink" title="配置Hexo"></a>配置Hexo</h3><p>blog是文件夹的名字，可以改别的。<br><code>hexo init blog</code><br><code>cd blog</code><br><code>npm install</code><br>整个网站的配置在_config.yml里面。<br><a href="https://hexo.io/docs/configuration.html" target="_blank" rel="external">配置说明</a></p>
+<h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><p><code>hexo new &quot;new-post&quot;</code><br><code>hexo generate</code><br><code>hexo server</code><br>可以访问<code>http://localhost:4000/</code>查看页面了。Ctrl+C停止。<br>运行<code>hexo clean</code>清理缓存文件。<br>配置了git之后用<code>hexo deploy</code>推送到github上。<br><a href="https://hexo.io/docs/commands.html" target="_blank" rel="external">其他命令</a></p>
+<h3 id="Hexo推送到Git"><a href="#Hexo推送到Git" class="headerlink" title="Hexo推送到Git"></a>Hexo推送到Git</h3><p>安装工具 <code>npm install hexo-deployer-git --save</code><br>在_config.yml中修改</p>
 <blockquote>
 <p>deploy:<br>  type: git<br>  repo: <a href="https://github.com/username/username.github.io.git" target="_blank" rel="external">https://github.com/username/username.github.io.git</a><br>  branch: master</p>
 </blockquote>
@@ -131,35 +142,34 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/03/25/hexo-install/" data-id="cio02zc4r000wm9z7ejhaqki6" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/03/25/hexo-install/" data-id="cio07z3n8000u40z7bbzr5uyn" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
       
-        <a href="http://lijiali1226.github.io/2016/03/25/hexo-install/
-        #ds-thread" class="article-comment-link">
+        <a href="http://lijiali1226.github.io/2016/03/25/hexo-install/#ds-thread" class="article-comment-link">
           <i class="fa fa-comment"></i> Comments
         </a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
 
 
     </footer>
 
+
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/03/25/hexo-install/" data-id="cio02zc4r000wm9z7ejhaqki6" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/03/25/hexo-install/" data-id="cio07z3n8000u40z7bbzr5uyn" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
+
       
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
 
 
     </footer>
 -->
-
 
   </div>
   
@@ -188,10 +198,9 @@
 </article>
 
 
-
 <section id="comments">
   <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="post-hexo-install" data-title="Mac下的Hexo安装和配置" data-url="http://lijiali1226.github.io/2016/03/25/hexo-install/"></div>
+  <div class="ds-thread" data-thread-key="post-hexo-install" data-title="Mac下的Hexo+Git安装和配置" data-url="http://lijiali1226.github.io/2016/03/25/hexo-install/"></div>
   <!-- 多说评论框 end -->
   <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
   <script type="text/javascript">
@@ -216,6 +225,13 @@
         </div>
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           
+  <div class="sidebar-module sidebar-toc">
+    <h4>Table of Contents</h4>
+    <ol class="sidebar-module-list"><li class="sidebar-module-list-item sidebar-module-list-level-2"><a class="sidebar-module-list-link" href="#前提条件"><span class="sidebar-module-list-number">1.</span> <span class="sidebar-module-list-text">前提条件</span></a><ol class="sidebar-module-list-child"><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#安装homebrew"><span class="sidebar-module-list-number">1.1.</span> <span class="sidebar-module-list-text">安装homebrew</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#安装Xcode-非必须"><span class="sidebar-module-list-number">1.2.</span> <span class="sidebar-module-list-text">安装Xcode(非必须)</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#安装Nodejs"><span class="sidebar-module-list-number">1.3.</span> <span class="sidebar-module-list-text">安装Nodejs</span></a></li></ol></li><li class="sidebar-module-list-item sidebar-module-list-level-2"><a class="sidebar-module-list-link" href="#Git"><span class="sidebar-module-list-number">2.</span> <span class="sidebar-module-list-text">Git</span></a><ol class="sidebar-module-list-child"><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#安装Git"><span class="sidebar-module-list-number">2.1.</span> <span class="sidebar-module-list-text">安装Git</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#配置Git"><span class="sidebar-module-list-number">2.2.</span> <span class="sidebar-module-list-text">配置Git</span></a></li></ol></li><li class="sidebar-module-list-item sidebar-module-list-level-2"><a class="sidebar-module-list-link" href="#Hexo"><span class="sidebar-module-list-number">3.</span> <span class="sidebar-module-list-text">Hexo</span></a><ol class="sidebar-module-list-child"><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#安装Hexo"><span class="sidebar-module-list-number">3.1.</span> <span class="sidebar-module-list-text">安装Hexo</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#配置Hexo"><span class="sidebar-module-list-number">3.2.</span> <span class="sidebar-module-list-text">配置Hexo</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#基本用法"><span class="sidebar-module-list-number">3.3.</span> <span class="sidebar-module-list-text">基本用法</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#Hexo推送到Git"><span class="sidebar-module-list-number">3.4.</span> <span class="sidebar-module-list-text">Hexo推送到Git</span></a></li></ol></li></ol>
+  </div>
+
+
+
   <div class="sidebar-module sidebar-module-inset">
   <h4>About</h4>
   <p>Hello,World!</p>
@@ -226,15 +242,15 @@
   
   <div class="sidebar-module">
     <h4>Categories</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/course/">course</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/data/">data</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/database/">database</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/education/">education</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/java/">java</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/life/">life</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/linux/">linux</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/mac/">mac</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/notes/">notes</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/programming/">programming</a><span class="sidebar-module-list-count">1</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/course/">course</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/data/">data</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/database/">database</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/demo/">demo</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/education/">education</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/java/">java</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/life/">life</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/linux/">linux</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/mac/">mac</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/notes/">notes</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/programming/">programming</a><span class="sidebar-module-list-count">1</span></li></ul>
   </div>
 
 
 
   
-  <div class="sidebar-module">
+  <div class="sidebar-module sidebar-tags">
     <h4>Tags</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/algorithm/">algorithm</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/course/">course</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/coursera/">coursera</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/education/">education</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/etl/">etl</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/game/">game</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/hexo/">hexo</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/ime/">ime</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/java/">java</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/kettle/">kettle</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/linux/">linux</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mac/">mac</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mysql/">mysql</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/netica/">netica</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/report/">report</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/sql-server/">sql server</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/udacity/">udacity</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/volunteer/">volunteer</a><span class="sidebar-module-list-count">1</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/algorithm/">algorithm</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/course/">course</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/coursera/">coursera</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/education/">education</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/etl/">etl</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/game/">game</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/git/">git</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/hexo/">hexo</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/ime/">ime</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/java/">java</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/kettle/">kettle</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/linux/">linux</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mac/">mac</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mysql/">mysql</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/netica/">netica</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/report/">report</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/sql-server/">sql server</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/ssh/">ssh</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/udacity/">udacity</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/volunteer/">volunteer</a><span class="sidebar-module-list-count">1</span></li></ul>
   </div>
 
 
@@ -242,13 +258,13 @@
   
   <div class="sidebar-module">
     <h4>Archives</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/05/">May 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/04/">April 2016</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/03/">March 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/11/">November 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/10/">October 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/05/">May 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/04/">April 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/01/">January 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/05/">May 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/01/">January 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2013/12/">December 2013</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2013/11/">November 2013</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/09/">September 2010</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/07/">July 2010</a><span class="sidebar-module-list-count">1</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/05/">May 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/04/">April 2016</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/03/">March 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/11/">November 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/10/">October 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/05/">May 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/04/">April 2015</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/01/">January 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/05/">May 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/01/">January 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2013/12/">December 2013</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2013/11/">November 2013</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/09/">September 2010</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/07/">July 2010</a><span class="sidebar-module-list-count">1</span></li></ul>
   </div>
 
 
 
   
-  <div class="sidebar-module">
+  <div class="sidebar-module sidebar-recents">
     <h4>Recents</h4>
     <ul class="sidebar-module-list">
       
@@ -277,6 +293,16 @@
 
 
 
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- blog-general-responsive-sidebar -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4721191851305300"
+     data-ad-slot="5846920073"
+     data-ad-format="auto"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
         </div>
     </div>
   </div>
@@ -291,11 +317,16 @@
 
   
 
-<script src="//libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/github.min.css" integrity="sha384-WtUWHyk39lfUpZQVgokNfSKCJaKAeD6adgLduBLrKTMUuPzFhLtL23y1guFy6lZn" crossorigin="anonymous">
+  <script src="/highlight/highlight.pack.js"></script>
+
+
+
 
 
 
