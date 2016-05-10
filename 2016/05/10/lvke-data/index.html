@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Category: demo | For A Breath I Tarry</title>
+  <title>需求分析和懂业务的必要性 | For A Breath I Tarry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="For A Breath I Tarry">
-<meta property="og:url" content="http://lijiali1226.github.io/categories/demo/index.html">
+  <meta name="description" content="昨天更新统计大屏，客户说累计旅客人数没有四舍五入。顿时感觉奇怪，因为从来只更新年月，数据都是程序去数据库里面现捞的，这个系统都用了好几年了，要错也应该都改过了。查了一下正确的数据，确实是要四舍五入的。
+于是就把涉及累计旅客人数的sql语句刨出来看，先除以10000，做单位转换，再round四舍五入，再用decimal取一位小数，看上去没问题啊？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="需求分析和懂业务的必要性">
+<meta property="og:url" content="http://lijiali1226.github.io/2016/05/10/lvke-data/index.html">
 <meta property="og:site_name" content="For A Breath I Tarry">
-<meta property="og:description">
+<meta property="og:description" content="昨天更新统计大屏，客户说累计旅客人数没有四舍五入。顿时感觉奇怪，因为从来只更新年月，数据都是程序去数据库里面现捞的，这个系统都用了好几年了，要错也应该都改过了。查了一下正确的数据，确实是要四舍五入的。
+于是就把涉及累计旅客人数的sql语句刨出来看，先除以10000，做单位转换，再round四舍五入，再用decimal取一位小数，看上去没问题啊？">
+<meta property="og:updated_time" content="2016-05-10T11:03:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="For A Breath I Tarry">
-<meta name="twitter:description">
+<meta name="twitter:title" content="需求分析和懂业务的必要性">
+<meta name="twitter:description" content="昨天更新统计大屏，客户说累计旅客人数没有四舍五入。顿时感觉奇怪，因为从来只更新年月，数据都是程序去数据库里面现捞的，这个系统都用了好几年了，要错也应该都改过了。查了一下正确的数据，确实是要四舍五入的。
+于是就把涉及累计旅客人数的sql语句刨出来看，先除以10000，做单位转换，再round四舍五入，再用decimal取一位小数，看上去没问题啊？">
   
     <link rel="alternate" href="/atom.xml" title="For A Breath I Tarry" type="application/atom+xml">
   
@@ -55,7 +59,7 @@
           <li><a class=""
                  href="/archives/">Archives</a></li>
         
-          <li><a class="active"
+          <li><a class=""
                  href="/categories/demo/">Demos</a></li>
         
       </ul>
@@ -88,52 +92,132 @@
 
     <div class="row">
         <div class="col-sm-8 blog-main">
-          
+          <article id="post-lvke-data" class="article article-type-post" itemscope itemprop="blogPost">
 
-<div class="page-header category-type"><h1>demo</h1></div>
-
-
-
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2010" class="archive-year">2010</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    <div class="article-datetime">
-  <a href="/2010/07/01/game-design-notes/" class="archive-article-date"><time datetime="2010-06-30T16:00:00.000Z" itemprop="datePublished">July 1st</time></a>
-</div>
-
+  <header class="article-header">
     
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2010/07/01/game-design-notes/">Game Level Design Notes</a>
+    <h1 class="article-title" itemprop="name">
+      需求分析和懂业务的必要性
     </h1>
   
 
 
-    
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/game/">game</a></li></ul>
-
-
   </header>
+
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/2016/05/10/lvke-data/" class="article-date"><time datetime="2016-05-09T16:00:00.000Z" itemprop="datePublished">2016-05-10</time></a>
+</div>
+
+    
+    
+
+    
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>昨天更新统计大屏，客户说累计旅客人数没有四舍五入。顿时感觉奇怪，因为从来只更新年月，数据都是程序去数据库里面现捞的，这个系统都用了好几年了，要错也应该都改过了。查了一下正确的数据，确实是要四舍五入的。</p>
+<p>于是就把涉及累计旅客人数的sql语句刨出来看，先除以10000，做单位转换，再round四舍五入，再用decimal取一位小数，看上去没问题啊？</p>
+<a id="more"></a>
+<p>然后把没处理之前的数据选出来看，好吧，这个数字不对。正确的旅客人数除以10000小数点后两位是75，要四舍五入到8，而这个数字除以10000后小数点后两位是74，刚好舍掉了。</p>
+<p>看看统计人数的sql，也好像没错，把成人、儿童、过站的相加，一直都是这么算的。</p>
+<p>为什么会选出来的数据相差几百人呢？</p>
+<p>灵光一闪，想到了上次去跟客户沟通报表的时候讲到的运输性质的问题，他们要的统计数据，架次是要运输性质的，旅客货邮是要所有性质的。什么正班，加班，补班，包机，换飞机，备降都算运输性质，其它的什么公务，试飞，人工降雨，驾照培训，空中游览，救灾之类的只有在统计起降架次的时候才算进去。相比起降架次，人家更看重运输起降架次。</p>
+<p>而这个sql选数据是根据运输性质一起选的，只统计了航班性质为运输的旅客，当然结果不一样。可以想象，货邮的数字也不一样。但是统计的结果旅客吞吐量单位用的万人次，货邮吞吐量用的万吨，每次都要先除然后取小数点后一位，而且两者数据量本来就相差不大，所以问题才一直没有暴露出来。</p>
+<p>报表也是这样，铁打的报表流水的开发，前任没调研清楚到底哪个数据是怎么个算法，客户默认我们知道，因为一期的报表是OK的，等开始用二期的时候就接到抱怨说哪个报表的数据不对，新增的几张表都没办法用。然后继任者就开始新一轮填坑。</p>
+<p>要跳出这个死循环，就只有靠需求调研和懂业务这两把刷子了。</p>
+
+      
+    </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://lijiali1226.github.io/2016/05/10/lvke-data/" data-id="cio1cjtj0000ipgz7o7flas2g" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+        <a href="http://lijiali1226.github.io/2016/05/10/lvke-data/#ds-thread" class="article-comment-link">
+          <i class="fa fa-comment"></i> Comments
+        </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/travelsky/">travelsky</a></li></ul>
+
+
+    </footer>
+
+
+<!--
+    <footer class="article-footer">
+      <a data-url="http://lijiali1226.github.io/2016/05/10/lvke-data/" data-id="cio1cjtj0000ipgz7o7flas2g" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/travelsky/">travelsky</a></li></ul>
+
+
+    </footer>
+-->
+
+  </div>
+  
+    
+<ul id="article-nav" class="nav nav-pills nav-justified">
+  
+  <li role="presentation">
+    <a href="/2016/05/09/mac-tips/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">Mac Tips</span>
+    </a>
+  </li>
+  
+  
+  <li role="presentation">
+    <a href="/2016/05/10/yunnan/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">云南印象</span>
+      <i class="fa fa-chevron-right pull-right"></i>
+    </a>
+  </li>
+  
+</ul>
+
+
+  
 </article>
 
-  
-  
-    </div></section>
-  
+
+<section id="comments">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-lvke-data" data-title="需求分析和懂业务的必要性" data-url="http://lijiali1226.github.io/2016/05/10/lvke-data/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:'habit2016'};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+       || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+  <!-- 多说公共JS代码 end -->
+</section>
 
 
+<!--
 
+-->
 
         </div>
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">

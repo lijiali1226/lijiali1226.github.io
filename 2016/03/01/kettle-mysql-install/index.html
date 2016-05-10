@@ -5,19 +5,16 @@
   
   <title>Linux下的Kettle+MySQL安装和配置 | For A Breath I Tarry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前提条件安装JDK1.查看是否已经安装 rpm -qa |grep java2.查看有资源的java版本 yum search java3.用root用户安装对应版本 yum -y install java-1.7.0-openjdk*4.查看安装效果  java -version
-MySQL安装MySQL1.查看是否已经安装 rpm -qa|grep mysql2.用root用户安装 yum i">
+  <meta name="description" content="前提条件安装JDK1.查看是否已经安装 rpm -qa |grep java2.查看有资源的java版本 yum search java3.用root用户安装对应版本 yum -y install java-1.7.0-openjdk*4.查看安装效果  java -version">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux下的Kettle+MySQL安装和配置">
 <meta property="og:url" content="http://lijiali1226.github.io/2016/03/01/kettle-mysql-install/index.html">
 <meta property="og:site_name" content="For A Breath I Tarry">
-<meta property="og:description" content="前提条件安装JDK1.查看是否已经安装 rpm -qa |grep java2.查看有资源的java版本 yum search java3.用root用户安装对应版本 yum -y install java-1.7.0-openjdk*4.查看安装效果  java -version
-MySQL安装MySQL1.查看是否已经安装 rpm -qa|grep mysql2.用root用户安装 yum i">
-<meta property="og:updated_time" content="2016-05-09T15:19:40.000Z">
+<meta property="og:description" content="前提条件安装JDK1.查看是否已经安装 rpm -qa |grep java2.查看有资源的java版本 yum search java3.用root用户安装对应版本 yum -y install java-1.7.0-openjdk*4.查看安装效果  java -version">
+<meta property="og:updated_time" content="2016-05-10T11:00:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux下的Kettle+MySQL安装和配置">
-<meta name="twitter:description" content="前提条件安装JDK1.查看是否已经安装 rpm -qa |grep java2.查看有资源的java版本 yum search java3.用root用户安装对应版本 yum -y install java-1.7.0-openjdk*4.查看安装效果  java -version
-MySQL安装MySQL1.查看是否已经安装 rpm -qa|grep mysql2.用root用户安装 yum i">
+<meta name="twitter:description" content="前提条件安装JDK1.查看是否已经安装 rpm -qa |grep java2.查看有资源的java版本 yum search java3.用root用户安装对应版本 yum -y install java-1.7.0-openjdk*4.查看安装效果  java -version">
   
     <link rel="alternate" href="/atom.xml" title="For A Breath I Tarry" type="application/atom+xml">
   
@@ -113,7 +110,7 @@ MySQL安装MySQL1.查看是否已经安装 rpm -qa|grep mysql2.用root用户安�
     
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/linux/">linux</a>
+    <a class="article-category-link" href="/categories/tech/">tech</a>
   </div>
 
 
@@ -124,6 +121,7 @@ MySQL安装MySQL1.查看是否已经安装 rpm -qa|grep mysql2.用root用户安�
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><h3 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h3><p>1.查看是否已经安装 <code>rpm -qa |grep java</code><br>2.查看有资源的java版本 <code>yum search java</code><br>3.用root用户安装对应版本 <code>yum -y install java-1.7.0-openjdk*</code><br>4.查看安装效果  <code>java -version</code></p>
+<a id="more"></a>
 <h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><h3 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h3><p>1.查看是否已经安装 <code>rpm -qa|grep mysql</code><br>2.用root用户安装 <code>yum install -y mysql-server mysql mysql-devel</code><br>3.查看安装信息 <code>rpm -qi mysql-server</code><br>4.启动MySQL进程 <code>service mysqld start</code> </p>
 <h3 id="用户设置"><a href="#用户设置" class="headerlink" title="用户设置"></a>用户设置</h3><p>在MySQL启动状态创建管理员 <code>/usr/bin/mysqladmin -u root password &#39;123456&#39;</code><br>登陆 <code>mysql -u root -p</code>  输入密码</p>
 <h3 id="开机启动配置"><a href="#开机启动配置" class="headerlink" title="开机启动配置"></a>开机启动配置</h3><p>查看MySQL开机选项 <code>chkconfig --list|grep mysqld</code><br>设为开机启动 <code>chkconfig mysqld on</code><br>检查是否设置成功 <code>chkconfig --list|grep mysqld</code></p>
@@ -140,7 +138,7 @@ MySQL安装MySQL1.查看是否已经安装 rpm -qa|grep mysql2.用root用户安�
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/03/01/kettle-mysql-install/" data-id="cio07z3nb001140z7113z9hct" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/03/01/kettle-mysql-install/" data-id="cio1cjtis000cpgz7726p8ky0" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -150,7 +148,7 @@ MySQL安装MySQL1.查看是否已经安装 rpm -qa|grep mysql2.用root用户安�
         </a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kettle/">kettle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kettle/">kettle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
 
 
     </footer>
@@ -158,12 +156,12 @@ MySQL安装MySQL1.查看是否已经安装 rpm -qa|grep mysql2.用root用户安�
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/03/01/kettle-mysql-install/" data-id="cio07z3nb001140z7113z9hct" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/03/01/kettle-mysql-install/" data-id="cio1cjtis000cpgz7726p8ky0" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
 
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kettle/">kettle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kettle/">kettle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
 
 
     </footer>
@@ -240,7 +238,7 @@ MySQL安装MySQL1.查看是否已经安装 rpm -qa|grep mysql2.用root用户安�
   
   <div class="sidebar-module">
     <h4>Categories</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/course/">course</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/data/">data</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/database/">database</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/demo/">demo</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/education/">education</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/java/">java</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/life/">life</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/linux/">linux</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/mac/">mac</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/notes/">notes</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/programming/">programming</a><span class="sidebar-module-list-count">1</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/database/">database</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/demo/">demo</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/education/">education</a><span class="sidebar-module-list-count">6</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/life/">life</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/programming/">programming</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/tech/">tech</a><span class="sidebar-module-list-count">6</span></li></ul>
   </div>
 
 
@@ -248,7 +246,7 @@ MySQL安装MySQL1.查看是否已经安装 rpm -qa|grep mysql2.用root用户安�
   
   <div class="sidebar-module sidebar-tags">
     <h4>Tags</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/algorithm/">algorithm</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/course/">course</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/coursera/">coursera</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/education/">education</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/etl/">etl</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/game/">game</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/git/">git</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/hexo/">hexo</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/ime/">ime</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/java/">java</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/kettle/">kettle</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/linux/">linux</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mac/">mac</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mysql/">mysql</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/netica/">netica</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/report/">report</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/sql-server/">sql server</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/ssh/">ssh</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/udacity/">udacity</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/volunteer/">volunteer</a><span class="sidebar-module-list-count">1</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/algorithm/">algorithm</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/course/">course</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/coursera/">coursera</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/education/">education</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/etl/">etl</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/game/">game</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/hexo/">hexo</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/ime/">ime</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/java/">java</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/kettle/">kettle</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mac/">mac</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mysql/">mysql</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/netica/">netica</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/report/">report</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/sql-server/">sql server</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/travelsky/">travelsky</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/udacity/">udacity</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/volunteer/">volunteer</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/yunnan/">yunnan</a><span class="sidebar-module-list-count">1</span></li></ul>
   </div>
 
 
@@ -256,7 +254,7 @@ MySQL安装MySQL1.查看是否已经安装 rpm -qa|grep mysql2.用root用户安�
   
   <div class="sidebar-module">
     <h4>Archives</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/05/">May 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/04/">April 2016</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/03/">March 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/11/">November 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/10/">October 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/05/">May 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/04/">April 2015</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/01/">January 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/05/">May 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/01/">January 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2013/12/">December 2013</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2013/11/">November 2013</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/09/">September 2010</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/07/">July 2010</a><span class="sidebar-module-list-count">1</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/05/">May 2016</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/04/">April 2016</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/03/">March 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/11/">November 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/10/">October 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/05/">May 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/04/">April 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/01/">January 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/05/">May 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/01/">January 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2013/12/">December 2013</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2013/11/">November 2013</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/09/">September 2010</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/07/">July 2010</a><span class="sidebar-module-list-count">1</span></li></ul>
   </div>
 
 
@@ -265,6 +263,14 @@ MySQL安装MySQL1.查看是否已经安装 rpm -qa|grep mysql2.用root用户安�
   <div class="sidebar-module sidebar-recents">
     <h4>Recents</h4>
     <ul class="sidebar-module-list">
+      
+        <li>
+          <a href="/2016/05/10/yunnan/">云南印象</a>
+        </li>
+      
+        <li>
+          <a href="/2016/05/10/lvke-data/">需求分析和懂业务的必要性</a>
+        </li>
       
         <li>
           <a href="/2016/05/09/mac-tips/">Mac Tips</a>
@@ -278,21 +284,16 @@ MySQL安装MySQL1.查看是否已经安装 rpm -qa|grep mysql2.用root用户安�
           <a href="/2016/04/25/mysql-upgrade/">MySQL 子查询及升级</a>
         </li>
       
-        <li>
-          <a href="/2016/04/18/mysql-tips/">MySQL Tips</a>
-        </li>
-      
-        <li>
-          <a href="/2016/04/13/java-with-netica-and-cron-job/">Java Program with NeticaJ and Cron Job</a>
-        </li>
-      
     </ul>
   </div>
 
 
 
+<!--
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+-->
 <!-- blog-general-responsive-sidebar -->
+<!--
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4721191851305300"
@@ -301,6 +302,7 @@ MySQL安装MySQL1.查看是否已经安装 rpm -qa|grep mysql2.用root用户安�
 <script>
   (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+-->
         </div>
     </div>
   </div>
