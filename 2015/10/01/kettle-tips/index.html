@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://lijiali1226.github.io/2015/10/01/kettle-tips/index.html">
 <meta property="og:site_name" content="For A Breath I Tarry">
 <meta property="og:description" content="ETLETL负责将分布的、异构数据源中的数据如关系数据、平面数据文件等抽取到临时中间层后进行清洗、转换、集成，最后加载到数据仓库或数据集市中，成为联机分析处理、数据挖掘的基础。">
-<meta property="og:updated_time" content="2016-05-10T11:10:43.000Z">
+<meta property="og:updated_time" content="2016-05-19T10:32:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kettle Tips">
 <meta name="twitter:description" content="ETLETL负责将分布的、异构数据源中的数据如关系数据、平面数据文件等抽取到临时中间层后进行清洗、转换、集成，最后加载到数据仓库或数据集市中，成为联机分析处理、数据挖掘的基础。">
@@ -58,6 +58,9 @@
         
           <li><a class=""
                  href="/categories/demo/">Demos</a></li>
+        
+          <li><a class=""
+                 href="/about/">About</a></li>
         
       </ul>
 
@@ -128,6 +131,7 @@
 <p>2.SQL Server的临时表创建有select into语法可以直接用于table input（表输入）步骤，MySQL的临时表用create table语法不能直接用于此步骤。估计是因为背后执行的java代码，executeQuery之类的。</p>
 <p>3.正常情况下不管是表查询还是字段应该是都能够预览的，如果预览不了一定是哪里不对。</p>
 <p>4.Kettle性能调优主要注意Rowset，一般的步骤在2000条/秒以上。</p>
+<p>5.注意路径问题：windows分隔符\    linux分隔符/<br>正则表达式中：\表示转义</p>
 
       
     </div>
@@ -138,7 +142,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2015/10/01/kettle-tips/" data-id="cio45iw4m000gykz7pql7or3b" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2015/10/01/kettle-tips/" data-id="cioe9amxg0010lez7pat88174" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -156,7 +160,7 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2015/10/01/kettle-tips/" data-id="cio45iw4m000gykz7pql7or3b" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2015/10/01/kettle-tips/" data-id="cioe9amxg0010lez7pat88174" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
 
@@ -269,11 +273,11 @@
     <ul class="sidebar-module-list">
       
         <li>
-          <a href="/2016/05/10/lvke-data/">需求分析和懂业务的必要性</a>
+          <a href="/2016/05/10/yunnan/">云南印象</a>
         </li>
       
         <li>
-          <a href="/2016/05/10/yunnan/">云南印象</a>
+          <a href="/2016/05/10/lvke-data/">需求分析和懂业务的必要性</a>
         </li>
       
         <li>

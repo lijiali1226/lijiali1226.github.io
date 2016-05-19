@@ -58,6 +58,9 @@
           <li><a class=""
                  href="/categories/demo/">Demos</a></li>
         
+          <li><a class=""
+                 href="/about/">About</a></li>
+        
       </ul>
 
       <!--
@@ -92,85 +95,6 @@
 
 
 
-  
-    <article id="post-lvke-data" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <header class="article-header">
-    
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/10/lvke-data/">需求分析和懂业务的必要性</a>
-    </h1>
-  
-
-
-  </header>
-
-  <div class="article-meta">
-    <div class="article-datetime">
-  <a href="/2016/05/10/lvke-data/" class="article-date"><time datetime="2016-05-09T16:00:00.000Z" itemprop="datePublished">2016-05-10</time></a>
-</div>
-
-    
-    
-
-    
-  </div>
-  <div class="article-inner">
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>昨天更新统计大屏，客户说累计旅客人数没有四舍五入。顿时感觉奇怪，因为从来只更新年月，数据都是程序去数据库里面现捞的，这个系统都用了好几年了，要错也应该都改过了。查了一下正确的数据，确实是要四舍五入的。</p>
-<p>于是就把涉及累计旅客人数的sql语句刨出来看，先除以10000，做单位转换，再round四舍五入，再用decimal取一位小数，看上去没问题啊？</p>
-        
-          <p class="article-more-link">
-            <a class="btn btn-primary" href="/2016/05/10/lvke-data/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-
-    
-
-    <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/05/10/lvke-data/" data-id="cio45iw4s000lykz7cqtfzyt1" class="article-share-link">
-        <i class="fa fa-share"></i> Share
-      </a>
-      
-      
-        <a href="http://lijiali1226.github.io/2016/05/10/lvke-data/#ds-thread" class="article-comment-link">
-          <i class="fa fa-comment"></i> Comments
-        </a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/travelsky/">travelsky</a></li></ul>
-
-
-    </footer>
-
-
-<!--
-    <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/05/10/lvke-data/" data-id="cio45iw4s000lykz7cqtfzyt1" class="article-share-link">
-        <i class="fa fa-share"></i> Share
-      </a>
-
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/travelsky/">travelsky</a></li></ul>
-
-
-    </footer>
--->
-
-  </div>
-  
-</article>
-
-
-
-<!--
-
--->
   
     <article id="post-yunnan" class="article article-type-post" itemscope itemprop="blogPost">
 
@@ -216,7 +140,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/05/10/yunnan/" data-id="cio45iw5l001iykz75bgof1bc" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/05/10/yunnan/" data-id="cioe9amyn002alez72hpr0b6g" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -234,12 +158,91 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/05/10/yunnan/" data-id="cio45iw5l001iykz75bgof1bc" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/05/10/yunnan/" data-id="cioe9amyn002alez72hpr0b6g" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
 
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/yunnan/">yunnan</a></li></ul>
+
+
+    </footer>
+-->
+
+  </div>
+  
+</article>
+
+
+
+<!--
+
+-->
+  
+    <article id="post-lvke-data" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <header class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/10/lvke-data/">需求分析和懂业务的必要性</a>
+    </h1>
+  
+
+
+  </header>
+
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/2016/05/10/lvke-data/" class="article-date"><time datetime="2016-05-09T16:00:00.000Z" itemprop="datePublished">2016-05-10</time></a>
+</div>
+
+    
+    
+
+    
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>昨天更新统计大屏，客户说累计旅客人数没有四舍五入。顿时感觉奇怪，因为从来只更新年月，数据都是程序去数据库里面现捞的，这个系统都用了好几年了，要错也应该都改过了。查了一下正确的数据，确实是要四舍五入的。</p>
+<p>于是就把涉及累计旅客人数的sql语句刨出来看，先除以10000，做单位转换，再round四舍五入，再用decimal取一位小数，看上去没问题啊？</p>
+        
+          <p class="article-more-link">
+            <a class="btn btn-primary" href="/2016/05/10/lvke-data/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://lijiali1226.github.io/2016/05/10/lvke-data/" data-id="cioe9amxk0013lez7v81enru3" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+        <a href="http://lijiali1226.github.io/2016/05/10/lvke-data/#ds-thread" class="article-comment-link">
+          <i class="fa fa-comment"></i> Comments
+        </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/travelsky/">travelsky</a></li></ul>
+
+
+    </footer>
+
+
+<!--
+    <footer class="article-footer">
+      <a data-url="http://lijiali1226.github.io/2016/05/10/lvke-data/" data-id="cioe9amxk0013lez7v81enru3" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/travelsky/">travelsky</a></li></ul>
 
 
     </footer>
@@ -286,7 +289,7 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><h3 id="brew"><a href="#brew" class="headerlink" title="brew"></a>brew</h3><p>安装见<a href="http://lijiali1226.github.io/2016/03/25/hexo-install/">之前的文章</a><br><strong>常用命令</strong><br><code>brew install wget</code><br><code>brew uninstall wget</code><br><code>brew search xxx</code><br><code>brew list 列出已安装的软件</code><br><code>brew update</code><br><code>brew info 显示应用的信息</code><br><code>brew deps 显示包依赖</code><br>brew将应用独立安装在类似/usr/local/Cellar/wget之类的地方，在/usr/local/bin下面建立一个到具体安装路径的符号链接</p>
+        <h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><h3 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h3><p>安装见<a href="http://lijiali1226.github.io/2016/03/25/hexo-install/">之前的文章</a><br><strong>常用命令</strong><br><code>brew install wget</code><br><code>brew uninstall wget</code><br><code>brew search xxx</code><br><code>brew list 列出已安装的软件</code><br><code>brew update</code><br><code>brew info 显示应用的信息</code><br><code>brew deps 显示包依赖</code><br>Homebrew将应用独立安装在类似/usr/local/Cellar/wget之类的地方，在/usr/local/bin下面建立一个到具体安装路径的符号链接</p>
         
           <p class="article-more-link">
             <a class="btn btn-primary" href="/2016/05/09/mac-tips/#more">Read More</a>
@@ -298,7 +301,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/05/09/mac-tips/" data-id="cio45iw4u000oykz74pyqicot" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/05/09/mac-tips/" data-id="cioe9amxq0015lez75q6hhsu6" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -316,7 +319,7 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/05/09/mac-tips/" data-id="cio45iw4u000oykz74pyqicot" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/05/09/mac-tips/" data-id="cioe9amxq0015lez75q6hhsu6" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
 
@@ -380,7 +383,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/05/06/shuangpin/" data-id="cio45iw570014ykz7kez2yzt1" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/05/06/shuangpin/" data-id="cioe9amy7001olez7u99bqrky" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -398,7 +401,7 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/05/06/shuangpin/" data-id="cio45iw570014ykz7kez2yzt1" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/05/06/shuangpin/" data-id="cioe9amy7001olez7u99bqrky" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
 
@@ -464,7 +467,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/25/mysql-upgrade/" data-id="cio45iw4w000sykz7gpa403ta" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/04/25/mysql-upgrade/" data-id="cioe9amy0001dlez7wfgfpsxh" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -482,7 +485,7 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/25/mysql-upgrade/" data-id="cio45iw4w000sykz7gpa403ta" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/04/25/mysql-upgrade/" data-id="cioe9amy0001dlez7wfgfpsxh" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
 
@@ -546,7 +549,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/18/mysql-tips/" data-id="cio45iw540010ykz7pu8iosmp" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/04/18/mysql-tips/" data-id="cioe9amxy001alez7c25n1fpt" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -564,7 +567,7 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/18/mysql-tips/" data-id="cio45iw540010ykz7pu8iosmp" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/04/18/mysql-tips/" data-id="cioe9amxy001alez7c25n1fpt" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
 
@@ -629,7 +632,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/13/java-with-netica-and-cron-job/" data-id="cio45iw4c000aykz7rbv5niah" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/04/13/java-with-netica-and-cron-job/" data-id="cioe9amxd000tlez7sqxfx97o" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -647,7 +650,7 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/13/java-with-netica-and-cron-job/" data-id="cio45iw4c000aykz7rbv5niah" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/04/13/java-with-netica-and-cron-job/" data-id="cioe9amxd000tlez7sqxfx97o" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
 
@@ -711,7 +714,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/06/sql-server-mysql-diff/" data-id="cio45iw5a0018ykz7a61c797t" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/04/06/sql-server-mysql-diff/" data-id="cioe9amy9001slez716wgzbt2" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -729,7 +732,7 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/06/sql-server-mysql-diff/" data-id="cio45iw5a0018ykz7a61c797t" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/04/06/sql-server-mysql-diff/" data-id="cioe9amy9001slez716wgzbt2" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
 
@@ -793,7 +796,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/01/sql-server-to-mysql/" data-id="cio45iw5f001cykz7q1tub8ot" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/04/01/sql-server-to-mysql/" data-id="cioe9amyo002elez72ii56ekl" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -811,7 +814,7 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/01/sql-server-to-mysql/" data-id="cio45iw5f001cykz7q1tub8ot" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/04/01/sql-server-to-mysql/" data-id="cioe9amyo002elez72ii56ekl" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
 
@@ -863,7 +866,7 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><h3 id="安装homebrew"><a href="#安装homebrew" class="headerlink" title="安装homebrew"></a>安装homebrew</h3><p>1.<code>ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code>有时候网络不太好，要多试几次。<br>2.添加环境变量 <code>echo &#39;export PATH=&quot;/usr/local/bin:$PATH&quot;&#39; &gt;&gt; ~/.bash_profile</code><br>3.查看安装情况 <code>brew doctor</code></p>
+        <h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><h3 id="安装Homebrew"><a href="#安装Homebrew" class="headerlink" title="安装Homebrew"></a>安装Homebrew</h3><p>1.<code>ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code>有时候网络不太好，要多试几次。<br>2.添加环境变量 <code>echo &#39;export PATH=&quot;/usr/local/bin:$PATH&quot;&#39; &gt;&gt; ~/.bash_profile</code><br>3.查看安装情况 <code>brew doctor</code></p>
         
           <p class="article-more-link">
             <a class="btn btn-primary" href="/2016/03/25/hexo-install/#more">Read More</a>
@@ -875,7 +878,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/03/25/hexo-install/" data-id="cio45iw4f000cykz78ex359p3" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/03/25/hexo-install/" data-id="cioe9amxb000rlez7rijrpqqh" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -893,7 +896,7 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/03/25/hexo-install/" data-id="cio45iw4f000cykz78ex359p3" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/03/25/hexo-install/" data-id="cioe9amxb000rlez7rijrpqqh" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
 
@@ -973,11 +976,11 @@
     <ul class="sidebar-module-list">
       
         <li>
-          <a href="/2016/05/10/lvke-data/">需求分析和懂业务的必要性</a>
+          <a href="/2016/05/10/yunnan/">云南印象</a>
         </li>
       
         <li>
-          <a href="/2016/05/10/yunnan/">云南印象</a>
+          <a href="/2016/05/10/lvke-data/">需求分析和懂业务的必要性</a>
         </li>
       
         <li>
