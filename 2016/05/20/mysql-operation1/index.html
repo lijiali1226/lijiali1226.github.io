@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: etl | For A Breath I Tarry</title>
+  <title>MySQL运维1（基础知识） | For A Breath I Tarry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="For A Breath I Tarry">
-<meta property="og:url" content="http://lijiali1226.github.io/tags/etl/index.html">
+  <meta name="description" content="概念常识TPS——Transaction Per Second 每秒事务处理量IOPS——Input/Output Operations Per Second 每秒进行读写（I/O）操作的次数，衡量随机访问的性能QPS——Query Per Second 每秒查询数RT——Response Time 响应时间吞吐量——Throughput 系统在单位时间内处理请求的数量TPC——Transacti">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL运维1（基础知识）">
+<meta property="og:url" content="http://lijiali1226.github.io/2016/05/20/mysql-operation1/index.html">
 <meta property="og:site_name" content="For A Breath I Tarry">
-<meta property="og:description">
+<meta property="og:description" content="概念常识TPS——Transaction Per Second 每秒事务处理量IOPS——Input/Output Operations Per Second 每秒进行读写（I/O）操作的次数，衡量随机访问的性能QPS——Query Per Second 每秒查询数RT——Response Time 响应时间吞吐量——Throughput 系统在单位时间内处理请求的数量TPC——Transacti">
+<meta property="og:updated_time" content="2016-05-22T12:17:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="For A Breath I Tarry">
-<meta name="twitter:description">
+<meta name="twitter:title" content="MySQL运维1（基础知识）">
+<meta name="twitter:description" content="概念常识TPS——Transaction Per Second 每秒事务处理量IOPS——Input/Output Operations Per Second 每秒进行读写（I/O）操作的次数，衡量随机访问的性能QPS——Query Per Second 每秒查询数RT——Response Time 响应时间吞吐量——Throughput 系统在单位时间内处理请求的数量TPC——Transacti">
   
     <link rel="alternate" href="/atom.xml" title="For A Breath I Tarry" type="application/atom+xml">
   
@@ -91,56 +92,146 @@
 
     <div class="row">
         <div class="col-sm-8 blog-main">
-          
+          <article id="post-mysql-operation1" class="article article-type-post" itemscope itemprop="blogPost">
 
-<div class="page-header tag-type"><h1>etl</h1></div>
-
-
-
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    <div class="article-datetime">
-  <a href="/2015/10/01/kettle-tips/" class="archive-article-date"><time datetime="2015-09-30T16:00:00.000Z" itemprop="datePublished">October 1st</time></a>
-</div>
-
+  <header class="article-header">
     
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/10/01/kettle-tips/">Kettle Tips</a>
+    <h1 class="article-title" itemprop="name">
+      MySQL运维1（基础知识）
     </h1>
   
 
 
-    
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/etl/">etl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kettle/">kettle</a></li></ul>
-
-
   </header>
+
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/2016/05/20/mysql-operation1/" class="article-date"><time datetime="2016-05-19T16:00:00.000Z" itemprop="datePublished">2016-05-20</time></a>
+</div>
+
+    
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/database/">database</a>
+  </div>
+
+
+    
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h3 id="常识"><a href="#常识" class="headerlink" title="常识"></a>常识</h3><p>TPS——Transaction Per Second 每秒事务处理量<br>IOPS——Input/Output Operations Per Second 每秒进行读写（I/O）操作的次数，衡量随机访问的性能<br>QPS——Query Per Second 每秒查询数<br>RT——Response Time 响应时间<br>吞吐量——Throughput 系统在单位时间内处理请求的数量<br>TPC——Transaction Processing Performance Council 一系列事务处理和数据库基准测试的规范</p>
+<a id="more"></a>
+<p>SSD固态硬盘（优点：读取速度，抗震能力，功耗，噪音，发热）<br>HDD机械硬盘（优点：容量，价格，写入次数，数据恢复）</p>
+<h3 id="LINUX相关"><a href="#LINUX相关" class="headerlink" title="LINUX相关"></a>LINUX相关</h3><p>LINUX IO调度策略：<br>  1) CFQ(Completely Fair Queuing, 完全公平排队)<br>  2) NOOP(电梯式调度程序)<br>  3) Deadline(截止时间调度程序)<br>  4) AS(预料I/O调度程序)</p>
+<p>Deadline确保了在一个截止时间内服务请求，这个截止时间是可调整的，而默认读期限短于写期限。这样就防止了写操作因为不能被读取而饿死的现象。Deadline对数据库环境是最好的选择。</p>
+<p>cgroup——controller group，将任意进程进行分组化管理的Linux内核功能。<br>CFS——完全公平调度器<br>BPS——Bits Per Second 比特率，传输速度</p>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><h3 id="测试工具"><a href="#测试工具" class="headerlink" title="测试工具"></a>测试工具</h3><p>fio<br>tpcc-mysql<br>DBT2<br>sysbench</p>
+<h3 id="日志分析"><a href="#日志分析" class="headerlink" title="日志分析"></a>日志分析</h3><p>mysqlsla<br>pt-query-digest</p>
+<h3 id="备份恢复"><a href="#备份恢复" class="headerlink" title="备份恢复"></a>备份恢复</h3><p>mysqldump<br>mydumper<br>myloader<br>xtrabackup（innodb）</p>
+<h3 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h3><p>vmstat/iostat/mpstat/ifstat/dstat<br>mysqladmin<br>pstack<br>tcprstat<br>tcpdump<br>perf<br>pt-stalk<br>orzdba<br>orztop</p>
+<h3 id="主机监控"><a href="#主机监控" class="headerlink" title="主机监控"></a>主机监控</h3><p>ping<br>hang<br>CPU<br>IO<br>Swap<br>Net_in<br>Net_out</p>
+
+      
+    </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://lijiali1226.github.io/2016/05/20/mysql-operation1/" data-id="cioik246a001xm2z7xgin984x" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+        <a href="http://lijiali1226.github.io/2016/05/20/mysql-operation1/#ds-thread" class="article-comment-link">
+          <i class="fa fa-comment"></i> Comments
+        </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
+
+
+    </footer>
+
+
+<!--
+    <footer class="article-footer">
+      <a data-url="http://lijiali1226.github.io/2016/05/20/mysql-operation1/" data-id="cioik246a001xm2z7xgin984x" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
+
+
+    </footer>
+-->
+
+  </div>
+  
+    
+<ul id="article-nav" class="nav nav-pills nav-justified">
+  
+  <li role="presentation">
+    <a href="/2016/05/10/lvke-data/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">需求分析和懂业务的必要性</span>
+    </a>
+  </li>
+  
+  
+  <li role="presentation">
+    <a href="/2016/05/20/excel/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">Excel Tips</span>
+      <i class="fa fa-chevron-right pull-right"></i>
+    </a>
+  </li>
+  
+</ul>
+
+
+  
 </article>
 
-  
-  
-    </div></section>
-  
+
+<section id="comments">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-mysql-operation1" data-title="MySQL运维1（基础知识）" data-url="http://lijiali1226.github.io/2016/05/20/mysql-operation1/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:'habit2016'};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+       || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+  <!-- 多说公共JS代码 end -->
+</section>
 
 
+<!--
 
+-->
 
         </div>
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           
+  <div class="sidebar-module sidebar-toc">
+    <h4>Table of Contents</h4>
+    <ol class="sidebar-module-list"><li class="sidebar-module-list-item sidebar-module-list-level-2"><a class="sidebar-module-list-link" href="#概念"><span class="sidebar-module-list-number">1.</span> <span class="sidebar-module-list-text">概念</span></a><ol class="sidebar-module-list-child"><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#常识"><span class="sidebar-module-list-number">1.1.</span> <span class="sidebar-module-list-text">常识</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#LINUX相关"><span class="sidebar-module-list-number">1.2.</span> <span class="sidebar-module-list-text">LINUX相关</span></a></li></ol></li><li class="sidebar-module-list-item sidebar-module-list-level-2"><a class="sidebar-module-list-link" href="#工具"><span class="sidebar-module-list-number">2.</span> <span class="sidebar-module-list-text">工具</span></a><ol class="sidebar-module-list-child"><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#测试工具"><span class="sidebar-module-list-number">2.1.</span> <span class="sidebar-module-list-text">测试工具</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#日志分析"><span class="sidebar-module-list-number">2.2.</span> <span class="sidebar-module-list-text">日志分析</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#备份恢复"><span class="sidebar-module-list-number">2.3.</span> <span class="sidebar-module-list-text">备份恢复</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#常用工具"><span class="sidebar-module-list-number">2.4.</span> <span class="sidebar-module-list-text">常用工具</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#主机监控"><span class="sidebar-module-list-number">2.5.</span> <span class="sidebar-module-list-text">主机监控</span></a></li></ol></li></ol>
+  </div>
+
 
 
   <div class="sidebar-module sidebar-module-inset">
