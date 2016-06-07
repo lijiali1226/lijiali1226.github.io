@@ -11,7 +11,7 @@
 系统设计本系统使用Mysql+Servlet/JSP技术。由浏览器发出Http请求，Web容器创建各种对象（如HttpServletRequest，HttpServletReq">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MVC Demo">
-<meta property="og:url" content="http://lijiali1226.github.io/2015/12/01/mvc-demo/index.html">
+<meta property="og:url" content="http://lijiali1226.github.io/2014/12/01/mvc-demo/index.html">
 <meta property="og:site_name" content="For A Breath I Tarry">
 <meta property="og:description" content="一个基于servlet+jsp+mysql的简单项目。
 需求分析要求开发一个动态网站，实现以下功能：航班信息增加；航班信息删除；航班信息查询；登录验证；会话跟踪。
@@ -20,6 +20,7 @@
 <meta property="og:image" content="http://lijiali1226.github.io/images/mvc/db.png">
 <meta property="og:image" content="http://lijiali1226.github.io/images/mvc/desc.png">
 <meta property="og:image" content="http://lijiali1226.github.io/images/mvc/dbdata.png">
+<meta property="og:image" content="http://lijiali1226.github.io/images/mvc/mvc.png">
 <meta property="og:image" content="http://lijiali1226.github.io/images/mvc/session.png">
 <meta property="og:image" content="http://lijiali1226.github.io/images/mvc/user.png">
 <meta property="og:image" content="http://lijiali1226.github.io/images/mvc/jaas.png">
@@ -37,7 +38,7 @@
 <meta property="og:image" content="http://lijiali1226.github.io/images/mvc/addhd.png">
 <meta property="og:image" content="http://lijiali1226.github.io/images/mvc/addhdsuccess.png">
 <meta property="og:image" content="http://lijiali1226.github.io/images/mvc/addhdcheck.png">
-<meta property="og:updated_time" content="2016-06-03T11:51:47.000Z">
+<meta property="og:updated_time" content="2016-06-07T14:23:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MVC Demo">
 <meta name="twitter:description" content="一个基于servlet+jsp+mysql的简单项目。
@@ -137,7 +138,7 @@
 
   <div class="article-meta">
     <div class="article-datetime">
-  <a href="/2015/12/01/mvc-demo/" class="article-date"><time datetime="2015-12-01T04:00:00.000Z" itemprop="datePublished">2015-12-01</time></a>
+  <a href="/2014/12/01/mvc-demo/" class="article-date"><time datetime="2014-12-01T04:00:00.000Z" itemprop="datePublished">2014-12-01</time></a>
 </div>
 
     
@@ -157,7 +158,8 @@
 <h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><p>要求开发一个动态网站，实现以下功能：<br>航班信息增加；<br>航班信息删除；<br>航班信息查询；<br>登录验证；<br>会话跟踪。</p>
 <h3 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h3><p>flightdb数据库<br>t_flight表：<br><img src="/images/mvc/db.png" alt="db"><br>示例：<br><img src="/images/mvc/desc.png" alt="desc"><br><img src="/images/mvc/dbdata.png" alt="dbdata"></p>
 <h3 id="系统设计"><a href="#系统设计" class="headerlink" title="系统设计"></a>系统设计</h3><p>本系统使用Mysql+Servlet/JSP技术。<br>由浏览器发出Http请求，Web容器创建各种对象（如HttpServletRequest，HttpServletRequest，HttpSession等），根据URL决定使用哪个Servlet，Servelt根据请求对象（HttpServletRequest）决定如何处理，通过响应对象（HttpServletResponse）创建响应，传回客户端。</p>
-<h3 id="系统实现"><a href="#系统实现" class="headerlink" title="系统实现"></a>系统实现</h3><p>会话跟踪<br><img src="/images/mvc/session.png" alt="session"></p>
+<h3 id="系统实现"><a href="#系统实现" class="headerlink" title="系统实现"></a>系统实现</h3><p>代码结构<br><img src="/images/mvc/mvc.png" alt="mvc"><br>AddFlight 继承HttpServlet，重写doPost方法，对提交的航班信息进行值检查，调用FlightService.addFlight方法添加航班，返回结果。<br>DeleteFlight 继承HttpServlet，重写doGet方法，调用FlightService.deleteFlight方法删除航班，重定向至航班列表页面。<br>FlightDAOImpl 航班查询，添加，删除的数据库操作具体实现。<br>CharacterFilter 特殊字符过滤。</p>
+<p>会话跟踪<br><img src="/images/mvc/session.png" alt="session"></p>
 <p>登录验证<br><img src="/images/mvc/user.png" alt="user"><br>tomcat的JAAS验证<br><img src="/images/mvc/jaas.png" alt="jaas"></p>
 <p>在tomcat-users.xml中添加用户<br><img src="/images/mvc/tomcatuser.png" alt="tomcatuser"></p>
 <p>在mysql中授权<br><img src="/images/mvc/testuser.png" alt="testuser"></p>
@@ -174,12 +176,12 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2015/12/01/mvc-demo/" data-id="ciozph45e001yaqz7s3xp5913" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2014/12/01/mvc-demo/" data-id="cip5jqygk001zmyz7zlikeawp" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
       
-        <a href="http://lijiali1226.github.io/2015/12/01/mvc-demo/#ds-thread" class="article-comment-link">
+        <a href="http://lijiali1226.github.io/2014/12/01/mvc-demo/#ds-thread" class="article-comment-link">
           <i class="fa fa-comment"></i> Comments
         </a>
       
@@ -192,7 +194,7 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2015/12/01/mvc-demo/" data-id="ciozph45e001yaqz7s3xp5913" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2014/12/01/mvc-demo/" data-id="cip5jqygk001zmyz7zlikeawp" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
 
@@ -209,16 +211,16 @@
 <ul id="article-nav" class="nav nav-pills nav-justified">
   
   <li role="presentation">
-    <a href="/2015/11/01/runqian-report-tips/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2014/07/01/my-university/" id="article-nav-older" class="article-nav-link-wrap">
       <i class="fa fa-chevron-left pull-left"></i>
-      <span class="article-nav-link-title">RunqianReport Tips</span>
+      <span class="article-nav-link-title">My University</span>
     </a>
   </li>
   
   
   <li role="presentation">
-    <a href="/2016/03/01/kettle-mysql-install/" id="article-nav-newer" class="article-nav-link-wrap">
-      <span class="article-nav-link-title">Linux下的Kettle+MySQL安装和配置</span>
+    <a href="/2015/01/01/mindmap/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">Mindmaps</span>
       <i class="fa fa-chevron-right pull-right"></i>
     </a>
   </li>
@@ -232,7 +234,7 @@
 
 <section id="comments">
   <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="post-mvc-demo" data-title="MVC Demo" data-url="http://lijiali1226.github.io/2015/12/01/mvc-demo/"></div>
+  <div class="ds-thread" data-thread-key="post-mvc-demo" data-title="MVC Demo" data-url="http://lijiali1226.github.io/2014/12/01/mvc-demo/"></div>
   <!-- 多说评论框 end -->
   <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
   <script type="text/javascript">
@@ -292,7 +294,7 @@
   
   <div class="sidebar-module">
     <h4>Archives</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/06/">June 2016</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/05/">May 2016</a><span class="sidebar-module-list-count">7</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/04/">April 2016</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/03/">March 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/12/">December 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/11/">November 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/10/">October 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/05/">May 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/04/">April 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/01/">January 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/07/">July 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/05/">May 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/01/">January 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2013/12/">December 2013</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2013/11/">November 2013</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2013/07/">July 2013</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/09/">September 2010</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/07/">July 2010</a><span class="sidebar-module-list-count">1</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/06/">June 2016</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/05/">May 2016</a><span class="sidebar-module-list-count">7</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/04/">April 2016</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/03/">March 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/11/">November 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/10/">October 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/05/">May 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/04/">April 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/01/">January 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/12/">December 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/07/">July 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/05/">May 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/01/">January 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2013/12/">December 2013</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2013/11/">November 2013</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2013/07/">July 2013</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/09/">September 2010</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/07/">July 2010</a><span class="sidebar-module-list-count">1</span></li></ul>
   </div>
 
 
