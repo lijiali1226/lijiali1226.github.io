@@ -127,29 +127,19 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>前提条件：MySQL 已经安装<br>1.执行<code>yum install mysql-workbench-community</code>报错，缺少tinyxml和proj。<br>2.配置EPEL。</p>
-<blockquote>
-<p>企业版 Linux 附加软件包(以下简称 EPEL)是一个针对 [红帽企业版 Linux(RHEL)]及其衍生发行版(比如 CentOS、Scientific Linux、Oracle Enterprise Linux)的一个高质量附加软件包项目。EPEL 项目包含完整的构建系统、升级管理器、镜像管理器等等。</p>
-</blockquote>
-<p>执行<code>yum install epel-release.noarch</code>，然后执行<code>yum repolist</code>，如果显示的信息里面有EPEL，则安装成功。<br>3.重新执行<code>yum install mysql-workbench-community</code></p>
-<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>1.打开MySQL Workbench<br>2.创建一个新的数据库连接，配置名称，主机名，端口号，用户名等。或者连接已有的本地实例。<br>3.报错Could not store password: Error communicating with gnome-keyring-daemon，或者其它和密码有关的错<br>4.<code>gedit /usr/bin/mysql-workbench</code>，去除对应注释</p>
-<blockquote>
-<p># Uncomment the following line if you’re having trouble with gnome-keyring lockups.<br># This will cause passwords to be stored only temporarily for the session.<br>WB_NO_GNOME_KEYRING=1</p>
-</blockquote>
-<p>5.重启</p>
-<p>行不通方式：<br>输入<code>mysql-workbench</code>启动图形界面，还是报错</p>
-<p>可行方式：<br>点击Applications-&gt;Programming-&gt;MySQL Workbench打开图形界面，并且创建一个快捷方式到桌面，以后双击图标打开MySQL Workbench。</p>
-
+        <h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>前提条件：MySQL 已经安装<br>1.执行<code>yum install mysql-workbench-community</code>报错，缺少tinyxml和proj。<br>2.配置EPEL。<br>
+        
+          <p class="article-more-link">
+            <a class="btn btn-primary" href="/2016/07/11/workbench/#more">Read More</a>
+          </p>
+        
       
     </div>
 
     
-      
-
-    
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/07/11/workbench/" data-id="ciqhwx5xm003aujz7r3jzwyyj" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/07/11/workbench/" data-id="ciqhwzye6003pw0z7etctz1t2" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -167,7 +157,7 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/07/11/workbench/" data-id="ciqhwx5xm003aujz7r3jzwyyj" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/07/11/workbench/" data-id="ciqhwzye6003pw0z7etctz1t2" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
 
@@ -232,7 +222,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/06/02/mysql-operation2/" data-id="ciqhwx5wv002eujz72jxs41wf" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/06/02/mysql-operation2/" data-id="ciqhwzydf002nw0z7ari236g3" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -250,7 +240,7 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/06/02/mysql-operation2/" data-id="ciqhwx5wv002eujz72jxs41wf" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/06/02/mysql-operation2/" data-id="ciqhwzydf002nw0z7ari236g3" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
 
@@ -317,7 +307,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/05/24/crontab/" data-id="ciqhwx5vj0012ujz74egqjpii" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/05/24/crontab/" data-id="ciqhwzycg001gw0z7epkhcdnd" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -335,7 +325,7 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/05/24/crontab/" data-id="ciqhwx5vj0012ujz74egqjpii" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/05/24/crontab/" data-id="ciqhwzycg001gw0z7epkhcdnd" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
 
@@ -409,7 +399,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/05/20/excel/" data-id="ciqhwx5vm0014ujz7y1ui2eau" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/05/20/excel/" data-id="ciqhwzych001iw0z7u32bq4w1" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -427,7 +417,7 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/05/20/excel/" data-id="ciqhwx5vm0014ujz7y1ui2eau" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/05/20/excel/" data-id="ciqhwzych001iw0z7u32bq4w1" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
 
@@ -491,7 +481,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/05/20/mysql-operation1/" data-id="ciqhwx5wr0026ujz7gn9g152i" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/05/20/mysql-operation1/" data-id="ciqhwzydb002jw0z7lrb2ieyi" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -509,7 +499,7 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/05/20/mysql-operation1/" data-id="ciqhwx5wr0026ujz7gn9g152i" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/05/20/mysql-operation1/" data-id="ciqhwzydb002jw0z7lrb2ieyi" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
 
@@ -574,7 +564,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/05/10/yunnan/" data-id="ciqhwx5xo003cujz71ghq7yun" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/05/10/yunnan/" data-id="ciqhwzye8003sw0z7a953iub2" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -592,7 +582,7 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/05/10/yunnan/" data-id="ciqhwx5xo003cujz71ghq7yun" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/05/10/yunnan/" data-id="ciqhwzye8003sw0z7a953iub2" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
 
@@ -657,7 +647,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/05/10/lvke-data/" data-id="ciqhwx5w8001qujz7lzfmjpls" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/05/10/lvke-data/" data-id="ciqhwzycy0020w0z7cg50ex4i" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -675,7 +665,7 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/05/10/lvke-data/" data-id="ciqhwx5w8001qujz7lzfmjpls" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/05/10/lvke-data/" data-id="ciqhwzycy0020w0z7cg50ex4i" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
 
@@ -739,7 +729,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/05/09/mac-tips/" data-id="ciqhwx5wa001uujz7k53jhlz2" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/05/09/mac-tips/" data-id="ciqhwzyd00024w0z7343je8kx" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -757,7 +747,7 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/05/09/mac-tips/" data-id="ciqhwx5wa001uujz7k53jhlz2" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/05/09/mac-tips/" data-id="ciqhwzyd00024w0z7343je8kx" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
 
@@ -821,7 +811,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/05/06/shuangpin/" data-id="ciqhwx5x7002qujz7jdhwl26f" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/05/06/shuangpin/" data-id="ciqhwzydu0038w0z73uk5iy65" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -839,7 +829,7 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/05/06/shuangpin/" data-id="ciqhwx5x7002qujz7jdhwl26f" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/05/06/shuangpin/" data-id="ciqhwzydu0038w0z73uk5iy65" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
 
@@ -905,7 +895,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/25/mysql-upgrade/" data-id="ciqhwx5wx002fujz7jst7l3fu" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/04/25/mysql-upgrade/" data-id="ciqhwzydi002vw0z7qqhqc04z" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -923,7 +913,7 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/25/mysql-upgrade/" data-id="ciqhwx5wx002fujz7jst7l3fu" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/04/25/mysql-upgrade/" data-id="ciqhwzydi002vw0z7qqhqc04z" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
 
