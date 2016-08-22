@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>MySQL运维2（fio,tpcc-mysql） | For A Breath I Tarry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="测试工具fio官网
+安装yum install libaio libaio-develwget http://brick.kernel.dk/snaps/fio-2.1.10.tar.gztar -xzvf fio-2.1.10.tar.gzcd fio-2.1.10./configuremakemake install">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL运维2（fio,tpcc-mysql）">
+<meta property="og:url" content="http://lijiali1226.github.io/2016/06/01/mysql-operation2/index.html">
+<meta property="og:site_name" content="For A Breath I Tarry">
+<meta property="og:description" content="测试工具fio官网
+安装yum install libaio libaio-develwget http://brick.kernel.dk/snaps/fio-2.1.10.tar.gztar -xzvf fio-2.1.10.tar.gzcd fio-2.1.10./configuremakemake install">
+<meta property="og:image" content="http://lijiali1226.github.io/images/rw.PNG">
+<meta property="og:updated_time" content="2016-08-22T14:02:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MySQL运维2（fio,tpcc-mysql）">
+<meta name="twitter:description" content="测试工具fio官网
+安装yum install libaio libaio-develwget http://brick.kernel.dk/snaps/fio-2.1.10.tar.gztar -xzvf fio-2.1.10.tar.gzcd fio-2.1.10./configuremakemake install">
+<meta name="twitter:image" content="http://lijiali1226.github.io/images/rw.PNG">
+  
+    <link rel="alternate" href="/atom.xml" title="For A Breath I Tarry" type="application/atom+xml">
+  
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="/css/styles.css">
+  
+
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="main-menu-navbar">
+      <ul class="nav navbar-nav">
+        
+          <li><a class=""
+                 href="/index.html">Home</a></li>
+        
+          <li><a class=""
+                 href="/archives/">Archives</a></li>
+        
+          <li><a class=""
+                 href="/categories/demo/">Demos</a></li>
+        
+          <li><a class=""
+                 href="/about/">About</a></li>
+        
+      </ul>
+
+      <!--
+      <ul class="nav navbar-nav navbar-right">
+        
+          <li><a href="/atom.xml" title="RSS Feed"><i class="fa fa-rss"></i></a></li>
+        
+      </ul>
+      -->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+  <div class="container">
+    <div class="blog-header hidden-xs">
+  <img id="blog-logo" width="80" height="80" alt="Christopher Martin" src="/images/icon.jpg">
+  <h1 class="blog-title">For A Breath I Tarry</h1>
+  
+    <p class="lead blog-description">For A Breath I Tarry</p>
+  
+</div>
+<div class="blog-header visible-xs">
+  <h1 class="blog-title">For A Breath I Tarry</h1>
+  
+    <p class="lead blog-description">For A Breath I Tarry</p>
+  
+</div>
+
+    <div class="row">
+        <div class="col-sm-8 blog-main">
+          <article id="post-mysql-operation2" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <header class="article-header">
+    
+  
+    <h1 class="article-title" itemprop="name">
+      MySQL运维2（fio,tpcc-mysql）
+    </h1>
+  
+
+
+  </header>
+
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/2016/06/01/mysql-operation2/" class="article-date"><time datetime="2016-05-31T16:00:00.000Z" itemprop="datePublished">2016-06-01</time></a>
+</div>
+
+    
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/database/">database</a>
+  </div>
+
+
+    
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="测试工具"><a href="#测试工具" class="headerlink" title="测试工具"></a>测试工具</h2><h3 id="fio"><a href="#fio" class="headerlink" title="fio"></a>fio</h3><p><a href="http://freecode.com/projects/fio" target="_blank" rel="external">官网</a></p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p><code>yum install libaio libaio-devel</code><br><code>wget http://brick.kernel.dk/snaps/fio-2.1.10.tar.gz</code><br><code>tar -xzvf fio-2.1.10.tar.gz</code><br><code>cd fio-2.1.10</code><br><code>./configure</code><br><code>make</code><br><code>make install</code></p>
+<a id="more"></a>
+<h4 id="读写测试"><a href="#读写测试" class="headerlink" title="读写测试"></a>读写测试</h4><p><img src="/images/rw.PNG" alt="读写模式"></p>
+<p>随机读：<br><code>fio -filename=/dev/sdb1 -direct=1 -iodepth 1 -thread -rw=randread -ioengine=psync -bs=16k -size=5G -numjobs=10 -runtime=1000 -group_reporting -name=mytest</code></p>
+<p>虚拟机测试结果：<br>read:io=51200MB, bw=412140KB/s, iops=25758, runt=127211msec<br>（省略其他输出）</p>
+<p> 随机写：<br><code>fio -filename=/dev/sdb1 -direct=1 -iodepth 1 -thread -rw=randwrite -ioengine=psync -bs=16k -size=5G -numjobs=30 -runtime=1000 -group_reporting -name=mytest</code></p>
+<p>虚拟机测试结果：<br>write: io=1112.5MB, bw=1138.6KB/s, iops=71, runt=1000204msec<br>（省略其他输出）</p>
+<p>混合随机读写：<br><code>fio -filename=/dev/sdb1 -direct=1 -iodepth 1 -thread -rw=randrw -rwmixread=70 -ioengine=psync -bs=16k -size=200G -numjobs=30 -runtime=100 -group_reporting -name=mytest -ioscheduler=noop</code></p>
+<p>虚拟机测试结果：<br>read: io=347312KB, bw=3469.3KB/s, iops=216, runt=100113msec<br>write: io=144736KB, bw=1445.8KB/s, iops=90, runt=100113msec<br>（省略其他输出）</p>
+<h3 id="dd（Linux命令）"><a href="#dd（Linux命令）" class="headerlink" title="dd（Linux命令）"></a>dd（Linux命令）</h3><p>作用：用指定大小的块拷贝一个文件</p>
+<p>写速度：<br><code>time dd if=/dev/zero of=/test.dbf bs=8k count=100000</code></p>
+<p>读速度：<br><code>time dd if=/dev/sdb1 of=/dev/null bs=8k</code></p>
+<p>读写速度：<br><code>time dd if=/dev/sdb1 of=/test.dbf bs=64k</code></p>
+<p>/dev/zero：产生字符<br>if=/dev/zero不产生IO，因此可以用来测试写速度。<br>/dev/null：回收站<br>of=/dev/null不产生IO，可以用来测试读速度。<br>time有计时作用，dd用于复制，从if读出，写到of。<br>bs是每次读或写的大小，即块的大小，count是读写块的数量。</p>
+<h3 id="tpcc-mysql"><a href="#tpcc-mysql" class="headerlink" title="tpcc-mysql"></a>tpcc-mysql</h3><p><a href="https://code.launchpad.net/~percona-dev/perconatools/tpcc-mysql" target="_blank" rel="external">官网</a></p>
+<h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><p>一开始直接用的<code>yum install bzr</code>，版本太老，python用的2.6的，装tpcc-mysql和sysbench各种报错，于是就自己下了新版，重新装了一遍。<br><code>wget https://launchpad.net/bzr/2.7/2.7.0/+download/bzr-2.7.0.tar.gz</code><br><code>tar -xzvf bzr-2.7.0.tar.gz</code><br><code>yum install Pyrex</code><br><code>python setup.py install</code><br><code>bzr branch lp:~percona-dev/perconatools/tpcc-mysql</code><br><code>cd tpcc-mysql/src</code><br><code>make</code></p>
+<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>tpcc_load 初始化数据<br>tpcc_start 进行压力测试<br>–help查看用法<br>注意$PATH中要有mysql_config<br>建测试库 <code>mysqladmin -uroot -p create tpcc10</code><br>建表 <code>mysql -uroot -p tpcc10 &lt; create_table.sql</code><br>加索引和外键 <code>mysql -uroot -p tpcc10 &lt; add_fkey_idx.sql</code><br>初始化数据，最后一个参数是仓库数目 <code>./tpcc_load 127.0.0.1:3306 tpcc10 root &quot;password&quot; 10</code><br>如果要并行加载数据用load.sh<br>基准测试   <code>./tpcc_start -h127.0.0.1 -P3306 -dtpcc10 -uroot -p&quot;password&quot; -w10 -c32 -r120 -l1800</code><br>-w warehouses：仓库的数量<br>-c connections：线程数，默认为1<br>-r warmup_time：热身时间，单位s，默认为10s，热身是为了将数据加载到内存。<br>-l running_time：测试时间，单位s，默认为20s</p>
+<p>虚拟机测试结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;Raw Results&gt;</span><br><span class="line">  [0] sc:10693  lt:4220  rt:0  fl:0 </span><br><span class="line">  [1] sc:14914  lt:0  rt:0  fl:0 </span><br><span class="line">  [2] sc:1491  lt:0  rt:0  fl:0 </span><br><span class="line">  [3] sc:1491  lt:0  rt:0  fl:0 </span><br><span class="line">  [4] sc:1243  lt:255  rt:0  fl:0 </span><br><span class="line"> in 1800 sec.</span><br><span class="line"></span><br><span class="line">&lt;Raw Results2(sum ver.)&gt;</span><br><span class="line">  [0] sc:10693  lt:4220  rt:0  fl:0 </span><br><span class="line">  [1] sc:14914  lt:0  rt:0  fl:0 </span><br><span class="line">  [2] sc:1491  lt:0  rt:0  fl:0 </span><br><span class="line">  [3] sc:1491  lt:0  rt:0  fl:0 </span><br><span class="line">  [4] sc:1243  lt:255  rt:0  fl:0 </span><br><span class="line"></span><br><span class="line">&lt;Constraint Check&gt; (all must be [OK])</span><br><span class="line"> [transaction percentage]</span><br><span class="line">        Payment: 43.47% (&gt;=43.0%) [OK]</span><br><span class="line">   Order-Status: 4.35% (&gt;= 4.0%) [OK]</span><br><span class="line">       Delivery: 4.35% (&gt;= 4.0%) [OK]</span><br><span class="line">    Stock-Level: 4.37% (&gt;= 4.0%) [OK]</span><br><span class="line"> [response time (at least 90% passed)]</span><br><span class="line">      New-Order: 71.70%  [NG] *</span><br><span class="line">        Payment: 100.00%  [OK]</span><br><span class="line">   Order-Status: 100.00%  [OK]</span><br><span class="line">       Delivery: 100.00%  [OK]</span><br><span class="line">    Stock-Level: 82.98%  [NG] *</span><br><span class="line"></span><br><span class="line">&lt;TpmC&gt;</span><br><span class="line">                 497.100 TpmC</span><br></pre></td></tr></table></figure></p>
+<p>新订单业务和库存仓储业务均存在延迟，响应耗时指标没有达到标准。</p>
+<p><a href="http://blog.chinaunix.net/uid-25266990-id-4080103.html" target="_blank" rel="external">参考资料</a></p>
+
+      
+    </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://lijiali1226.github.io/2016/06/01/mysql-operation2/" data-id="cis650krx002e6lz7updp5i90" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+        <a href="http://lijiali1226.github.io/2016/06/01/mysql-operation2/#ds-thread" class="article-comment-link">
+          <i class="fa fa-comment"></i> Comments
+        </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
+
+
+    </footer>
+
+
+<!--
+    <footer class="article-footer">
+      <a data-url="http://lijiali1226.github.io/2016/06/01/mysql-operation2/" data-id="cis650krx002e6lz7updp5i90" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
+
+
+    </footer>
+-->
+
+  </div>
+  
+    
+<ul id="article-nav" class="nav nav-pills nav-justified">
+  
+  <li role="presentation">
+    <a href="/2016/05/20/mysql-operation1/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">MySQL运维1（基础知识）</span>
+    </a>
+  </li>
+  
+  
+  <li role="presentation">
+    <a href="/2016/06/15/yunnan/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">云南印象</span>
+      <i class="fa fa-chevron-right pull-right"></i>
+    </a>
+  </li>
+  
+</ul>
+
+
+  
+</article>
+
+
+<section id="comments">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-mysql-operation2" data-title="MySQL运维2（fio,tpcc-mysql）" data-url="http://lijiali1226.github.io/2016/06/01/mysql-operation2/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:'habit2016'};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+       || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+  <!-- 多说公共JS代码 end -->
+</section>
+
+
+<!--
+
+-->
+
+        </div>
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          
+  <div class="sidebar-module sidebar-toc">
+    <h4>Table of Contents</h4>
+    <ol class="sidebar-module-list"><li class="sidebar-module-list-item sidebar-module-list-level-2"><a class="sidebar-module-list-link" href="#测试工具"><span class="sidebar-module-list-number">1.</span> <span class="sidebar-module-list-text">测试工具</span></a><ol class="sidebar-module-list-child"><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#fio"><span class="sidebar-module-list-number">1.1.</span> <span class="sidebar-module-list-text">fio</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#dd（Linux命令）"><span class="sidebar-module-list-number">1.2.</span> <span class="sidebar-module-list-text">dd（Linux命令）</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#tpcc-mysql"><span class="sidebar-module-list-number">1.3.</span> <span class="sidebar-module-list-text">tpcc-mysql</span></a></li></ol></li></ol>
+  </div>
+
+
+
+  
+  <div class="sidebar-module">
+    <h4>Categories</h4>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/data/">data</a><span class="sidebar-module-list-count">8</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/database/">database</a><span class="sidebar-module-list-count">8</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/demo/">demo</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/education/">education</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/life/">life</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/programming/">programming</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/tech/">tech</a><span class="sidebar-module-list-count">4</span></li></ul>
+  </div>
+
+
+
+  
+  <div class="sidebar-module sidebar-tags">
+    <h4>Tags</h4>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/algorithm/">algorithm</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/bat/">bat</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/course/">course</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/crontab/">crontab</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/data-engineer/">data engineer</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/data-warehouse/">data warehouse</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/education/">education</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/etl/">etl</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/excel/">excel</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/game/">game</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/hexo/">hexo</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/ime/">ime</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/java/">java</a><span class="sidebar-module-list-count">5</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/jsp/">jsp</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/kettle/">kettle</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mac/">mac</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/machine-learning/">machine learning</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/matlab/">matlab</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mindmap/">mindmap</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/mysql/">mysql</a><span class="sidebar-module-list-count">9</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/netica/">netica</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/recommendation-system/">recommendation system</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/report/">report</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/servlet/">servlet</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/shell/">shell</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/sql-server/">sql server</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/ssh/">ssh</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/travelsky/">travelsky</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/volunteer/">volunteer</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/yunnan/">yunnan</a><span class="sidebar-module-list-count">1</span></li></ul>
+  </div>
+
+
+
+  
+  <div class="sidebar-module">
+    <h4>Tag Cloud</h4>
+    <p class="tagcloud">
+      <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/bat/" style="font-size: 10px;">bat</a> <a href="/tags/course/" style="font-size: 10px;">course</a> <a href="/tags/crontab/" style="font-size: 10px;">crontab</a> <a href="/tags/data-engineer/" style="font-size: 10px;">data engineer</a> <a href="/tags/data-warehouse/" style="font-size: 10px;">data warehouse</a> <a href="/tags/education/" style="font-size: 12.5px;">education</a> <a href="/tags/etl/" style="font-size: 10px;">etl</a> <a href="/tags/excel/" style="font-size: 10px;">excel</a> <a href="/tags/game/" style="font-size: 10px;">game</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/ime/" style="font-size: 10px;">ime</a> <a href="/tags/java/" style="font-size: 17.5px;">java</a> <a href="/tags/jsp/" style="font-size: 10px;">jsp</a> <a href="/tags/kettle/" style="font-size: 15px;">kettle</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/machine-learning/" style="font-size: 10px;">machine learning</a> <a href="/tags/matlab/" style="font-size: 10px;">matlab</a> <a href="/tags/mindmap/" style="font-size: 10px;">mindmap</a> <a href="/tags/mysql/" style="font-size: 20px;">mysql</a> <a href="/tags/netica/" style="font-size: 10px;">netica</a> <a href="/tags/recommendation-system/" style="font-size: 10px;">recommendation system</a> <a href="/tags/report/" style="font-size: 10px;">report</a> <a href="/tags/servlet/" style="font-size: 10px;">servlet</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/sql-server/" style="font-size: 12.5px;">sql server</a> <a href="/tags/ssh/" style="font-size: 12.5px;">ssh</a> <a href="/tags/travelsky/" style="font-size: 10px;">travelsky</a> <a href="/tags/volunteer/" style="font-size: 10px;">volunteer</a> <a href="/tags/yunnan/" style="font-size: 10px;">yunnan</a>
+    </p>
+  </div>
+
+
+  
+  <div class="sidebar-module">
+    <h4>Archives</h4>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/08/">August 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/07/">July 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/06/">June 2016</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/05/">May 2016</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/04/">April 2016</a><span class="sidebar-module-list-count">4</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/03/">March 2016</a><span class="sidebar-module-list-count">3</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/02/">February 2016</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/01/">January 2016</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/12/">December 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/11/">November 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/10/">October 2015</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/08/">August 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/07/">July 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/06/">June 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/05/">May 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2015/04/">April 2015</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/12/">December 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/07/">July 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2014/05/">May 2014</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2013/07/">July 2013</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/09/">September 2010</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2010/07/">July 2010</a><span class="sidebar-module-list-count">1</span></li></ul>
+  </div>
+
+
+
+
+<!--
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+-->
+<!-- blog-general-responsive-sidebar -->
+<!--
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4721191851305300"
+     data-ad-slot="5846920073"
+     data-ad-format="auto"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+-->
+        </div>
+    </div>
+  </div>
+  <footer class="blog-footer">
+  <div class="container">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Jiali Li<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Theme <a href="https://github.com/cgmartin/hexo-theme-bootstrap-blog">bootstrap-blog</a> by <a href="https://github.com/cgmartin">cgmartin</a> 
+    </div>
+  </div>
+</footer>
+
+  
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/github.min.css" integrity="sha384-WtUWHyk39lfUpZQVgokNfSKCJaKAeD6adgLduBLrKTMUuPzFhLtL23y1guFy6lZn" crossorigin="anonymous">
+  <script src="/highlight/highlight.pack.js"></script>
+
+
+
+
+
+
+<script src="/js/script.js"></script>
+
+</body>
+</html>
