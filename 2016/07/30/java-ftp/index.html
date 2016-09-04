@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Java Program with NeticaJ and Cron Job | For A Breath I Tarry</title>
+  <title>Java FTP上传下载问题 | For A Breath I Tarry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="NeticaJ配置同事两年前写的项目，需要部署到服务器上运行。
-步骤1.拷贝64位的Netica文件Netica.dll,NeticaJ.dll,NeticaJ.jar,Netica.lib到java.library.path下。获取java.library.path的方法:在MyEclipse下运行System.out.println(System.getProperty(&amp;quot;java.">
+  <meta name="description" content="问题1：从FTP下载文件，可以正常下载，但是打开的时候报“excel已损坏”之类的错误。
+解决方法：改编码格式。ftpClient.setControlEncoding(&amp;quot;GBK&amp;quot;);">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java Program with NeticaJ and Cron Job">
-<meta property="og:url" content="http://lijiali1226.github.io/2016/04/15/java-with-netica-and-cron-job/index.html">
+<meta property="og:title" content="Java FTP上传下载问题">
+<meta property="og:url" content="http://lijiali1226.github.io/2016/07/30/java-ftp/index.html">
 <meta property="og:site_name" content="For A Breath I Tarry">
-<meta property="og:description" content="NeticaJ配置同事两年前写的项目，需要部署到服务器上运行。
-步骤1.拷贝64位的Netica文件Netica.dll,NeticaJ.dll,NeticaJ.jar,Netica.lib到java.library.path下。获取java.library.path的方法:在MyEclipse下运行System.out.println(System.getProperty(&amp;quot;java.">
-<meta property="og:updated_time" content="2016-08-22T14:14:29.000Z">
+<meta property="og:description" content="问题1：从FTP下载文件，可以正常下载，但是打开的时候报“excel已损坏”之类的错误。
+解决方法：改编码格式。ftpClient.setControlEncoding(&amp;quot;GBK&amp;quot;);">
+<meta property="og:updated_time" content="2016-09-04T06:05:17.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java Program with NeticaJ and Cron Job">
-<meta name="twitter:description" content="NeticaJ配置同事两年前写的项目，需要部署到服务器上运行。
-步骤1.拷贝64位的Netica文件Netica.dll,NeticaJ.dll,NeticaJ.jar,Netica.lib到java.library.path下。获取java.library.path的方法:在MyEclipse下运行System.out.println(System.getProperty(&amp;quot;java.">
+<meta name="twitter:title" content="Java FTP上传下载问题">
+<meta name="twitter:description" content="问题1：从FTP下载文件，可以正常下载，但是打开的时候报“excel已损坏”之类的错误。
+解决方法：改编码格式。ftpClient.setControlEncoding(&amp;quot;GBK&amp;quot;);">
   
     <link rel="alternate" href="/atom.xml" title="For A Breath I Tarry" type="application/atom+xml">
   
@@ -92,13 +92,13 @@
 
     <div class="row">
         <div class="col-sm-8 blog-main">
-          <article id="post-java-with-netica-and-cron-job" class="article article-type-post" itemscope itemprop="blogPost">
+          <article id="post-java-ftp" class="article article-type-post" itemscope itemprop="blogPost">
 
   <header class="article-header">
     
   
     <h1 class="article-title" itemprop="name">
-      Java Program with NeticaJ and Cron Job
+      Java FTP上传下载问题
     </h1>
   
 
@@ -107,7 +107,7 @@
 
   <div class="article-meta">
     <div class="article-datetime">
-  <a href="/2016/04/15/java-with-netica-and-cron-job/" class="article-date"><time datetime="2016-04-15T10:51:31.000Z" itemprop="datePublished">2016-04-15</time></a>
+  <a href="/2016/07/30/java-ftp/" class="article-date"><time datetime="2016-07-30T05:49:02.000Z" itemprop="datePublished">2016-07-30</time></a>
 </div>
 
     
@@ -123,22 +123,15 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="NeticaJ配置"><a href="#NeticaJ配置" class="headerlink" title="NeticaJ配置"></a>NeticaJ配置</h2><p>同事两年前写的项目，需要部署到服务器上运行。</p>
-<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><p>1.拷贝64位的Netica文件Netica.dll,NeticaJ.dll,NeticaJ.jar,Netica.lib到java.library.path下。<br>获取java.library.path的方法:<br>在MyEclipse下运行<code>System.out.println(System.getProperty(&quot;java.library.path&quot;));</code><br>2.修改数据库连接字符串,ODBC连接,文件存储位置</p>
+        <h3 id="问题1："><a href="#问题1：" class="headerlink" title="问题1："></a>问题1：</h3><p>从FTP下载文件，可以正常下载，但是打开的时候报“excel已损坏”之类的错误。</p>
+<p>解决方法：<br>改编码格式。<code>ftpClient.setControlEncoding(&quot;GBK&quot;);</code></p>
 <a id="more"></a>
-<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>1.图形化控件各种bug，和算法逻辑没关系，都干掉了<br>2.服务器系统和数据库经历各种重装，odbc连接各种奇葩问题，原来的连接是这样：<br><code>Driver={SQL Server};Server=DB_server;DataBase=myDB</code><br>改来改去就是连不上，后来查了手册，看到了角落里面的一行小字</p>
-<blockquote>
-<p>Hint: If you are having difficulty getting your connection string to work, then use the Windows ODBC Data Source Administrator to connect to the database, give it a data source name (DSN), “myName”, and then use “DSN=myName” as the simplified connection string. The Administrator has powerful wizards to facilitate both finding the database and defining precisely how you wish to access it.</p>
-</blockquote>
-<p>于是再配了一遍，改成了这样：<br><code>DSN=myDataSource;UID=myUserAccount;PWD=myPassword</code><br>大功告成。</p>
-<h2 id="定时调度任务"><a href="#定时调度任务" class="headerlink" title="定时调度任务"></a>定时调度任务</h2><p>然后又提出了一个需求，要把它做成定时任务。</p>
-<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>首先想到的就是Quartz ，以前的程序有过用Quartz+Spring+Tomcat做调度的。但是这是个单独的java程序，没必要搞那么重量级。单独用Quartz 又要考虑到数据库持久化，Quartz 程序的销毁问题。总觉得有更简单的办法。<br>当当当当，直接写个bat脚本，计划任务调bat，bat调java。</p>
-<h3 id="问题-1"><a href="#问题-1" class="headerlink" title="问题"></a>问题</h3><p>程序调用了Netica的dll文件和lib文件，报各种错<br>1.java.lang.UnsatisfiedLinkError：no xxx in java.library.path<br>2.java.lang.ClassLoader.loadClass(Unknown Source)<br>3.java.lang.UnsatisfiedLinkError: %1 不是有效的 Win32 应用程序</p>
-<p>1和2的解决方法是配置好classpath和java.library.path。配置classpath的时候千万要注意在原来的基础上追加，我就手残的把原来的覆盖掉了。<br>3是因为32位和64位引起的问题。把Netica的x64_bin下的所有文件复制到c:\Program Files\Java\jdkxxx\bin目录下。<br>设置编译和运行环境的时候注意用64位的目录下的文件和程序，用和操作系统、jdk版本同一个位长的，不然各种报错。</p>
-<h3 id="bat脚本"><a href="#bat脚本" class="headerlink" title="bat脚本"></a>bat脚本</h3><p><strong>关于bat</strong><br>bat文件如果闪退的话可以加<code>pause</code>，退出cmd窗口用<code>exit</code>。<br>bat的注释是<code>::</code>和<code>rem</code>，<code>&gt;</code>是传递并覆盖，<code>&gt;&gt;</code>是传递并追加。<br><code>.</code>表示当前目录，<code>..</code>表示上级目录。</p>
-<p><strong>编译</strong><br><code>javac -deprecation -classpath ..\x64_bin\NeticaJ.jar;..\x64_bin\sqljdbc4.jar *.java</code></p>
-<p><strong>运行</strong><br><code>echo %date%_%time% &gt;&gt; E:\projectname\log\log%date%.txt</code><br><code>set PATH=..\bin;%PATH%</code><br><code>java -classpath .;..\x64_bin\NeticaJ.jar;..\x64_bin\sqljdbc4.jar -Djava.library.path=..\x64_bin Entry &gt;&gt; E:\projectname\log\log%date%.txt</code><br><code>exit</code></p>
-<h3 id="计划任务"><a href="#计划任务" class="headerlink" title="计划任务"></a>计划任务</h3><p>到计划任务里面进行设置。这里要注意路径问题，计划任务不能识别相对路径，要么配置的时候配置“起始于”选项，要么改成绝对路径。</p>
+<h3 id="问题2："><a href="#问题2：" class="headerlink" title="问题2："></a>问题2：</h3><p>通过FTP上传文件，本地测试一切正常。服务器上可以正常登陆FTP，通过FTP地址直接上传文件。服务器程序上传测试，FTP里面可以创建文件，但是大小为0，传输不过去，刷新就没有文件了，而上传页面就卡在上传的那一步。</p>
+<p>解决方法：<br>改端口设置。<code>ftpClient.enterLocalPassiveMode();</code></p>
+<p>原因：<br>FTP通常用的端口是21（命令端口）和20（数据端口）。但FTP工作方式不同，有主动模式（PORT）和被动模式（PASV），数据端口并不总是20。</p>
+<p>主动模式：客户端向服务器的FTP端口（默认是21）发送连接请求，服务器接受连接，建立一条命令链路。当需要传送数据时，客户端用PORT命令告诉服务器：我打开了X端口。于是服务器从20端口向客户端的X端口发送连接请求，建立一条数据链路来传送数据。</p>
+<p>被动模式：客户端向服务器的FTP端口（默认是21）发送连接请求，服务器接受连接，建立一条命令链路。当需要传送数据时，服务器用PASV命令告诉客户端：我打开了X端口。于是客户端向服务器的X端口发送连接请求，建立一条数据链路来传送数据。</p>
+<h3 id="其他注意事项："><a href="#其他注意事项：" class="headerlink" title="其他注意事项："></a>其他注意事项：</h3><p>上传的文件不要用中文名。<br>测试的时候一步步来，注意排除干扰项，比如防火墙、杀毒软件之类。</p>
 
       
     </div>
@@ -149,17 +142,17 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/15/java-with-netica-and-cron-job/" data-id="ciso5fles001qslz7wayaafx8" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/07/30/java-ftp/" data-id="ciso779q7006jslz7kbk4hkvj" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
       
-        <a href="http://lijiali1226.github.io/2016/04/15/java-with-netica-and-cron-job/#ds-thread" class="article-comment-link">
+        <a href="http://lijiali1226.github.io/2016/07/30/java-ftp/#ds-thread" class="article-comment-link">
           <i class="fa fa-comment"></i> Comments
         </a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bat/">bat</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/netica/">netica</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
 
 
     </footer>
@@ -167,12 +160,12 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/15/java-with-netica-and-cron-job/" data-id="ciso5fles001qslz7wayaafx8" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2016/07/30/java-ftp/" data-id="ciso779q7006jslz7kbk4hkvj" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
 
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bat/">bat</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/netica/">netica</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
 
 
     </footer>
@@ -184,16 +177,16 @@
 <ul id="article-nav" class="nav nav-pills nav-justified">
   
   <li role="presentation">
-    <a href="/2016/04/08/sql-server-mysql-diff/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/07/15/workbench/" id="article-nav-older" class="article-nav-link-wrap">
       <i class="fa fa-chevron-left pull-left"></i>
-      <span class="article-nav-link-title">Microsoft SQL Server 和MySQL的区别（数据类型及语法）</span>
+      <span class="article-nav-link-title">Linux下使用MySQL Workbench</span>
     </a>
   </li>
   
   
   <li role="presentation">
-    <a href="/2016/04/22/mysql-upgrade/" id="article-nav-newer" class="article-nav-link-wrap">
-      <span class="article-nav-link-title">MySQL 子查询及升级</span>
+    <a href="/2016/08/01/recommendation-system/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">推荐系统笔记</span>
       <i class="fa fa-chevron-right pull-right"></i>
     </a>
   </li>
@@ -207,7 +200,7 @@
 
 <section id="comments">
   <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="post-java-with-netica-and-cron-job" data-title="Java Program with NeticaJ and Cron Job" data-url="http://lijiali1226.github.io/2016/04/15/java-with-netica-and-cron-job/"></div>
+  <div class="ds-thread" data-thread-key="post-java-ftp" data-title="Java FTP上传下载问题" data-url="http://lijiali1226.github.io/2016/07/30/java-ftp/"></div>
   <!-- 多说评论框 end -->
   <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
   <script type="text/javascript">
@@ -232,11 +225,6 @@
         </div>
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           
-  <div class="sidebar-module sidebar-toc">
-    <h4>Table of Contents</h4>
-    <ol class="sidebar-module-list"><li class="sidebar-module-list-item sidebar-module-list-level-2"><a class="sidebar-module-list-link" href="#NeticaJ配置"><span class="sidebar-module-list-number">1.</span> <span class="sidebar-module-list-text">NeticaJ配置</span></a><ol class="sidebar-module-list-child"><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#步骤"><span class="sidebar-module-list-number">1.1.</span> <span class="sidebar-module-list-text">步骤</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#问题"><span class="sidebar-module-list-number">1.2.</span> <span class="sidebar-module-list-text">问题</span></a></li></ol></li><li class="sidebar-module-list-item sidebar-module-list-level-2"><a class="sidebar-module-list-link" href="#定时调度任务"><span class="sidebar-module-list-number">2.</span> <span class="sidebar-module-list-text">定时调度任务</span></a><ol class="sidebar-module-list-child"><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#思考"><span class="sidebar-module-list-number">2.1.</span> <span class="sidebar-module-list-text">思考</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#问题-1"><span class="sidebar-module-list-number">2.2.</span> <span class="sidebar-module-list-text">问题</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#bat脚本"><span class="sidebar-module-list-number">2.3.</span> <span class="sidebar-module-list-text">bat脚本</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#计划任务"><span class="sidebar-module-list-number">2.4.</span> <span class="sidebar-module-list-text">计划任务</span></a></li></ol></li></ol>
-  </div>
-
 
 
   

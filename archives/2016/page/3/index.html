@@ -3,21 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Java Program with NeticaJ and Cron Job | For A Breath I Tarry</title>
+  <title>Archives: 2016 | For A Breath I Tarry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="NeticaJ配置同事两年前写的项目，需要部署到服务器上运行。
-步骤1.拷贝64位的Netica文件Netica.dll,NeticaJ.dll,NeticaJ.jar,Netica.lib到java.library.path下。获取java.library.path的方法:在MyEclipse下运行System.out.println(System.getProperty(&amp;quot;java.">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Java Program with NeticaJ and Cron Job">
-<meta property="og:url" content="http://lijiali1226.github.io/2016/04/15/java-with-netica-and-cron-job/index.html">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="For A Breath I Tarry">
+<meta property="og:url" content="http://lijiali1226.github.io/archives/2016/page/3/index.html">
 <meta property="og:site_name" content="For A Breath I Tarry">
-<meta property="og:description" content="NeticaJ配置同事两年前写的项目，需要部署到服务器上运行。
-步骤1.拷贝64位的Netica文件Netica.dll,NeticaJ.dll,NeticaJ.jar,Netica.lib到java.library.path下。获取java.library.path的方法:在MyEclipse下运行System.out.println(System.getProperty(&amp;quot;java.">
-<meta property="og:updated_time" content="2016-08-22T14:14:29.000Z">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java Program with NeticaJ and Cron Job">
-<meta name="twitter:description" content="NeticaJ配置同事两年前写的项目，需要部署到服务器上运行。
-步骤1.拷贝64位的Netica文件Netica.dll,NeticaJ.dll,NeticaJ.jar,Netica.lib到java.library.path下。获取java.library.path的方法:在MyEclipse下运行System.out.println(System.getProperty(&amp;quot;java.">
+<meta name="twitter:title" content="For A Breath I Tarry">
+<meta name="twitter:description">
   
     <link rel="alternate" href="/atom.xml" title="For A Breath I Tarry" type="application/atom+xml">
   
@@ -56,7 +52,7 @@
           <li><a class=""
                  href="/index.html">Home</a></li>
         
-          <li><a class=""
+          <li><a class="active"
                  href="/archives/">Archives</a></li>
         
           <li><a class=""
@@ -92,151 +88,60 @@
 
     <div class="row">
         <div class="col-sm-8 blog-main">
-          <article id="post-java-with-netica-and-cron-job" class="article article-type-post" itemscope itemprop="blogPost">
+          
 
-  <header class="article-header">
+<div class="page-header archives-type"><h1>Archives</h1></div>
+
+
+
+  
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <header class="archive-article-header">
+    <div class="article-datetime">
+  <a href="/2016/01/01/mysql-tips/" class="archive-article-date"><time datetime="2016-01-01T10:40:15.000Z" itemprop="datePublished">January 1st</time></a>
+</div>
+
     
   
-    <h1 class="article-title" itemprop="name">
-      Java Program with NeticaJ and Cron Job
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2016/01/01/mysql-tips/">MySQL Tips</a>
     </h1>
   
 
 
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
+
+
   </header>
-
-  <div class="article-meta">
-    <div class="article-datetime">
-  <a href="/2016/04/15/java-with-netica-and-cron-job/" class="article-date"><time datetime="2016-04-15T10:51:31.000Z" itemprop="datePublished">2016-04-15</time></a>
-</div>
-
-    
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/tech/">tech</a>
-  </div>
-
-
-    
-  </div>
-  <div class="article-inner">
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="NeticaJ配置"><a href="#NeticaJ配置" class="headerlink" title="NeticaJ配置"></a>NeticaJ配置</h2><p>同事两年前写的项目，需要部署到服务器上运行。</p>
-<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><p>1.拷贝64位的Netica文件Netica.dll,NeticaJ.dll,NeticaJ.jar,Netica.lib到java.library.path下。<br>获取java.library.path的方法:<br>在MyEclipse下运行<code>System.out.println(System.getProperty(&quot;java.library.path&quot;));</code><br>2.修改数据库连接字符串,ODBC连接,文件存储位置</p>
-<a id="more"></a>
-<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>1.图形化控件各种bug，和算法逻辑没关系，都干掉了<br>2.服务器系统和数据库经历各种重装，odbc连接各种奇葩问题，原来的连接是这样：<br><code>Driver={SQL Server};Server=DB_server;DataBase=myDB</code><br>改来改去就是连不上，后来查了手册，看到了角落里面的一行小字</p>
-<blockquote>
-<p>Hint: If you are having difficulty getting your connection string to work, then use the Windows ODBC Data Source Administrator to connect to the database, give it a data source name (DSN), “myName”, and then use “DSN=myName” as the simplified connection string. The Administrator has powerful wizards to facilitate both finding the database and defining precisely how you wish to access it.</p>
-</blockquote>
-<p>于是再配了一遍，改成了这样：<br><code>DSN=myDataSource;UID=myUserAccount;PWD=myPassword</code><br>大功告成。</p>
-<h2 id="定时调度任务"><a href="#定时调度任务" class="headerlink" title="定时调度任务"></a>定时调度任务</h2><p>然后又提出了一个需求，要把它做成定时任务。</p>
-<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>首先想到的就是Quartz ，以前的程序有过用Quartz+Spring+Tomcat做调度的。但是这是个单独的java程序，没必要搞那么重量级。单独用Quartz 又要考虑到数据库持久化，Quartz 程序的销毁问题。总觉得有更简单的办法。<br>当当当当，直接写个bat脚本，计划任务调bat，bat调java。</p>
-<h3 id="问题-1"><a href="#问题-1" class="headerlink" title="问题"></a>问题</h3><p>程序调用了Netica的dll文件和lib文件，报各种错<br>1.java.lang.UnsatisfiedLinkError：no xxx in java.library.path<br>2.java.lang.ClassLoader.loadClass(Unknown Source)<br>3.java.lang.UnsatisfiedLinkError: %1 不是有效的 Win32 应用程序</p>
-<p>1和2的解决方法是配置好classpath和java.library.path。配置classpath的时候千万要注意在原来的基础上追加，我就手残的把原来的覆盖掉了。<br>3是因为32位和64位引起的问题。把Netica的x64_bin下的所有文件复制到c:\Program Files\Java\jdkxxx\bin目录下。<br>设置编译和运行环境的时候注意用64位的目录下的文件和程序，用和操作系统、jdk版本同一个位长的，不然各种报错。</p>
-<h3 id="bat脚本"><a href="#bat脚本" class="headerlink" title="bat脚本"></a>bat脚本</h3><p><strong>关于bat</strong><br>bat文件如果闪退的话可以加<code>pause</code>，退出cmd窗口用<code>exit</code>。<br>bat的注释是<code>::</code>和<code>rem</code>，<code>&gt;</code>是传递并覆盖，<code>&gt;&gt;</code>是传递并追加。<br><code>.</code>表示当前目录，<code>..</code>表示上级目录。</p>
-<p><strong>编译</strong><br><code>javac -deprecation -classpath ..\x64_bin\NeticaJ.jar;..\x64_bin\sqljdbc4.jar *.java</code></p>
-<p><strong>运行</strong><br><code>echo %date%_%time% &gt;&gt; E:\projectname\log\log%date%.txt</code><br><code>set PATH=..\bin;%PATH%</code><br><code>java -classpath .;..\x64_bin\NeticaJ.jar;..\x64_bin\sqljdbc4.jar -Djava.library.path=..\x64_bin Entry &gt;&gt; E:\projectname\log\log%date%.txt</code><br><code>exit</code></p>
-<h3 id="计划任务"><a href="#计划任务" class="headerlink" title="计划任务"></a>计划任务</h3><p>到计划任务里面进行设置。这里要注意路径问题，计划任务不能识别相对路径，要么配置的时候配置“起始于”选项，要么改成绝对路径。</p>
-
-      
-    </div>
-
-    
-      
-
-    
-
-    <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/15/java-with-netica-and-cron-job/" data-id="ciso5fles001qslz7wayaafx8" class="article-share-link">
-        <i class="fa fa-share"></i> Share
-      </a>
-      
-      
-        <a href="http://lijiali1226.github.io/2016/04/15/java-with-netica-and-cron-job/#ds-thread" class="article-comment-link">
-          <i class="fa fa-comment"></i> Comments
-        </a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bat/">bat</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/netica/">netica</a></li></ul>
-
-
-    </footer>
-
-
-<!--
-    <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/15/java-with-netica-and-cron-job/" data-id="ciso5fles001qslz7wayaafx8" class="article-share-link">
-        <i class="fa fa-share"></i> Share
-      </a>
-
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bat/">bat</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/netica/">netica</a></li></ul>
-
-
-    </footer>
--->
-
-  </div>
-  
-    
-<ul id="article-nav" class="nav nav-pills nav-justified">
-  
-  <li role="presentation">
-    <a href="/2016/04/08/sql-server-mysql-diff/" id="article-nav-older" class="article-nav-link-wrap">
-      <i class="fa fa-chevron-left pull-left"></i>
-      <span class="article-nav-link-title">Microsoft SQL Server 和MySQL的区别（数据类型及语法）</span>
-    </a>
-  </li>
-  
-  
-  <li role="presentation">
-    <a href="/2016/04/22/mysql-upgrade/" id="article-nav-newer" class="article-nav-link-wrap">
-      <span class="article-nav-link-title">MySQL 子查询及升级</span>
-      <i class="fa fa-chevron-right pull-right"></i>
-    </a>
-  </li>
-  
-</ul>
-
-
-  
 </article>
 
-
-<section id="comments">
-  <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="post-java-with-netica-and-cron-job" data-title="Java Program with NeticaJ and Cron Job" data-url="http://lijiali1226.github.io/2016/04/15/java-with-netica-and-cron-job/"></div>
-  <!-- 多说评论框 end -->
-  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-  <script type="text/javascript">
-  var duoshuoQuery = {short_name:'habit2016'};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0] 
-       || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-    </script>
-  <!-- 多说公共JS代码 end -->
-</section>
+  
+  
+    </div></section>
+  
 
 
-<!--
+  <div id="page-nav">
+    <nav><ul class="pagination"><li><a class="page-prev" rel="prev" href="/archives/2016/page/2/"><i class="fa fa-chevron-left"></i> Prev</a></li><li><a class="page-number" href="/archives/2016/">1</a></li><li><a class="page-number" href="/archives/2016/page/2/">2</a></li><li class="active"><span class="page-number">3</span></li><li class="disabled"><span class="page-next">Next <i class="fa fa-chevron-right"></i></a></li></ul></nav>
+  </div>
 
--->
+
 
         </div>
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           
-  <div class="sidebar-module sidebar-toc">
-    <h4>Table of Contents</h4>
-    <ol class="sidebar-module-list"><li class="sidebar-module-list-item sidebar-module-list-level-2"><a class="sidebar-module-list-link" href="#NeticaJ配置"><span class="sidebar-module-list-number">1.</span> <span class="sidebar-module-list-text">NeticaJ配置</span></a><ol class="sidebar-module-list-child"><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#步骤"><span class="sidebar-module-list-number">1.1.</span> <span class="sidebar-module-list-text">步骤</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#问题"><span class="sidebar-module-list-number">1.2.</span> <span class="sidebar-module-list-text">问题</span></a></li></ol></li><li class="sidebar-module-list-item sidebar-module-list-level-2"><a class="sidebar-module-list-link" href="#定时调度任务"><span class="sidebar-module-list-number">2.</span> <span class="sidebar-module-list-text">定时调度任务</span></a><ol class="sidebar-module-list-child"><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#思考"><span class="sidebar-module-list-number">2.1.</span> <span class="sidebar-module-list-text">思考</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#问题-1"><span class="sidebar-module-list-number">2.2.</span> <span class="sidebar-module-list-text">问题</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#bat脚本"><span class="sidebar-module-list-number">2.3.</span> <span class="sidebar-module-list-text">bat脚本</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#计划任务"><span class="sidebar-module-list-number">2.4.</span> <span class="sidebar-module-list-text">计划任务</span></a></li></ol></li></ol>
-  </div>
-
 
 
   
