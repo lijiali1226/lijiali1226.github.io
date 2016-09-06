@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2015/12 | For A Breath I Tarry</title>
+  <title>Oracle海量数据笔记2 | For A Breath I Tarry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="For A Breath I Tarry">
-<meta property="og:url" content="http://lijiali1226.github.io/archives/2015/12/index.html">
+  <meta name="description" content="初始化参数作用：用来预设和约束Oracle实例的行为
+分类：内存相关的参数；I/O相关的参数：DB_FILE_MULTIBLOCK_READ_COUNT约束Oracle多数据块读取时的行为">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Oracle海量数据笔记2">
+<meta property="og:url" content="http://lijiali1226.github.io/2016/07/07/oracle-mass-data2/index.html">
 <meta property="og:site_name" content="For A Breath I Tarry">
-<meta property="og:description">
+<meta property="og:description" content="初始化参数作用：用来预设和约束Oracle实例的行为
+分类：内存相关的参数；I/O相关的参数：DB_FILE_MULTIBLOCK_READ_COUNT约束Oracle多数据块读取时的行为">
+<meta property="og:updated_time" content="2016-09-06T13:24:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="For A Breath I Tarry">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Oracle海量数据笔记2">
+<meta name="twitter:description" content="初始化参数作用：用来预设和约束Oracle实例的行为
+分类：内存相关的参数；I/O相关的参数：DB_FILE_MULTIBLOCK_READ_COUNT约束Oracle多数据块读取时的行为">
   
     <link rel="alternate" href="/atom.xml" title="For A Breath I Tarry" type="application/atom+xml">
   
@@ -52,7 +56,7 @@
           <li><a class=""
                  href="/index.html">Home</a></li>
         
-          <li><a class="active"
+          <li><a class=""
                  href="/archives/">Archives</a></li>
         
           <li><a class=""
@@ -88,56 +92,165 @@
 
     <div class="row">
         <div class="col-sm-8 blog-main">
-          
+          <article id="post-oracle-mass-data2" class="article article-type-post" itemscope itemprop="blogPost">
 
-<div class="page-header archives-type"><h1>Archives</h1></div>
-
-
-
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    <div class="article-datetime">
-  <a href="/2015/12/01/excel/" class="archive-article-date"><time datetime="2015-11-30T16:00:00.000Z" itemprop="datePublished">December 1st</time></a>
-</div>
-
+  <header class="article-header">
     
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/12/01/excel/">Excel Tips</a>
+    <h1 class="article-title" itemprop="name">
+      Oracle海量数据笔记2
     </h1>
   
 
 
-    
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/excel/">excel</a></li></ul>
-
-
   </header>
+
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/2016/07/07/oracle-mass-data2/" class="article-date"><time datetime="2016-07-07T13:19:23.000Z" itemprop="datePublished">2016-07-07</time></a>
+</div>
+
+    
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/database/">database</a>
+  </div>
+
+
+    
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="初始化参数"><a href="#初始化参数" class="headerlink" title="初始化参数"></a>初始化参数</h3><p>作用：用来预设和约束Oracle实例的行为</p>
+<p>分类：<br>内存相关的参数；<br>I/O相关的参数：<br>DB_FILE_MULTIBLOCK_READ_COUNT<br>约束Oracle多数据块读取时的行为</p>
+<a id="more"></a>
+<p>和变量绑定相关的参数：<br>CURSOR_SHARING<br>SQL重用：相同的SQL语句，Oracle只对它的第一次运行执行硬解析，后续的SQL则直接使用第一次硬解析的结果。<br>分类：EXACT；SIMILAR；FORCE；<br>如果是一个OLAP类型的数据库，应该将它的值设置为EXACT，同时不要绑定变量。</p>
+<p>优化器相关的参数：<br>PTIMIZER_DYNAMIC_SAMPLING<br>设定Oracle动态采样级别。<br>建议：在OLAP或者数据仓库环境中，将动态采样的level设置为3或者4比较好；在OLTP系统下，不应该使用动态采样。</p>
+<p>并行相关的参数；<br>PARALLEL_ADAPTIVE_MULTI_USER<br>为true时，Oracle自动根据系统的负载情况和每个用户使用的并行度情况来动态的调整并行度的值。<br>PARALLEL_INSTANCE_GROUP<br>和INSTANCE_GROUPS参数一起，约束并行执行进程在哪些RAC实例上执行。</p>
+<h3 id="SQL优化"><a href="#SQL优化" class="headerlink" title="SQL优化"></a>SQL优化</h3><p>高效的SQL：<br>1.减少数据块的访问：尽可能的重用结果集（decode）；正确的索引；正确的执行计划；<br>2.尽可能并行地处理数据<br>3.优化器模式的选择：first_rows or all_rows</p>
+<p>正确的索引<br>1.选择合适的索引类型<br>2.分区索引还是全局索引<br>3.哪些列上创建索引</p>
+<p>SQL优化的工具<br>10046事件—SQL的资源消耗及等待事件(SQL_TRACE)<br>10053事件—SQL的执行计划是如何产生的</p>
+<h3 id="dbms-stats包"><a href="#dbms-stats包" class="headerlink" title="dbms_stats包"></a>dbms_stats包</h3><p>OLAP 数据库需要数据分析<br>正确的使用dbms_stats包：<br>分析哪些对象；数据分析的频率和时间；分析的采样率；分析的粒度；</p>
+<p>直方图<br>均匀的数据分布vs倾斜的数据分布</p>
+<p>动态采样<br>海量数据，临时表，列相关性分析</p>
+<h4 id="数据加载"><a href="#数据加载" class="headerlink" title="数据加载"></a>数据加载</h4><p>OLAP数据库数据加载方式：<br>1.sql*loader工具<br>2.OCI接口调用sql*loader<br>3.传统的insert</p>
+<p>sql *loader优势：<br>批量数据加载；更灵活的加载控制；效率更高；</p>
+<p>sql *loader的重要参数：<br>常规的数据加载 direct=false<br>类似insert，不支持簇表<br>BINDSIZE 设置每次提交数据的大小</p>
+<p>直接加载 direct=true<br>直接写到新建的块里面，而不是已经存在的块<br>进程用自己的写I/O，不需要oracle的buffer cache<br>不支持簇表，不能有正在进行的交易<br>直接加载不能维护约束性索引（如主键），加载完后索引状态变为unusable，需要重建</p>
+<p>并行常规加载vs并行直接加载</p>
+<h3 id="数据管理"><a href="#数据管理" class="headerlink" title="数据管理"></a>数据管理</h3><p>OLAP 数据库数据管理的内容：<br>1.数据的容量和存储方式<br>2.数据的日常管理<br>3.数据的备份和容灾</p>
+<p>存储方式：<br>单台数据库服务器(或RAC)+SAN；<br>分布式数据库；</p>
+<p>数据的日常管理：<br>分区存储<br>分区索引<br>交换分区加载数据<br>数据压缩<br>只读表空间</p>
+<p>只读表空间：<br>减少数据库的备份和恢复工作<br>加快数据库的关闭和启动时间<br>防止数据被意外的删除和修改（可以添加列，修改列名，因为列信息存储在系统表空间里面）<br>方便进行表空间的管理</p>
+<p>数据的备份和恢复：<br>Rman，DataGuard方式对于OLAP不再适合</p>
+<p>OLAP的备份方式：<br>分区+表空间的备份和恢复<br>原始数据的备份和恢复</p>
+<h3 id="RAC-amp-DG"><a href="#RAC-amp-DG" class="headerlink" title="RAC &amp; DG"></a>RAC &amp; DG</h3><p>RAC实例级别<br>DataGuard数据库级别</p>
+<p>RAC：<br>OLTP要求很高的内存效率：RAC不是，但是RAC可以接受更多的并发。<br>OLAP需要大量的并行：RAC提供，但会产生大量的interconnect数据。</p>
+<p>RAC在OLAP下的应用：<br>实例容错（failover，面向应用透明）<br>负载均衡（随机，服务器端和客户端均可设置）<br>业务分离（不同实例处理不同业务）</p>
+<p>DataGuard原理（归档日志）<br>DG是一个容错方案，对于OLTP非常适合。<br>OLAP数据量太大，只能选择关键数据创建DG。<br>海量的数据，应该选择其它的备份方式，如原始数据备份等。</p>
+<p>DataGuard的保护模式：<br>最大数据保护模式<br>最大性能模式<br>最高可用性模式</p>
+<p>本地：最高可用性模式<br>远程：最大性能模式</p>
+<p>DataGuard中Standby数据库的类型：<br>物理Standby数据库（数据块，redo日志，改变向量）<br>逻辑Standby数据库（sql）</p>
+
+      
+    </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://lijiali1226.github.io/2016/07/07/oracle-mass-data2/" data-id="cisria1kn0029kmz7g3w0e87h" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+        <a href="http://lijiali1226.github.io/2016/07/07/oracle-mass-data2/#ds-thread" class="article-comment-link">
+          <i class="fa fa-comment"></i> Comments
+        </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/oracle/">oracle</a></li></ul>
+
+
+    </footer>
+
+
+<!--
+    <footer class="article-footer">
+      <a data-url="http://lijiali1226.github.io/2016/07/07/oracle-mass-data2/" data-id="cisria1kn0029kmz7g3w0e87h" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/oracle/">oracle</a></li></ul>
+
+
+    </footer>
+-->
+
+  </div>
+  
+    
+<ul id="article-nav" class="nav nav-pills nav-justified">
+  
+  <li role="presentation">
+    <a href="/2016/07/01/data-engineer/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">数据工程师技术栈</span>
+    </a>
+  </li>
+  
+  
+  <li role="presentation">
+    <a href="/2016/07/15/workbench/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">Linux下使用MySQL Workbench</span>
+      <i class="fa fa-chevron-right pull-right"></i>
+    </a>
+  </li>
+  
+</ul>
+
+
+  
 </article>
 
-  
-  
-    </div></section>
-  
+
+<section id="comments">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-oracle-mass-data2" data-title="Oracle海量数据笔记2" data-url="http://lijiali1226.github.io/2016/07/07/oracle-mass-data2/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:'habit2016'};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+       || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+  <!-- 多说公共JS代码 end -->
+</section>
 
 
+<!--
 
+-->
 
         </div>
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           
+  <div class="sidebar-module sidebar-toc">
+    <h4>Table of Contents</h4>
+    <ol class="sidebar-module-list"><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#初始化参数"><span class="sidebar-module-list-number">1.</span> <span class="sidebar-module-list-text">初始化参数</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#SQL优化"><span class="sidebar-module-list-number">2.</span> <span class="sidebar-module-list-text">SQL优化</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#dbms-stats包"><span class="sidebar-module-list-number">3.</span> <span class="sidebar-module-list-text">dbms_stats包</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#数据管理"><span class="sidebar-module-list-number">4.</span> <span class="sidebar-module-list-text">数据管理</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#RAC-amp-DG"><span class="sidebar-module-list-number">5.</span> <span class="sidebar-module-list-text">RAC & DG</span></a></li></ol>
+  </div>
+
 
 
   
