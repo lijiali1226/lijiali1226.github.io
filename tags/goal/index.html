@@ -3,21 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Microsoft SQL Server 和MySQL的区别（数据类型及语法） | For A Breath I Tarry</title>
+  <title>Tag: goal | For A Breath I Tarry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="数据类型两者大部分数据类型都能对应，少部分需进行转换(图片来自MySQL)">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Microsoft SQL Server 和MySQL的区别（数据类型及语法）">
-<meta property="og:url" content="http://lijiali1226.github.io/2016/04/22/sql-server-mysql-diff/index.html">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="For A Breath I Tarry">
+<meta property="og:url" content="http://lijiali1226.github.io/tags/goal/index.html">
 <meta property="og:site_name" content="For A Breath I Tarry">
-<meta property="og:description" content="数据类型两者大部分数据类型都能对应，少部分需进行转换(图片来自MySQL)">
-<meta property="og:image" content="http://lijiali1226.github.io/images/datatype.PNG">
-<meta property="og:image" content="http://lijiali1226.github.io/images/date.PNG">
-<meta property="og:updated_time" content="2016-09-06T15:34:06.000Z">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Microsoft SQL Server 和MySQL的区别（数据类型及语法）">
-<meta name="twitter:description" content="数据类型两者大部分数据类型都能对应，少部分需进行转换(图片来自MySQL)">
-<meta name="twitter:image" content="http://lijiali1226.github.io/images/datatype.PNG">
+<meta name="twitter:title" content="For A Breath I Tarry">
+<meta name="twitter:description">
   
     <link rel="alternate" href="/atom.xml" title="For A Breath I Tarry" type="application/atom+xml">
   
@@ -92,126 +88,56 @@
 
     <div class="row">
         <div class="col-sm-8 blog-main">
-          <article id="post-sql-server-mysql-diff" class="article article-type-post" itemscope itemprop="blogPost">
+          
 
-  <header class="article-header">
+<div class="page-header tag-type"><h1>goal</h1></div>
+
+
+
+  
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <header class="archive-article-header">
+    <div class="article-datetime">
+  <a href="/2017/11/26/goals-executions-and-habits/" class="archive-article-date"><time datetime="2017-11-26T13:42:21.000Z" itemprop="datePublished">November 26th</time></a>
+</div>
+
     
   
-    <h1 class="article-title" itemprop="name">
-      Microsoft SQL Server 和MySQL的区别（数据类型及语法）
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/11/26/goals-executions-and-habits/">目标和执行</a>
     </h1>
   
 
 
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/goal/">goal</a></li></ul>
+
+
   </header>
-
-  <div class="article-meta">
-    <div class="article-datetime">
-  <a href="/2016/04/22/sql-server-mysql-diff/" class="article-date"><time datetime="2016-04-21T16:00:00.000Z" itemprop="datePublished">2016-04-22</time></a>
-</div>
-
-    
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/database/">database</a>
-  </div>
-
-
-    
-  </div>
-  <div class="article-inner">
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>两者大部分数据类型都能对应，少部分需进行转换<br>(图片来自MySQL)<br><img src="/images/datatype.PNG" alt="datatype"></p>
-<a id="more"></a>
-<h3 id="日期函数"><a href="#日期函数" class="headerlink" title="日期函数"></a>日期函数</h3><p>(图片来自MySQL)<br><img src="/images/date.PNG" alt="date"></p>
-<p>日期转字符串：<br>DATE_FORMAT(date,format)<br><a href="http://www.w3school.com.cn/sql/func_date_format.asp" target="_blank" rel="external">格式控制</a></p>
-<p>字符串转日期：<br>STR_TO_DATE(str,format) </p>
-<p>之前的同事设计的数据库把一个非常重要的日期字段在所有的表中都用的varchar类型存储，带来了无数的日期字符串转换问题，真是一个非常糟糕的设计。</p>
-<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><p>SQL Server<br><code>CONVERT(int, &#39;123.4&#39;)</code><br><code>CAST(&#39;123.4&#39; as int)</code><br>convert可以格式化日期和数值。</p>
-<p>MySQL<br><code>CONVERT(&#39;23&#39;,SIGNED)</code><br><code>CAST(&#39;125e342.83&#39; AS signed)</code><br>可以转换的类型是有限制的。</p>
-<h3 id="临时表"><a href="#临时表" class="headerlink" title="临时表"></a>临时表</h3><p>SQL Server<br><code>select * INTO #TEMPOO FROM SELECT * FROM table_name</code></p>
-<p>#局部临时表 ##全局临时表  @本地变量  @@函数  N以Unicode格式存储</p>
-<p>MySQL<br><code>CREATE TEMPORARY TABLE tmp_table SELECT * FROM table_name</code></p>
-<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><p>SQL Server用+连接字符串，MySQL用concat()函数</p>
-<h3 id="其它语法"><a href="#其它语法" class="headerlink" title="其它语法"></a>其它语法</h3><p>SQL Server<br><code>select top 100 * from table</code>  </p>
-<p>MySQL<br><code>select * from table limit 100</code></p>
-
-      
-    </div>
-
-    
-      
-
-    
-
-    <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/22/sql-server-mysql-diff/" data-id="cjc7m8fg8003fcqs2bim154fi" class="article-share-link">
-        <i class="fa fa-share"></i> Share
-      </a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql-server/">sql server</a></li></ul>
-
-
-    </footer>
-
-
-<!--
-    <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/04/22/sql-server-mysql-diff/" data-id="cjc7m8fg8003fcqs2bim154fi" class="article-share-link">
-        <i class="fa fa-share"></i> Share
-      </a>
-
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql-server/">sql server</a></li></ul>
-
-
-    </footer>
--->
-
-  </div>
-  
-    
-<ul id="article-nav" class="nav nav-pills nav-justified">
-  
-  <li role="presentation">
-    <a href="/2016/04/15/sql-server-to-mysql/" id="article-nav-older" class="article-nav-link-wrap">
-      <i class="fa fa-chevron-left pull-left"></i>
-      <span class="article-nav-link-title">跨平台 Microsoft SQL Server 迁移到MySQL</span>
-    </a>
-  </li>
-  
-  
-  <li role="presentation">
-    <a href="/2016/04/29/lvke-data/" id="article-nav-newer" class="article-nav-link-wrap">
-      <span class="article-nav-link-title">需求分析和懂业务的必要性</span>
-      <i class="fa fa-chevron-right pull-right"></i>
-    </a>
-  </li>
-  
-</ul>
-
-
-  
 </article>
 
+  
+  
+    </div></section>
+  
 
 
-<!--
 
--->
 
         </div>
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           
-  <div class="sidebar-module sidebar-toc">
-    <h4>Table of Contents</h4>
-    <ol class="sidebar-module-list"><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#数据类型"><span class="sidebar-module-list-number">1.</span> <span class="sidebar-module-list-text">数据类型</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#日期函数"><span class="sidebar-module-list-number">2.</span> <span class="sidebar-module-list-text">日期函数</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#类型转换"><span class="sidebar-module-list-number">3.</span> <span class="sidebar-module-list-text">类型转换</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#临时表"><span class="sidebar-module-list-number">4.</span> <span class="sidebar-module-list-text">临时表</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#字符串"><span class="sidebar-module-list-number">5.</span> <span class="sidebar-module-list-text">字符串</span></a></li><li class="sidebar-module-list-item sidebar-module-list-level-3"><a class="sidebar-module-list-link" href="#其它语法"><span class="sidebar-module-list-number">6.</span> <span class="sidebar-module-list-text">其它语法</span></a></li></ol>
-  </div>
-
 
 
   
