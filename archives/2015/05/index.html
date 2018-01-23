@@ -3,20 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Java中调用Kettle Trans或Job | For A Breath I Tarry</title>
+  <title>Archives: 2015/5 | For A Breath I Tarry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="用的kettle 4.4版本，需要引入kettle lib目录下的jar包：">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Java中调用Kettle Trans或Job">
-<meta property="og:url" content="http://lijiali1226.github.io/2016/08/01/java-job-trans/index.html">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="For A Breath I Tarry">
+<meta property="og:url" content="http://lijiali1226.github.io/archives/2015/05/index.html">
 <meta property="og:site_name" content="For A Breath I Tarry">
-<meta property="og:description" content="用的kettle 4.4版本，需要引入kettle lib目录下的jar包：">
-<meta property="og:image" content="http://lijiali1226.github.io/images/jar.PNG">
-<meta property="og:updated_time" content="2016-09-06T15:38:30.000Z">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java中调用Kettle Trans或Job">
-<meta name="twitter:description" content="用的kettle 4.4版本，需要引入kettle lib目录下的jar包：">
-<meta name="twitter:image" content="http://lijiali1226.github.io/images/jar.PNG">
+<meta name="twitter:title" content="For A Breath I Tarry">
+<meta name="twitter:description">
   
     <link rel="alternate" href="/atom.xml" title="For A Breath I Tarry" type="application/atom+xml">
   
@@ -55,7 +52,7 @@
           <li><a class=""
                  href="/index.html">Home</a></li>
         
-          <li><a class=""
+          <li><a class="active"
                  href="/archives/">Archives</a></li>
         
           <li><a class=""
@@ -91,107 +88,52 @@
 
     <div class="row">
         <div class="col-sm-8 blog-main">
-          <article id="post-java-job-trans" class="article article-type-post" itemscope itemprop="blogPost">
+          
 
-  <header class="article-header">
+<div class="page-header archives-type"><h1>Archives</h1></div>
+
+
+
+  
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2015" class="archive-year">2015</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <header class="archive-article-header">
+    <div class="article-datetime">
+  <a href="/2015/05/29/yunnan/" class="archive-article-date"><time datetime="2015-05-28T16:00:00.000Z" itemprop="datePublished">May 29th</time></a>
+</div>
+
     
   
-    <h1 class="article-title" itemprop="name">
-      Java中调用Kettle Trans或Job
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2015/05/29/yunnan/">云南印象</a>
     </h1>
   
 
 
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/travel/">travel</a></li></ul>
+
+
   </header>
-
-  <div class="article-meta">
-    <div class="article-datetime">
-  <a href="/2016/08/01/java-job-trans/" class="article-date"><time datetime="2016-08-01T11:24:57.000Z" itemprop="datePublished">2016-08-01</time></a>
-</div>
-
-    
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/data/">data</a>
-  </div>
-
-
-    
-  </div>
-  <div class="article-inner">
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>用的kettle 4.4版本，需要引入kettle lib目录下的jar包：<br><img src="/images/jar.PNG" alt="jar"></p>
-<a id="more"></a>
-<p>除此之外，job和trans中用到了ftp下载以及excel读取功能，ftp下载需要引入edtftpj.jar，excel workbook需要引入jxl.jar，kettle libext目录下都有，复制到项目然后设置路径即可。没有参数需要传就都置为空。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">	 * 调用 kettle trans</span><br><span class="line">	 * </span><br><span class="line">	 * @param params</span><br><span class="line">	 *            多个参数值</span><br><span class="line">	 * @param ktrPath</span><br><span class="line">	 *            如： String fName= &quot;D:\\kettle\\aaa.ktr&quot;;</span><br><span class="line">	 */</span><br><span class="line">	public static void runTrans(String[] params, String ktrPath) &#123;</span><br><span class="line">		try &#123;</span><br><span class="line">			KettleEnvironment.init();</span><br><span class="line">			EnvUtil.environmentInit();</span><br><span class="line">			TransMeta transMeta = new TransMeta(ktrPath);</span><br><span class="line">			Trans trans = new Trans(transMeta);</span><br><span class="line">			trans.execute(params);</span><br><span class="line">			trans.waitUntilFinished();</span><br><span class="line">			if (trans.getErrors() &gt; 0) &#123;</span><br><span class="line">				throw new Exception(&quot;Errors during transformation execution!&quot;);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; catch (Exception e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">	 * 调用 kettle job</span><br><span class="line">	 * </span><br><span class="line">	 * @param paraNames</span><br><span class="line">	 *            多个参数名</span><br><span class="line">	 * @param paraValues</span><br><span class="line">	 *            多个参数值</span><br><span class="line">	 * @param jobPath</span><br><span class="line">	 *            如： String fName= &quot;D:\\kettle\\aaa.kjb&quot;;</span><br><span class="line">	 */</span><br><span class="line">public static void runJob(String[] paraNames, String[] paraValues, String jobPath) &#123;</span><br><span class="line">		try &#123;</span><br><span class="line">			KettleEnvironment.init();</span><br><span class="line">			JobMeta jobMeta = new JobMeta(jobPath, null);</span><br><span class="line">			Job job = new Job(null, jobMeta);</span><br><span class="line">			// 向Job 脚本传递参数，脚本中获取参数值：$&#123;参数名&#125;</span><br><span class="line">			if (paraNames != null &amp;&amp; paraValues != null) &#123;</span><br><span class="line">				for (int i = 0; i &lt; paraNames.length &amp;&amp; i &lt; paraValues.length; i++) &#123;</span><br><span class="line">					job.setVariable(paraNames[i], paraValues[i]);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			job.start();</span><br><span class="line">			job.waitUntilFinished();</span><br><span class="line">			if (job.getErrors() &gt; 0) &#123;</span><br><span class="line">				throw new Exception(&quot;Errors during job execution!&quot;);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; catch (Exception e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-      
-
-    
-
-    <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/08/01/java-job-trans/" data-id="cjcrq1hzq0026tgs2sk8w641g" class="article-share-link">
-        <i class="fa fa-share"></i> Share
-      </a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kettle/">kettle</a></li></ul>
-
-
-    </footer>
-
-
-<!--
-    <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2016/08/01/java-job-trans/" data-id="cjcrq1hzq0026tgs2sk8w641g" class="article-share-link">
-        <i class="fa fa-share"></i> Share
-      </a>
-
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kettle/">kettle</a></li></ul>
-
-
-    </footer>
--->
-
-  </div>
-  
-    
-<ul id="article-nav" class="nav nav-pills nav-justified">
-  
-  <li role="presentation">
-    <a href="/2016/07/08/java-ftp/" id="article-nav-older" class="article-nav-link-wrap">
-      <i class="fa fa-chevron-left pull-left"></i>
-      <span class="article-nav-link-title">Java FTP上传下载问题</span>
-    </a>
-  </li>
-  
-  
-  <li role="presentation">
-    <a href="/2016/08/08/kettle-job/" id="article-nav-newer" class="article-nav-link-wrap">
-      <span class="article-nav-link-title">Java中调用Kettle Job报错</span>
-      <i class="fa fa-chevron-right pull-right"></i>
-    </a>
-  </li>
-  
-</ul>
-
-
-  
 </article>
 
+  
+  
+    </div></section>
+  
 
 
-<!--
 
--->
 
         </div>
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
