@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: anaconda | For A Breath I Tarry</title>
+  <title>Mac下Anaconda的安装及Jupyter Notebook中Julia内核配置 | For A Breath I Tarry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="For A Breath I Tarry">
-<meta property="og:url" content="http://lijiali1226.github.io/tags/anaconda/index.html">
+  <meta name="description" content="Anaconda的安装配置1.下载安装https://www.anaconda.com/download/#macos
+2.环境配置 在.bashrc或.bash_profile中添加export PATH=&amp;quot;/&amp;lt;path to anaconda&amp;gt;/bin:$PATH&amp;quot;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac下Anaconda的安装及Jupyter Notebook中Julia内核配置">
+<meta property="og:url" content="http://lijiali1226.github.io/2018/04/02/anaconda-julia-setup/index.html">
 <meta property="og:site_name" content="For A Breath I Tarry">
-<meta property="og:description">
+<meta property="og:description" content="Anaconda的安装配置1.下载安装https://www.anaconda.com/download/#macos
+2.环境配置 在.bashrc或.bash_profile中添加export PATH=&amp;quot;/&amp;lt;path to anaconda&amp;gt;/bin:$PATH&amp;quot;">
+<meta property="og:updated_time" content="2018-05-02T15:07:50.595Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="For A Breath I Tarry">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Mac下Anaconda的安装及Jupyter Notebook中Julia内核配置">
+<meta name="twitter:description" content="Anaconda的安装配置1.下载安装https://www.anaconda.com/download/#macos
+2.环境配置 在.bashrc或.bash_profile中添加export PATH=&amp;quot;/&amp;lt;path to anaconda&amp;gt;/bin:$PATH&amp;quot;">
   
     <link rel="alternate" href="/atom.xml" title="For A Breath I Tarry" type="application/atom+xml">
   
@@ -88,52 +92,109 @@
 
     <div class="row">
         <div class="col-sm-8 blog-main">
-          
+          <article id="post-anaconda-julia-setup" class="article article-type-post" itemscope itemprop="blogPost">
 
-<div class="page-header tag-type"><h1>anaconda</h1></div>
-
-
-
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <header class="archive-article-header">
-    <div class="article-datetime">
-  <a href="/2018/04/02/anaconda-julia-setup/" class="archive-article-date"><time datetime="2018-04-01T16:00:00.000Z" itemprop="datePublished">April 2nd</time></a>
-</div>
-
+  <header class="article-header">
     
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/02/anaconda-julia-setup/">Mac下Anaconda的安装及Jupyter Notebook中Julia内核配置</a>
+    <h1 class="article-title" itemprop="name">
+      Mac下Anaconda的安装及Jupyter Notebook中Julia内核配置
     </h1>
   
 
 
+  </header>
+
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/2018/04/02/anaconda-julia-setup/" class="article-date"><time datetime="2018-04-01T16:00:00.000Z" itemprop="datePublished">2018-04-02</time></a>
+</div>
+
     
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/tech/">tech</a>
+  </div>
+
+
+    
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Anaconda的安装配置"><a href="#Anaconda的安装配置" class="headerlink" title="Anaconda的安装配置"></a>Anaconda的安装配置</h2><p>1.下载安装<br><a href="https://www.anaconda.com/download/#macos" target="_blank" rel="external">https://www.anaconda.com/download/#macos</a></p>
+<p>2.环境配置<br> 在.bashrc或.bash_profile中添加<br><code>export PATH=&quot;/&lt;path to anaconda&gt;/bin:$PATH&quot;</code></p>
+<a id="more"></a>
+<p>3.验证安装<br><code>conda --version</code>  查看当前conda版本<br><code>conda list</code>   查看已安装的包和版本<br><code>python</code> 进入有Anaconda提示信息的python shell</p>
+<p>4.添加国内源<br>    conda config –add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/" target="_blank" rel="external">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</a><br>    conda config –add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/" target="_blank" rel="external">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</a><br>    conda config –set show_channel_urls yes</p>
+<p>5.conda环境管理<br><code>conda info --envs</code>  查看已有环境，有*号的是当前环境<br><code>conda create --name snakes python=3.5</code>   新建一个使用python3.5的环境snakes<br><code>source activate snakes</code> 激活snakes环境<br><code>source deactivate</code>   回到默认环境</p>
+<p>参考：<br><a href="https://docs.anaconda.com/anaconda/" target="_blank" rel="external">https://docs.anaconda.com/anaconda/</a><br><a href="https://conda.io/docs/user-guide/" target="_blank" rel="external">https://conda.io/docs/user-guide/</a></p>
+<h2 id="Jupyter-Notebook中Julia内核配置"><a href="#Jupyter-Notebook中Julia内核配置" class="headerlink" title="Jupyter Notebook中Julia内核配置"></a>Jupyter Notebook中Julia内核配置</h2><p>1.安装Jupyter Notebook<br>打开Anaconda Navigator，安装Jupyter Notebook</p>
+<p>2.验证安装<br>shell中输入<code>jupyter notebook</code></p>
+<p>3.安装Julia<br><a href="https://julialang.org/downloads/" target="_blank" rel="external">https://julialang.org/downloads/</a></p>
+<p>4.安装IJulia<br>在Julia中运行<br><code>Pkg.add(&quot;IJulia&quot;)</code><br><code>ENV[&quot;JUPYTER&quot;]=&quot;/Users/username/anaconda3/bin/jupyter&quot;</code><br><code>Pkg.build(&quot;IJulia&quot;)</code></p>
+<p>5.验证安装<br>查看可用内核<code>jupyter kernelspec list</code></p>
+<p>参考：<br><a href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels" target="_blank" rel="external">https://github.com/jupyter/jupyter/wiki/Jupyter-kernels</a><br><a href="https://ipython.readthedocs.io/en/latest/install/kernel_install.html#kernels-for-different-environments" target="_blank" rel="external">https://ipython.readthedocs.io/en/latest/install/kernel_install.html#kernels-for-different-environments</a><br><a href="https://irkernel.github.io/installation/#source-panel" target="_blank" rel="external">https://irkernel.github.io/installation/#source-panel</a><br><a href="https://github.com/JuliaLang/IJulia.jl" target="_blank" rel="external">https://github.com/JuliaLang/IJulia.jl</a></p>
+
+      
+    </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://lijiali1226.github.io/2018/04/02/anaconda-julia-setup/" data-id="cjgp8p3dk001n33s2ehjwo5s9" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+      
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/anaconda/">anaconda</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/julia/">julia</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jupyter-notebook/">jupyter notebook</a></li></ul>
 
 
-  </header>
+    </footer>
+
+
+<!--
+    <footer class="article-footer">
+      <a data-url="http://lijiali1226.github.io/2018/04/02/anaconda-julia-setup/" data-id="cjgp8p3dk001n33s2ehjwo5s9" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/anaconda/">anaconda</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/julia/">julia</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jupyter-notebook/">jupyter notebook</a></li></ul>
+
+
+    </footer>
+-->
+
+  </div>
+  
+    
+<ul id="article-nav" class="nav nav-pills nav-justified">
+  
+  <li role="presentation">
+    <a href="/2018/03/01/relationship/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">亲密关系</span>
+    </a>
+  </li>
+  
+  
+</ul>
+
+
+  
 </article>
 
-  
-  
-    </div></section>
-  
 
 
+<!--
 
+-->
 
         </div>
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
