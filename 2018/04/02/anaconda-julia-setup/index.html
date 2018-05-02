@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="For A Breath I Tarry">
 <meta property="og:description" content="Anaconda的安装配置1.下载安装https://www.anaconda.com/download/#macos
 2.环境配置 在.bashrc或.bash_profile中添加export PATH=&amp;quot;/&amp;lt;path to anaconda&amp;gt;/bin:$PATH&amp;quot;">
-<meta property="og:updated_time" content="2018-05-02T15:07:50.595Z">
+<meta property="og:updated_time" content="2018-05-02T15:17:34.287Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac下Anaconda的安装及Jupyter Notebook中Julia内核配置">
 <meta name="twitter:description" content="Anaconda的安装配置1.下载安装https://www.anaconda.com/download/#macos
@@ -127,8 +127,11 @@
 <p>2.环境配置<br> 在.bashrc或.bash_profile中添加<br><code>export PATH=&quot;/&lt;path to anaconda&gt;/bin:$PATH&quot;</code></p>
 <a id="more"></a>
 <p>3.验证安装<br><code>conda --version</code>  查看当前conda版本<br><code>conda list</code>   查看已安装的包和版本<br><code>python</code> 进入有Anaconda提示信息的python shell</p>
-<p>4.添加国内源<br>    conda config –add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/" target="_blank" rel="external">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</a><br>    conda config –add channels <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/" target="_blank" rel="external">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</a><br>    conda config –set show_channel_urls yes</p>
-<p>5.conda环境管理<br><code>conda info --envs</code>  查看已有环境，有*号的是当前环境<br><code>conda create --name snakes python=3.5</code>   新建一个使用python3.5的环境snakes<br><code>source activate snakes</code> 激活snakes环境<br><code>source deactivate</code>   回到默认环境</p>
+<p>4.添加国内源</p>
+<pre><code>conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --set show_channel_urls yes
+</code></pre><p>5.conda环境管理<br><code>conda info --envs</code>  查看已有环境，有*号的是当前环境<br><code>conda create --name snakes python=3.5</code>   新建一个使用python3.5的环境snakes<br><code>source activate snakes</code> 激活snakes环境<br><code>source deactivate</code>   回到默认环境</p>
 <p>参考：<br><a href="https://docs.anaconda.com/anaconda/" target="_blank" rel="external">https://docs.anaconda.com/anaconda/</a><br><a href="https://conda.io/docs/user-guide/" target="_blank" rel="external">https://conda.io/docs/user-guide/</a></p>
 <h2 id="Jupyter-Notebook中Julia内核配置"><a href="#Jupyter-Notebook中Julia内核配置" class="headerlink" title="Jupyter Notebook中Julia内核配置"></a>Jupyter Notebook中Julia内核配置</h2><p>1.安装Jupyter Notebook<br>打开Anaconda Navigator，安装Jupyter Notebook</p>
 <p>2.验证安装<br>shell中输入<code>jupyter notebook</code></p>
@@ -146,7 +149,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2018/04/02/anaconda-julia-setup/" data-id="cjgp8p3dk001n33s2ehjwo5s9" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2018/04/02/anaconda-julia-setup/" data-id="cjgp8ucs2001o3ks29c4idtcj" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -160,7 +163,7 @@
 
 <!--
     <footer class="article-footer">
-      <a data-url="http://lijiali1226.github.io/2018/04/02/anaconda-julia-setup/" data-id="cjgp8p3dk001n33s2ehjwo5s9" class="article-share-link">
+      <a data-url="http://lijiali1226.github.io/2018/04/02/anaconda-julia-setup/" data-id="cjgp8ucs2001o3ks29c4idtcj" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
 
